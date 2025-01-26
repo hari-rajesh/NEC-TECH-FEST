@@ -20,7 +20,7 @@ export default function Particle() {
   const fireParticleConfig = {
     particles: {
       number: {
-        value: 20,
+        value: 25,
         density: {
           enable: true,
           value_area: 600
@@ -84,7 +84,7 @@ export default function Particle() {
       life: {
         duration: {
           sync: false,
-          value: 1
+          value: 10
         },
         count: 0,
         delay: {

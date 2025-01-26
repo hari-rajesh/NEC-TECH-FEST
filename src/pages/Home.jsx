@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "../assets/fonts/font.css";
 import "../assets/fonts/nusar.css";
-
+import '../components/Footer'
 import CountDown from "../components/CountDown";
+import Footer from "../components/Footer";
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
   }, []);
 
   return (
+    <>
     <div className="home">
 
       <div className="hero" style={{ zIndex: 180, position: "relative" }}>
@@ -33,11 +35,14 @@ function Home() {
           <p style={{ fontSize: 34 }}>21 & 22th Feburary A'25</p>
         </div>
       </div>
-
-      {/* CountDown */}
+      
+     
       <h1 className="count-h">COUNTDOWN</h1>
       <CountDown />
+    
+    <Footer/>
     </div>
+    </>
   );
 }
 

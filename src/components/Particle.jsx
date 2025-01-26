@@ -15,7 +15,6 @@ export default function Particle() {
   }, []);
 
   const particlesLoaded = (container) => {
-    // Optional: Add any logic when particles are loaded
   };
 
   const fireParticleConfig = {
@@ -28,45 +27,58 @@ export default function Particle() {
         }
       },
       color: {
-        value: ["#ff4500", "#ff6a00", "#ff8c00", "#ffa500", "#ffcc00"]
+        value: [
+          "#6602F2",
+          "#7B24F3",
+          "#8F45F4",
+          "#A367F5",
+          "#B789F6"
+        ]
       },
+      
       shape: {
         type: "circle"
       },
       opacity: {
-        value: 0.8,
+        value: 0.6,
         random: true,
         animation: {
           enable: true,
-          speed: 1,
+          speed: 0.8,
           minimumValue: 0.1,
           sync: false
         }
       },
       size: {
-        value: 3,
+        value: 4,
         random: true,
         animation: {
           enable: true,
-          speed: 2,
+          speed: 1.5,
           minimumValue: 0.5,
           sync: false
         }
       },
       links: {
-        enable: false
+        enable: true,
+        distance: 150,
+        color: "#4A0080",
+        opacity: 0.3,
+        width: 1
       },
       move: {
         enable: true,
-        speed: 6,
-        direction: "top",
+        speed: 3,
+        direction: "none",
         random: true,
         straight: false,
         outModes: {
-          default: "out"
+          default: "bounce"
         },
         attract: {
-          enable: false
+          enable: true,
+          rotateX: 600,
+          rotateY: 1200
         }
       },
       life: {
@@ -107,7 +119,6 @@ export default function Particle() {
       }
     },
     background: {
-      color: "#000000"
     },
     fullScreen: {
       enable: true,
@@ -128,7 +139,7 @@ export default function Particle() {
         x: 50,
         y: 100
       },
-      life:{
+      life: {
         duration: 0.1,
         count: 1
       }

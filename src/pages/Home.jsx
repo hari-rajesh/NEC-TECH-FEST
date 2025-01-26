@@ -75,7 +75,9 @@ function Home() {
         </div>
       </div>
       <h1 className="count-h">COUNTDOWN</h1>
+      <div className="countdown-box">
       <CountDown />
+      </div>
       <Footer/>
     </div>
     </>

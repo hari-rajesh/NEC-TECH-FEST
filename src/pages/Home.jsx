@@ -52,24 +52,25 @@ function Home() {
           </motion.div>
 
           <motion.p
-  style={{ 
-    fontSize: 25,
-    fontFamily: 'Orbitron, sans-serif',
-    background: 'linear-gradient(to right, #C0C0C0, #E8E8E8, #A8A8A8)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    textShadow: '2px 2px 4px rgba(192, 192, 192, 0.3)',
-    letterSpacing: '2px'
-  }}
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 1.5,
-    duration: 1.2,
-    ease: "easeOut"
-  }}
->
-  21st & 22nd February 2k'25
+          className="event-date"
+                style={{ 
+                  fontSize: 25,
+                  fontFamily: 'Orbitron, sans-serif',
+                  background: 'linear-gradient(to right, #C0C0C0, #E8E8E8, #A8A8A8)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  textShadow: '2px 2px 4px rgba(192, 192, 192, 0.3)',
+                  letterSpacing: '2px'
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 1.5,
+                  duration: 1.2,
+                  ease: "easeOut"
+                }}
+              >
+                21st & 22nd February 2k'25
 </motion.p>
 
         </div>

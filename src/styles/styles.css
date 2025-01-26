@@ -73,7 +73,7 @@ body {
 }
 
 .hero {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,6 +285,9 @@ body {
 }
 
 @media screen and (min-width: 200px) and (max-width: 650px) {
+  .hero{
+    height:65vh;
+  }
   .hero .logo-img img {
     width: 220px !important;
   }

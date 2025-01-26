@@ -68,6 +68,7 @@
   
   /* Mobile responsiveness for count */
   @media screen and (min-width: 200px) and (max-width: 650px) {
+ 
     .count {
       width: 100%;
     }
@@ -91,14 +92,47 @@
     .count-p {
       font-size: 20px;
     }
+
   }
 @media screen and (min-width: 200px) and (max-width: 650px) {
   .countdown-box {
     width: 90%;
     background: none;
     padding: 20px;
-    margin: 40px auto;
+    margin:0px auto;
+    animation: fadeInUp 1.2s ease-out 1.5s forwards;
+    opacity: 0;
+    margin-bottom: 100px;
+
   }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .count-h {
+    animation: fadeInSlide 1.2s ease-out 1.5s forwards;
+    opacity: 0;
+  }
+  
+  
   .flip-clock-container {
     width: 100%;
     gap: 0px !important;

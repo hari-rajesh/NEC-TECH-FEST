@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './styles/styles.css'
-
+import './styles/Home.css'
 import Particle from './components/Particle'
 
 import Home from './pages/Home'
@@ -17,7 +17,6 @@ function App() {
       <Particle />
         <Routes>
           <Route path="/" element={<Home />} />
-
         </Routes>
         
       </BrowserRouter>

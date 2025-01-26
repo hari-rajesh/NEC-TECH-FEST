@@ -141,7 +141,7 @@
     font-size: 30px;
     margin: 18px auto;
   }
-
+/*CountDown */
   .count-h {
     position: relative;
     margin: auto;
@@ -769,9 +769,6 @@
     padding: 3rem 1rem;
     position: relative;
     overflow: hidden;
-
-    z-index: 99;
-   
 
   }
 

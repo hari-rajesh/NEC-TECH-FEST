@@ -13,7 +13,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Your Company Name</p>
+        <p>&copy; 2025 NEC TECH FEST</p>
       </div>
     </footer>
   );

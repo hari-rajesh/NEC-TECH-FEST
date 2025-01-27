@@ -306,7 +306,8 @@ body {
 @media screen and (min-width: 200px) and (max-width: 650px) {
   .count-h {
     padding: 20px 0;
-    font-size: 29px;
+    font-size: 26px;
+    /* color:#ff00ff */
   }
 }
 

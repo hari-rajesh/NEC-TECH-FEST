@@ -20,55 +20,55 @@ export default function Particle() {
   const fireParticleConfig = {
     particles: {
       number: {
-        value: 25,
+        value: 80, // Increased particle count
         density: {
           enable: true,
-          value_area: 600
+          value_area: 800 // Increased density area
         }
       },
+      
       color: {
         value: [
-          "#6602F2",
-          "#7B24F3",
-          "#8F45F4",
-          "#A367F5",
-          "#B789F6"
+          "#8A2BE2", // Brighter purple
+          "#9400D3",
+          "#ff00ff",
+          "#BA55D3",
+          "#FF00FF" // Added magenta for more vibrancy
         ]
       },
-      
       shape: {
         type: "circle"
       },
       opacity: {
-        value: 0.6,
+        value: 0.8, // Increased base opacity
         random: true,
         animation: {
           enable: true,
-          speed: 0.8,
-          minimumValue: 0.1,
+          speed: 1,
+          minimumValue: 0.2,
           sync: false
         }
       },
       size: {
-        value: 4,
+        value: 6, // Increased particle size
         random: true,
         animation: {
           enable: true,
-          speed: 1.5,
-          minimumValue: 0.5,
+          speed: 2,
+          minimumValue: 0.8,
           sync: false
         }
       },
       links: {
         enable: true,
-        distance: 150,
-        color: "#4A0080",
-        opacity: 0.3,
-        width: 1
+        distance: 180, // Increased connection distance
+        color: "#6A0DAD", // Brighter connection color
+        opacity: 0.4, // Slightly increased connection opacity
+        width: 1.2 // Slightly thicker connections
       },
       move: {
         enable: true,
-        speed: 3,
+        speed: 4, // Increased movement speed
         direction: "none",
         random: true,
         straight: false,
@@ -77,16 +77,16 @@ export default function Particle() {
         },
         attract: {
           enable: true,
-          rotateX: 600,
-          rotateY: 1200
+          rotateX: 800,
+          rotateY: 1500
         }
       },
       life: {
         duration: {
           sync: false,
-          value: 10
+          value: 20 // Increased lifetime
         },
-        count: 0,
+        count: 1,
         delay: {
           random: {
             enable: true,
@@ -110,11 +110,11 @@ export default function Particle() {
       },
       modes: {
         repulse: {
-          distance: 100,
-          duration: 0.4
+          distance: 150, // Increased repulsion distance
+          duration: 0.6 // Increased repulsion duration
         },
         push: {
-          quantity: 4
+          quantity: 6 // Increased particles created on click
         }
       }
     },
@@ -128,11 +128,11 @@ export default function Particle() {
     emitters: {
       direction: "top",
       rate: {
-        quantity: 1,
-        delay: 0.25
+        quantity: 2, // Increased emission rate
+        delay: 0.2
       },
       size: {
-        width: 80,
+        width: 100, // Increased emitter width
         height: 10
       },
       position: {
@@ -140,7 +140,7 @@ export default function Particle() {
         y: 100
       },
       life: {
-        duration: 0.1,
+        duration: 0.2, // Increased emitter duration
         count: 1
       }
     }

@@ -19,15 +19,6 @@ function Home() {
           <motion.div
             className="logo-txt glow"
             style={{ fontFamily: "Netron" }}
-            // initial={{ scale: 4, opacity: 0 }}
-            // animate={{ scale: 1, opacity: 1 }}
-            // transition={{
-            //   duration: 2,
-            //   type: "spring",
-            //   stiffness: 100,
-            //   damping: 20,
-            //   mass: 1
-            // }}
             initial={{ scale: 3.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{

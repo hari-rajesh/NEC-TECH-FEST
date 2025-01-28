@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './styles/styles.css'
-import './styles/Home.css'
+
 import Particle from './components/Particle'
 
 import Home from './pages/Home'
-
+import './index.css';
 import Footer from './components/Footer'
 
 

@@ -146,14 +146,15 @@ export default function Particle() {
   };
 
   return (
-    <>
+    <div className="fixed inset-0" style={{ zIndex: 2 }}>
       {init && (
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={fireParticleConfig}
+          className="!z-[-1]"
         />
       )}
-    </>
+    </div>
   );
 }

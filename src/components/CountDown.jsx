@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import "../styles/countdown.css";
+import React, { useEffect, useRef } from 'react';
 
 const Countdown = () => {
   const clockRef = useRef(null);
@@ -37,9 +36,13 @@ const Countdown = () => {
     }
 
     function runClock() {
-      const endDate = new Date('2025-02-01T00:00:00');
+      const targetDate = new Date('2025-02-01T00:00:00+05:30');
       const now = new Date();
-      const diff = endDate - now;
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        return;
+      }
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -103,9 +106,7 @@ const Countdown = () => {
         }
       }
 
-      if (diff > 0) {
-        setTimeout(runClock, 1000);
-      }
+      setTimeout(runClock, 1000);
     }
 
     runClock();
@@ -118,90 +119,42 @@ const Countdown = () => {
     };
   }, []);
 
+  const TimeSection = ({ type, label }) => (
+    <div className="flex flex-col items-center gap-2.5">
+      <div className={`flip-clock flip-clock-${type} flex flex-row items-center gap-1 sm:gap-2 md:gap-4`}>
+        <div className="digit digit-left relative w-[25px] h-[35px] md:w-[75px] md:h-[110px] bg-purple-900 rounded-lg perspective-[400px] m-0.5">
+          <div className="card">
+            <div className="card-face text-[1em] md:text-[3.5em] font-bold text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] rounded-lg shadow-[0_4px_20px_rgba(139,92,246,0.3)]"></div>
+            <div className="card-face card-face-back text-[1em] md:text-[3.5em] font-bold text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] rounded-lg shadow-[0_4px_20px_rgba(139,92,246,0.3)]"></div>
+          </div>
+        </div>
+        <div className="digit digit-right relative w-[25px] h-[35px] md:w-[75px] md:h-[110px] bg-purple-900 rounded-lg perspective-[400px] m-0.5">
+          <div className="card">
+            <div className="card-face text-[1em] md:text-[3.5em] font-bold text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] rounded-lg shadow-[0_4px_20px_rgba(139,92,246,0.3)]"></div>
+            <div className="card-face card-face-back text-[1em] md:text-[3.5em] font-bold text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] rounded-lg shadow-[0_4px_20px_rgba(139,92,246,0.3)]"></div>
+          </div>
+        </div>
+      </div>
+      <div className="text-[0.7em] md:text-[1.5em] font-semibold uppercase tracking-[2px] md:tracking-[3px] text-purple-200 mt-2.5 drop-shadow-[0_0_8px_rgba(221,214,254,0.3)]">
+        {label}
+      </div>
+    </div>
+  );
 
   return (
-    <div id="app">
-  <div className="flip-clock-container">
-    <div className="time-section">
-      <div className="flip-clock flip-clock-d">
-        <div className="digit digit-left">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-        <div className="digit digit-right">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
+    <div className="relative w-full flex justify-center">
+      <div className="w-[95%] md:w-[90%] lg:w-[120%] my-5 p-4 md:p-[15px] bg-white/5 backdrop-blur-[10px] rounded-[25px] shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_20px_rgba(139,92,246,0.3),inset_0_0_15px_rgba(139,92,246,0.2)] animate-fadeInUp opacity-0 mb-[100px] lg:translate-x-[-8%] border border-purple-500/20">
+        <div className="flex gap-1 md:gap-[35px] justify-center items-center p-3 md:p-10 bg-transparent rounded-[20px] shadow-[0_10px_30px_rgba(88,28,135,0.3)]">
+          <TimeSection type="d" label="DAYS" />
+          <div className="text-[1.2em] md:text-[4em] text-purple-400 font-bold flex items-center px-[2px] md:px-[5px] drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]">:</div>
+          <TimeSection type="h" label="HOURS" />
+          <div className="text-[1.2em] md:text-[4em] text-purple-400 font-bold flex items-center px-[2px] md:px-[5px] drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]">:</div>
+          <TimeSection type="m" label="MINUTES" />
+          <div className="text-[1.2em] md:text-[4em] text-purple-400 font-bold flex items-center px-[2px] md:px-[5px] drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]">:</div>
+          <TimeSection type="s" label="SECONDS" />
         </div>
       </div>
-      <div className="label count-label">DAYS</div>
     </div>
-
-    <div className="colon">:</div>
-
-    <div className="time-section">
-      <div className="flip-clock flip-clock-h">
-        <div className="digit digit-left">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-        <div className="digit digit-right">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-      </div>
-      <div className="label count-label">HOURS</div>
-    </div>
-
-    <div className="colon">:</div>
-
-    <div className="time-section">
-      <div className="flip-clock flip-clock-m">
-        <div className="digit digit-left">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-        <div className="digit digit-right">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-      </div>
-      <div className="label count-label">MINUTES</div>
-    </div>
-
-    <div className="colon">:</div>
-
-    <div className="time-section">
-      <div className="flip-clock flip-clock-s">
-        <div className="digit digit-left">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-        <div className="digit digit-right">
-          <div className="card">
-            <div className="card-face card-face-front"></div>
-            <div className="card-face card-face-back"></div>
-          </div>
-        </div>
-      </div>
-      <div className="label count-label">SECONDS</div>
-    </div>
-  </div>
-</div>
-
   );
 };
 

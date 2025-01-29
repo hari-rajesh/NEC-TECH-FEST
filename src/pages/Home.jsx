@@ -10,17 +10,15 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+    return (
+      <>
+        <Navbar />
+        <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,40,217,0.2)] via-transparent to-[rgba(139,92,246,0.2)] z-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#7700ff_0%,transparent_25%),radial-gradient(circle_at_80%_80%,#7700FF_0%,transparent_25%)] blur-[60px]" />
+          </div>
 
-  return (
-    <>
-          <Navbar/>
-
-      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
- <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,40,217,0.2)] via-transparent to-[rgba(139,92,246,0.2)] z-0">
- <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#7700ff_0%,transparent_25%),radial-gradient(circle_at_80%_80%,#7700FF_0%,transparent_25%)] blur-[60px]" />
- </div>
-
-        <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col z-[1] backdrop-blur-xs pb-0">
+          <div className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center flex-col z-[1] backdrop-blur-xs pb-0 pt-32 sm:pt-40">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(78,8,243,0.127),transparent_70%)] blur-[40px]" />
   
           <div className="container mx-auto text-center px-4">

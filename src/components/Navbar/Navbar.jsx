@@ -4,7 +4,7 @@ import { FloatingNav } from "./floating-navbar.jsx";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
-export function FloatingNavDemo() {
+export function Navbar() {
   const navItems = [
     {
       name: "Home",

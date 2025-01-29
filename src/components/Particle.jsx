@@ -19,13 +19,12 @@ export default function Particle() {
   const fireParticleConfig = {
     particles: {
       number: {
-        value: 80, // Increased particle count
+        value: 40, // Reduced from 80 to 40
         density: {
           enable: true,
-          value_area: 800 // Increased density area
+          value_area: 800
         }
       },
-      
       color: {
         value: [
           "#8A2BE2", // Brighter purple
@@ -109,11 +108,11 @@ export default function Particle() {
       },
       modes: {
         repulse: {
-          distance: 150, // Increased repulsion distance
-          duration: 0.6 // Increased repulsion duration
+          distance: 150,
+          duration: 0.6
         },
         push: {
-          quantity: 6 // Increased particles created on click
+          quantity: 2 // Reduced from 6 to 2
         }
       }
     },
@@ -127,7 +126,7 @@ export default function Particle() {
     emitters: {
       direction: "top",
       rate: {
-        quantity: 2, // Increased emission rate
+        quantity: 1, // Reduced from 2 to 1
         delay: 0.2
       },
       size: {

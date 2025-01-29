@@ -5,6 +5,7 @@ import Particle from './components/Particle'
 import Home from './pages/Home'
 import './index.css';
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -14,6 +15,7 @@ function App() {
    
       <BrowserRouter>
       <Particle />
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

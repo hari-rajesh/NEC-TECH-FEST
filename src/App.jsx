@@ -5,8 +5,8 @@ import Particle from './components/Particle'
 import Home from './pages/Home'
 import './index.css';
 import Footer from './components/Footer'
-
-
+import {FloatingNavDemo} from './components/Navbar/Navbar.jsx'
+// import {FloatingNav} from './components/floating-navbar.jsx'
 
 function App() {
 
@@ -14,10 +14,10 @@ function App() {
    
       <BrowserRouter>
       <Particle />
+        <FloatingNavDemo/>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        
       </BrowserRouter>
   )
 }

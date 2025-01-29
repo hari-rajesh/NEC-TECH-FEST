@@ -4,7 +4,7 @@ import "../assets/fonts/nusar.css";
 import CountDown from "../components/CountDown";
 import Footer from "../components/Footer";
 import { motion } from 'framer-motion';
-
+import Card from '../components/Card.jsx';
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,6 +33,7 @@ function Home() {
   >
     NEC TECH FEST
   </motion.div>
+  <Card/>
 
   <motion.div
     className="relative overflow-hidden mb-6 sm:mb-8"
@@ -62,7 +63,6 @@ function Home() {
   </motion.p>
 </div>
         </div>
-
         <div className="relative z-[2] bg-gradient-to-b from-transparent via-transparent to-transparent">
           <div className="relative">
             <motion.h1 
@@ -84,7 +84,7 @@ function Home() {
             </div>
           </div>
         </div>
-
+              
         <Footer />
       </div>
     </>

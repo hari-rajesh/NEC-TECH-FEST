@@ -4,10 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'monoton': ['Monoton', 'cursive'],
         'netron': ['Netron', 'sans-serif'],
         'space-grotesk': ['Space Grotesk', 'sans-serif'],
         'orbitron': ['Orbitron', 'sans-serif'],
-        'nusar': ['nusar', 'sans-serif']
+        'nusar': ['nusar', 'sans-serif'],
+        'zcool': ['"ZCOOL KuaiLe"', 'serif'],
+
       },
       colors: {
         'primary-purple': '#613aeb',

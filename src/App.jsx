@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop';
 import Event from './components/events/Event';
 import EventPage from './components/events/EventPage';
+import Accommodation from './pages/Accommodation';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           <Route path="/events/:eventType" element={<Event />} />
           <Route path="/:id" element={<EventPage />} />
           <Route path="/associations/event/:id" element={<EventPage />} />
-
+          <Route path="/events/accommodations" element={<Accommodation/>} />
         </Routes>
       </BrowserRouter>
   )

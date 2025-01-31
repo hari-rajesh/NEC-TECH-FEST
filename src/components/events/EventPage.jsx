@@ -79,9 +79,11 @@ const EventPage = () => {
   };
 
   const handleRegister = () => {
-    if (event?.registrationLink) {
-      window.location.href = event.registrationLink;
-    }
+    const link = "https://forms.gle/GZpP25TEG6CYGAZn7";
+    window.open(link, "_blank");
+    // if (event?.registrationLink) {
+    //   window.location.href = event.registrationLink;
+    // }
   };
 
   if (loading || navigating) {

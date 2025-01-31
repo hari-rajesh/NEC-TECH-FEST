@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+
+.contact-form {
+  background: radial-gradient(circle, #4e08f3 30%, transparent 70%);
+}
+
+body{
+  font-family: 'Space Grotesk', sans-serif;
+  background: black; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Apply Orbitron font */
+.font-netron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Glow effect animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0px 0px 2px #e60dd3, 0px 0px 5px #614ad3;
+  }
+  100% {
+    text-shadow: 0px 2px 12px #f009dd, 0px 0px 30px #2c06ec;
+  }
+}
+
+.animate-glow {
+  animation: glow 1s alternate infinite;
+  color: rgb(245, 12, 12);
+}
+
+/* Responsive font sizes */
+.text-responsive {
+  font-size: 40px;
+}
+
+
+.coordinator, .contact, .location {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Apply glow effect */
+.coordinator, .contact, .location {
+  animation: glow 1s alternate infinite;
+}
+
+.location{
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.contact{
+  margin-bottom: 50px;
+}
+
+
+
+/* If using a local font, define it */
+@font-face {
+  font-family: 'Netron';
+  src: url('/path-to-your-font/Netron.woff2') format('woff2'),
+       url('/path-to-your-font/Netron.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the custom font */
+.font-netron {
+  font-family: 'Netron', sans-serif;
+}
+
+/* Glow effect animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0px 0px 2px #fff, 0px 0px 5px #614ad3;
+  }
+  100% {
+    text-shadow: 0px 0px 12px #fff, 0px 0px 30px #614ad3;
+  }
+}
+
+.animate-glow {
+  animation: glow 1s alternate infinite;
+}
+
+/* Responsive font sizes */
+.text-responsive {
+  font-size: 40px;
+}
+
+@media (min-width: 640px) {
+  .text-responsive {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-responsive {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive {
+    font-size: 75px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes float {
+    0% {
+      transform: translateY(0) scale(0.8);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Bubbles container */
+  .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Cover the entire viewport */
+    pointer-events: none; /* Prevent interaction with the bubbles */
+    z-index: 0; /* Make sure bubbles stay behind the content */
+  }
+  
+  /* Individual bubble styles */
+  .bubble {
+    position: absolute;
+    bottom: -50px; /* Start below the screen */
+    background-color: rgb(179, 237, 239);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 8s linear infinite;
+  }
+  
+  /* Customize the size and position of each bubble */
+  .bubble:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+  }
+  
+  .bubble:nth-child(3) {
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+  }
+  
+  .bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 70%;
+    animation-duration: 7s;
+    animation-delay: 4s;
+  }
+  
+  .bubble:nth-child(5) {
+    width: 10px;
+    height: 10px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }

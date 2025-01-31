@@ -31,7 +31,12 @@ function Home() {
       image: "/sarah.jpg",
       github: "https://github.com/sarahc"
     },
-
+    {
+      name: "Hari",
+      role: "Frontend Lead",
+      image: "/mike.jpg",
+      github: "https://github.com/mikep"
+    },
     {
       name: "Palani Kumar",
       role: "Backend Dev",
@@ -47,6 +52,24 @@ function Home() {
     {
       name: "Shyam",
       role: "Backend Dev",
+      image: "/mike.jpg",
+      github: "https://github.com/mikep"
+    },
+    {
+      name: "Fioana",
+      role: "Frontend Dev",
+      image: "/mike.jpg",
+      github: "https://github.com/mikep"
+    },
+    {
+      name: "Narmadha",
+      role: "Frontend Dev",
+      image: "/mike.jpg",
+      github: "https://github.com/mikep"
+    },
+    {
+      name: "Sankareshwari",
+      role: "Frontend Dev",
       image: "/mike.jpg",
       github: "https://github.com/mikep"
     },

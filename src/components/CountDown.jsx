@@ -36,7 +36,7 @@ const Countdown = () => {
     }
 
     function runClock() {
-      const targetDate = new Date('2025-02-01T00:00:00+05:30');
+      const targetDate = new Date('2025-02-21T00:00:00+05:30');
       const now = new Date();
       const diff = targetDate - now;
 

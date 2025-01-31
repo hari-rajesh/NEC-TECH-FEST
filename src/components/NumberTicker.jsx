@@ -12,7 +12,7 @@ const NumberCounter = () => {
             <div className="flex items-baseline font-orbitron">
               <NumberTicker
                 className="text-lg md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
-                value={180}
+                value={70}
                 duration={2000}
               />
               <span className="text-lg md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">+</span>
@@ -28,7 +28,7 @@ const NumberCounter = () => {
               <span className="text-sm md:text-3xl font-bold text-purple-400 mr-1">₹</span>
               <NumberTicker
                 className="text-lg md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
-                value={200000}
+                value={100000}
                 duration={100}
               />
             </div>

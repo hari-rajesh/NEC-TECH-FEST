@@ -17,7 +17,7 @@ export function Navbar() {
 
   const departments = [
     "Computer Science",
-    "Electrical & Communication",
+    "Electrical",
     "Information Technology",
     "Electronics",
     "Mechanical",

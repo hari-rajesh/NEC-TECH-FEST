@@ -34,7 +34,7 @@ const Footer = () => {
               <h3 className="font-orbitron text-2xl text-white group-hover:[text-shadow:_0_0_10px_#8000ff]">NEC TECH FEST</h3>
             </div>
             <p className="text-purple-200/90 mb-6 font-space-grotesk">
-              Join us for an incredible journey into technology and innovation at NEC Tech Fest 2024.
+              Join us for an incredible journey into technology and innovation at NEC Tech Fest 2025.
             </p>
           </div>
 

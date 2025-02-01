@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
@@ -10,38 +11,7 @@
   background: radial-gradient(circle, #4e08f3 30%, transparent 70%);
 }
 
-body{
-  font-family: 'Space Grotesk', sans-serif;
-  background: black; 
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-/* Apply Orbitron font */
-.font-netron {
-  font-family: 'Orbitron', sans-serif;
-}
-
-/* Glow effect animation */
-@keyframes glow {
-  0% {
-    text-shadow: 0px 0px 2px #e60dd3, 0px 0px 5px #614ad3;
-  }
-  100% {
-    text-shadow: 0px 2px 12px #f009dd, 0px 0px 30px #2c06ec;
-  }
-}
-
-.animate-glow {
-  animation: glow 1s alternate infinite;
-  color: rgb(245, 12, 12);
-}
 
 /* Responsive font sizes */
 .text-responsive {
@@ -70,8 +40,6 @@ body{
   margin-bottom: 50px;
 }
 
-
-
 /* If using a local font, define it */
 @font-face {
   font-family: 'Netron';
@@ -81,24 +49,6 @@ body{
   font-style: normal;
 }
 
-/* Apply the custom font */
-.font-netron {
-  font-family: 'Netron', sans-serif;
-}
-
-/* Glow effect animation */
-@keyframes glow {
-  0% {
-    text-shadow: 0px 0px 2px #fff, 0px 0px 5px #614ad3;
-  }
-  100% {
-    text-shadow: 0px 0px 12px #fff, 0px 0px 30px #614ad3;
-  }
-}
-
-.animate-glow {
-  animation: glow 1s alternate infinite;
-}
 
 /* Responsive font sizes */
 .text-responsive {

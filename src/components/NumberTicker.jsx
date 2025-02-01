@@ -1,6 +1,5 @@
 import React from 'react';
-import { NumberTicker } from "@/components/ui/number-ticker";
-
+import {NumberTicker} from "../components/ui/number-ticker.jsx"
 const NumberCounter = () => {
   return (
     <div className="w-full bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm rounded-xl p-2 md:p-4 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 shadow-[0_8px_32px_rgba(31,38,135,0.15)] hover:shadow-[0_8px_32px_rgba(139,92,246,0.3)]">

@@ -7,7 +7,7 @@ export const departments = [
   { id: "civil", name: "Civil" },
   { id: "information-technology", name: "Information Technology" },
   { id: "ai-ds", name: "AI&DS" },
-  { id: "electrical", name: "Electrical" },
+  { id: "electrical", name: "Electrical" }
 ];
 
 export const tags = {

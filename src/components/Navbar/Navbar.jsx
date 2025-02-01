@@ -17,7 +17,7 @@ export function Navbar() {
 
   const departments = [
     "Computer Science",
-    "Electrical",
+    "Electrical & Communication",
     "Information Technology",
     "Electronics",
     "Mechanical",
@@ -60,6 +60,11 @@ export function Navbar() {
     {
       name: "Accommodations",
       link: "/events/accommodations",
+      icon: <IconBed className="h-4 w-4 text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/events/contact",
       icon: <IconBed className="h-4 w-4 text-white" />,
     },
   ];

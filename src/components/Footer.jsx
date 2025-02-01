@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="border-t border-purple-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-space-grotesk text-purple-200/90 text-sm">
-              &copy; 2024 NEC TECH FEST. All rights reserved.
+              &copy; 2025 NEC TECH FEST. All rights reserved.
             </p>
             <div className="flex gap-6">
               {[FaGithub, FaTwitter, FaInstagram, FaLinkedin].map((Icon, index) => (

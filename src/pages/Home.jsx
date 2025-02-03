@@ -176,7 +176,7 @@ function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-6xl font-iceland font-bold bg-gradient-to-b from-[#e0aaff] to-[#5a189a] bg-clip-text text-transparent leading-[100%] tracking-tighter mb-2">
+            <h1 className="text-7xl font-iceland font-bold bg-gradient-to-b from-[#e0aaff] to-[#5a189a] bg-clip-text text-transparent leading-[100%] tracking-tighter mb-2">
               HIGHLIGHTED EVENTS
             </h1>
             <div className="h-0.5 w-48 bg-gradient-to-r from-transparent via-[#9d4edd] to-transparent mx-auto mt-4 mb-8 [filter:drop-shadow(0_0_5px_rgb(157,78,221))]" />

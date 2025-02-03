@@ -7,7 +7,8 @@ import {
   IconDeviceGamepad2, 
   IconBulb, 
   IconBook2, 
-  IconBed 
+  IconBed, 
+  IconPhone
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -61,6 +62,12 @@ export function Navbar() {
       name: "Accommodations",
       link: "/events/accommodations",
       icon: <IconBed className="h-4 w-4 text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/events/contact",
+      icon: <IconPhone className="h-4 w-4 text-white" />,
+      
     },
   ];
 

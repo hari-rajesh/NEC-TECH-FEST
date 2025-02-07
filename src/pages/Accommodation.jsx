@@ -17,7 +17,6 @@ const Accommodation = () => {
       <Cafe />
       <Particle/>
       <Food />
-      <Footer />
     </div>
   );
 };

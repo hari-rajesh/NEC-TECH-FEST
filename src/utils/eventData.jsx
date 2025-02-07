@@ -6,7 +6,7 @@ export const departments = [
   { id: "mechanical", name: "Mechanical" },
   { id: "civil", name: "Civil" },
   { id: "information-technology", name: "Information Technology" },
-  { id: "ai-ds", name: "AI&DS" },
+  { id: "ai&ds", name: "AI&DS" },
   { id: "electrical", name: "Electrical" }
 ];
 
@@ -59,7 +59,7 @@ export const oldtags = [
   "ECE",
   "EEE",
   "MECH",
-  "AI/DS",
+  "AI&DS",
   "CIVIL",
   "CODING",
   "HACKATHONS",
@@ -339,32 +339,6 @@ export const events = [
     ],
   },
   {
-    id: 11,
-    name: "Picture Perfect",
-    description: "Showcase of innovative projects and prototypes",
-    image: "/images/expo.jpg",
-    department: "Information Technology",
-    category: "workshops",
-    tags: ["CYBER", "WORKSHOPS", "CSE"],
-    date: "2024-02-23",
-    venue: "Expo Center",
-    registrationLink: "/register/innovators-expo",
-    organizer: "CSI",
-    facultyCoordinator: "TBD",
-    studentCoordinator: "TBD",
-    studentContact: "",
-    rules: [
-      "Team Size: Maximum of 2 members per team",
-      "Round 1: Multiple choice questions on programming concepts",
-      "Round 2: Problem-solving with live coding",
-      "Time limit: 90 minutes per round",
-      "Languages allowed: C, C++, Java, Python",
-      "No external resources or references allowed during the contest",
-      "Plagiarism will lead to immediate disqualification",
-      "Judges' decision will be final",
-    ],
-  },
-  {
     id: "ideathon",
     name: "Ideathon",
     tags: [],
@@ -382,7 +356,32 @@ export const events = [
       "Plagiarism will lead to immediate disqualification",
       "Judges' decision will be final",
     ],
+  },
+  {
+    "name":"AR VR Workshop",
+    "title": "AR VR Workshop",
+    "subtitle": "Innovate, Ideate, Create – Unleash Your Ideas!",
+    "time": "10:00 AM - 5:00 PM",
+    "date": "20/01/2025",
+    "organizer": "CSI/IEEE",
+    "category": "workshops",
+    "facultyCoordinator": "TBD",
+    "studentCoordinator": "TBD",
+    "studentContact": "7548836628",
+    "description": "About workshop",
+  
+    "resourcePerson": {
+      "name": "Dr. Aisha Patel",
+      "image": "/images/person1.jpg",
+      "designation": "AI Research Scientist",
+      "organization": "OpenAI",
+      "bio": "Dr. Aisha Patel is a leading AI researcher specializing in machine learning, deep learning, and natural language processing. With over a decade of experience, she has contributed to groundbreaking AI advancements and has been a keynote speaker at global conferences.",
+      "expertise": ["Machine Learning", "Deep Learning", "Natural Language Processing", "AI Ethics"],
+      "link": "www.google.com",    },
+    
+    "video": "/images/river.mp4"
   }
+  ,
 ];
 
 // Custom hook for managing events
@@ -413,6 +412,10 @@ export const useEvents = () => {
         event.description.toLowerCase().includes(query.toLowerCase())
     );
   };
+  const getWorkshopByTitle=(title)=>{
+    const event=events.find((event)=>event.title==title);
+    return event;
+  }
 
   return {
     events,
@@ -423,5 +426,6 @@ export const useEvents = () => {
     getEventsByCategory,
     getEventsByTag,
     searchEvents,
+    getWorkshopByTitle,
   };
 };

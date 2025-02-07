@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../assets/fonts/font.css";
 import "../assets/fonts/nusar.css";
+import Particle from '../components/Particle'
 import logo from "../assets/logo.png";
 import CountDown from "../components/CountDown";
 import Footer from "../components/Footer";
@@ -55,6 +56,9 @@ function Home() {
   return (
     <>
       <Navbar />
+      <div>
+        <Particle/>
+      </div>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         <RegisterButton />
         <div className="absolute top-2.5 sm:top-24 md:top-2.5 left-2 sm:left-4 z-[5]">
@@ -232,7 +236,6 @@ function Home() {
           </div>
         </div>
 
-        <Footer />
       </div>
     </>
   );

@@ -155,7 +155,6 @@ const Contact = () => {
             data-aos="fade-up"
           ></iframe>
         </div>
-        <Footer/>
       </div>
   
     );

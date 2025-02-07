@@ -28,8 +28,16 @@ const EventCard = ({ event }) => {
   };
 
   const handleViewDetails = () => {
-    navigate(`/associations/event/${event.id}`);
+    if(event.category==="workshops"){
+      navigate(`/workshop/${event.title}`);
+
+    }
+    else{
+      navigate(`/associations/event/${event.id}`);
+    }
+    
   };
+
 
   return (
     <motion.div {...floatingAnimation} className="relative group">

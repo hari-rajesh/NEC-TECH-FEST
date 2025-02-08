@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
 import Call from "../assets/call-logo.png";
 import Mail from "../assets/mail-logo.png";
@@ -8,6 +9,10 @@ import NEC from "../assets/NEC.mp4";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
 import ParticleBackground from "../components/Accommodations/ParticleBackground";
+
+const handleBack = () => {
+  window.location.href = '/';
+};
 
 const Contact = () => {
 
@@ -47,7 +52,13 @@ const Contact = () => {
 
     return (
         <div className="contact-form p-4 w-full bg-gradient-radial from-[#4e08f3] to-transparent">
-        <Navbar/>
+      <button
+        onClick={handleBack}
+        className="fixed top-4 left-4 z-50 flex items-center gap-2 text-white hover:text-purple-300 transition-colors duration-300 mb-4 font-['Orbitron'] tracking-widest"
+      >
+        <ArrowLeft className="w-5 h-5" />
+        <span>Back to Home</span>
+      </button>
         <ParticleBackground/>
         <h1 className="contact text-responsive"  style={{ fontSize: "41px" , marginTop:"80px"}} data-aos="fade-down">Contact</h1>
         <div

@@ -200,7 +200,7 @@ const WorkshopPage = () => {
           className="text-white text-xl"
           style={navigating ? styles.fadeOut : {}}
         >
-          {navigating ? "Returning to workshops..." : "Loading..."}
+          {/* {navigating ? "Returning to workshops..." : "Loading..."} */}
         </div>
       </div>
     );

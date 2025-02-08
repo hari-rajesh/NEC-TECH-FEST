@@ -91,7 +91,7 @@ const EventPage = () => {
           className="text-white text-xl"
           style={navigating ? styles.fadeOut : {}}
         >
-          {navigating ? "Returning to events..." : "Loading..."}
+          {/* {navigating ? "Returning to events..." : "Loading..."} */}
         </div>
       </div>
     );
@@ -134,7 +134,8 @@ const EventPage = () => {
         className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors duration-300 mb-4"
       >
         <ArrowLeft className="w-5 h-5" />
-        <span>Back to Events</span>
+        {/* <span>Back to Events</span> */}
+        <span>Back to Home</span> 
       </button>
 
       {/* Header */}

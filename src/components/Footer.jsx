@@ -81,7 +81,7 @@ const Footer = () => {
           <div className="col-span-1">
             <h4 className="font-orbitron text-white text-lg mb-6 [text-shadow:_0_0_10px_#8000ff]">Stay Updated</h4>
             <div className="space-y-4">
-              <p className="text-purple-200/90 font-space-grotesk">Subscribe to our newsletter</p>
+              <p className="text-purple-200/90 font-space-grotesk">Subscribe to get event updates</p>
               <div className="flex gap-2">
                 <Input
                   type="email"

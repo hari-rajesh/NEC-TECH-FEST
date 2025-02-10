@@ -13,6 +13,7 @@ import HighlightedEvents from "../components/HighlightedEvents";
 import PricingCards from "../components/PricingCards";
 import RegisterButton from '../components/RegisterButton';
 import { Marquee } from '../components/ui/marquee'
+import VisitorCounter from "../components/VisitorCount/index.jsx";
 
 
 function Home() {
@@ -129,7 +130,7 @@ function Home() {
             </motion.div>
           </div>
         </div>
-
+        <VisitorCounter/>
         {/* About Section */}
         <motion.section
           className="relative mt-20 sm:mt-32"

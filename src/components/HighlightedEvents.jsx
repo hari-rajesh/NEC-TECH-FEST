@@ -107,7 +107,7 @@ const EventCard = ({ event, index }) => {
       />
 
       {/* Enhanced shine effect */}
-      <div className="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-[linear-gradient(105deg,transparent_20%,rgba(255,255,255,0.1)_30%,rgba(255,255,255,0.2)_35%,rgba(255,255,255,0.1)_40%,transparent_50%)] group-hover:translate-x-[200%] transform translate-x-[-200%] transition-transform duration-[1.5s] ease-in-out" />
+      <div className="absolute inset-0 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-[linear-gradient(105deg,transparent_20%,rgba(255,255,255,0.1)_30%,rgba(255,255,255,0.2)_35%,rgba(255,255,255,0.1)_40%,transparent_50%)] group-hover:translate-x-[200%] transform translate-x-[-200%] transition-transform duration-[1500] ease-in-out" />
 
       {/* Particle effect on hover */}
       <div className="absolute inset-0 z-40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">

@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import "../assets/fonts/font.css";
 import "../assets/fonts/nusar.css";
 import Particle from '../components/Particle'
-import logo from "../assets/logo.png";
+import necLogo from "../assets/logo.png";
+import founderLogo from "/logos/Founder-Logo.png"
 import CountDown from "../components/CountDown";
 import Footer from "../components/Footer";
 import { motion } from 'framer-motion';
@@ -58,18 +59,26 @@ function Home() {
     <>
       <Navbar />
       <div>
-        <Particle/>
+        <Particle />
       </div>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         <RegisterButton />
+        {/* NEC Logo - Left side */}
         <div className="absolute top-2.5 sm:top-24 md:top-2.5 left-2 sm:left-4 z-[5]">
           <img
-            src={logo}
-            alt="NEC Tech Fest Logo"
+            src={necLogo}
+            alt="NEC Tech Fest logo"
             className="w-8 sm:w-12 md:w-14 lg:w-14 h-auto hover:scale-105 transition-transform duration-300"
           />
         </div>
-
+        {/* Founder Logo - Right side */}
+        <div className="absolute top-0.5 sm:top-24 md:top-0.5 right-0 sm:right-0 md:right-12 lg:right-0 z-[5]"> {/* Increased right spacing */}
+          <img
+            src={founderLogo}
+            alt="Founder logo"
+            className="w-12 sm:w-16 md:w-20 lg:w-24 h-auto hover:scale-105 transition-transform duration-300" // Further increased sizes
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,40,217,0.2)] via-transparent to-[rgba(139,92,246,0.2)] z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#7700ff_0%,transparent_25%),radial-gradient(circle_at_80%_80%,#7700FF_0%,transparent_25%)] blur-[60px]" />
         </div>
@@ -130,7 +139,7 @@ function Home() {
             </motion.div>
           </div>
         </div>
-        <VisitorCounter/>
+        <VisitorCounter />
         {/* About Section */}
         <motion.section
           className="relative mt-20 sm:mt-32"

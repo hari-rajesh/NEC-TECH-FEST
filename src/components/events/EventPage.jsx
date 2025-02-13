@@ -111,7 +111,7 @@ const EventPage = () => {
       style={navigating ? styles.fadeOut : styles.fadeIn}
     >
       {/* Navigation Buttons */}
-      <div className="fixed top-4 right-4 z-50 flex gap-4">
+      {/* <div className="fixed top-4 right-4 z-50 flex gap-4">
         <button
           onClick={() => navigate('/events/non-tech')}
           className="p-2 rounded-full bg-purple-600/50 hover:bg-purple-600 transition-colors duration-300 text-white"
@@ -126,7 +126,7 @@ const EventPage = () => {
         >
           <Home className="w-6 h-6" />
         </button>
-      </div>
+      </div> */}
 
       {/* Back Button */}
       <button

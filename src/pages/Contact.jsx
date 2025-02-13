@@ -155,7 +155,7 @@ const Contact = () => {
         <div className="map-container mt-12 text-center">
           <h1 class="location text-responsive" style={{ fontSize: "41px" , marginTop:"80px"}} data-aos="fade-down">Location</h1>
           <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLEMAP_API_KEY}&q=National+Engineering+College,+KR+Nagar,+Kovilpatti`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.GOOGLEMAP_API_KEY}&q=National+Engineering+College,+KR+Nagar,+Kovilpatti`}
             width="100%"
             height="500"
             frameBorder="0"

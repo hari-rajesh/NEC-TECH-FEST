@@ -125,7 +125,7 @@ function Home() {
 
               className="text-[18px] sm:text-[18px] md:text-[22px] lg:text-[25px] font-['Orbitron'] tracking-[1px] sm:tracking-[1.5px] md:tracking-[2px] bg-gradient-to-b from-[#edeffd] to-[#524d57]  bg-clip-text text-transparent [text-shadow:2px_2px_4px_rgba(192,192,192,0.3)] transform-none opacity-100 font-bold "
             >
-              21st & 22nd February 2k&apos;25
+              14th & 15th March 2k&apos;25
             </motion.p>
           </div>
 
@@ -224,7 +224,7 @@ function Home() {
         </motion.section>
 
         {/* Countdown Section */}
-        <div className="relative z-[2] bg-gradient-to-b from-transparent via-transparent to-transparent">
+        <div className="relative z-[2] bg-gradient-to-b from-transparent via-transparent to-transparent pb-0">
           <div className="relative">
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
@@ -240,7 +240,7 @@ function Home() {
               REGISTRATION ENDS
             </motion.h1>
 
-            <div className="w-full md:w-3/5 mx-auto mt-0.5 sm:mt-4 md:mt-8">
+            <div className="w-full md:w-3/5 mx-auto pb-8">
               <CountDown />
             </div>
           </div>

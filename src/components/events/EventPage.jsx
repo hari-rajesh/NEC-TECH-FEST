@@ -84,6 +84,11 @@ const EventPage = () => {
     }
   };
 
+  const formatPhoneNumbers = (contact) => {
+    if (!contact) return [];
+    return contact.split(',').map(num => num.trim());
+  };
+
   if (loading || navigating) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-[#1a0033] to-[#0c0019] flex items-center justify-center">
@@ -249,17 +254,20 @@ const EventPage = () => {
                     {event.studentCoordinator}
                   </p>
                   {event.studentContact && (
-                    <p className="text-sm text-purple-300 mt-1">
+                    <div className="text-sm text-purple-300 mt-1 flex gap-4">
                       Contact:{" "}
-                      <a
-                        href={`https://wa.me/91${event.studentContact}?text=Hi, I would like to know more about ${event.name}`}
-                        className="hover:text-white transition-colors duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {event.studentContact}
-                      </a>
-                    </p>
+                      {formatPhoneNumbers(event.studentContact).map((phone, index) => (
+                        <a
+                          key={index}
+                          href={`https://wa.me/91${phone}?text=Hi, I would like to know more about ${event.name}`}
+                          className="hover:text-white transition-colors duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {phone}
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>

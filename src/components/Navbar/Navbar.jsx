@@ -95,7 +95,7 @@ export function Navbar() {
                 onMouseLeave={() => setShowDepartments(false)}
               >
                 {/* Add a decorative arrow */}
-                <div className="absolute -top-2 left-[50%] -translate-x-1/2 w-4 h-4 rotate-45 bg-purple-900/90 z-[-1]"></div>
+                <div className="absolute -top-2 left-[50%] -translate-x-1/2 w-4 h-4 rotate-45 bg-purple-900/90 z-[-10]"></div>
 
                 <div className="relative py-1 rounded-md bg-purple-900/90">
                   {departments.map((department, index) => (

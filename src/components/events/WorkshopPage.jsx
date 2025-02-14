@@ -10,6 +10,7 @@ import{
   Book,
   Play,
   Pause,
+  ExternalLink,
 } from "lucide-react";
 
 
@@ -76,7 +77,7 @@ const WorkshopPage = () => {
             time: fetchedWorkshop.time || "10:00 AM - 5:00 PM",
             organizer: fetchedWorkshop.organizer || "TBD",
             facultyCoordinator: fetchedWorkshop.facultyCoordinator || "TBD",
-            studentCoordinator: fetchedWorkshop.studentCoordinator || "TBD",
+            studentCoordinators: fetchedWorkshop.studentCoordinators || "TBD",
             resourcePerson: {
               name: fetchedWorkshop.resourcePerson?.name || "TBD",
               image:
@@ -90,6 +91,7 @@ const WorkshopPage = () => {
                 fetchedWorkshop.resourcePerson?.bio ||
                 "Biography coming soon...",
               expertise: fetchedWorkshop.resourcePerson?.expertise || [],
+              vidwanLink: fetchedWorkshop.resourcePerson?.vidwanLink || null,
             },
             video: fetchedWorkshop.video || null,
           });
@@ -246,28 +248,50 @@ const WorkshopPage = () => {
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto mb-6 flex flex-col md:flex-row gap-4">
-        {/* Left Side - Workshop Image */}
-        <div
-          className="md:w-[45%] bg-purple-900/10 backdrop-blur-lg rounded-xl border border-purple-600/20 
-                      shadow-[0_0_20px_rgba(128,0,255,0.2)]"
-        >
-          <div className="p-4">
-            <div className="rounded-lg overflow-hidden border border-purple-600/30 relative">
-              <div className="min-h-[200px] max-h-[600px] h-auto flex items-center justify-center bg-black/20">
-                <img
-                  src={workshop.poster}
-                  alt={workshop.name}
-                  className="w-auto h-auto max-w-full max-h-[600px] object-contain"
-                  onError={(e) => {
-                    e.target.src = "/api/placeholder/800/800";
-                    e.target.onerror = null;
-                  }}
-                />
+  {/* Left Side - Workshop Image */}
+  <div
+    className="md:w-[45%] bg-purple-900/10 backdrop-blur-lg rounded-xl border border-purple-600/20 
+                shadow-[0_0_20px_rgba(128,0,255,0.2)]"
+  >
+    <div className="p-4">
+      <div className="rounded-lg overflow-hidden border border-purple-600/30 relative">
+        <div className="min-h-[200px] max-h-[600px] h-auto flex items-center justify-center bg-black/20">
+          {workshop.resourcePerson.vidwanLink ? (
+            <a 
+              href={workshop.resourcePerson.vidwanLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center relative group"
+            >
+              <img
+                src={workshop.poster}
+                alt={workshop.name}
+                className="w-auto h-auto max-w-full max-h-[600px] object-contain group-hover:opacity-90 transition-opacity duration-300"
+                onError={(e) => {
+                  e.target.src = "/api/placeholder/800/800";
+                  e.target.onerror = null;
+                }}
+              />
+              <div className="absolute bottom-3 right-3 bg-purple-900/70 text-white px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 backdrop-blur-sm">
+                <span className="text-sm font-medium">View Profile</span>
+                <ExternalLink className="w-4 h-4" />
               </div>
-            </div>
-          </div>
+            </a>
+          ) : (
+            <img
+              src={workshop.poster}
+              alt={workshop.name}
+              className="w-auto h-auto max-w-full max-h-[600px] object-contain"
+              onError={(e) => {
+                e.target.src = "/api/placeholder/800/800";
+                e.target.onerror = null;
+              }}
+            />
+          )}
         </div>
-
+      </div>
+    </div>
+  </div>
         {/* Right Side - Schedule */}
         <div
           className="md:w-[55%] bg-purple-900/10 backdrop-blur-lg rounded-xl border border-purple-600/20 
@@ -333,37 +357,60 @@ const WorkshopPage = () => {
                   </p>
                 </div>
               </div>
-
-              {/* Student Coordinator */}
-              <div className="flex items-center gap-3 text-white">
-                <User className="w-5 h-5 text-purple-300" />
-                <div>
-                  <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
-                    Student Coordinator
-                  </p>
-                  <p className="text-sm text-purple-300 mt-0.5">
-                    {workshop.studentCoordinator}
-                  </p>
-                  {workshop.studentContact && (
-                    <p className="text-sm text-purple-300 mt-0.5">
-                      Contact:{" "}
-                      <a
-                        href={`https://wa.me/91${workshop.studentContact}?text=Hi, I would like to know more about ${workshop.name}`}
-                        className="hover:text-white transition-colors duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {workshop.studentContact}
-                        <img
-                          src="https://img.icons8.com/?size=512&id=16713&format=png"
-                          width={20}
-                          className="w-5 h-5 inline-block object-contain ml-2"
-                        />
-                      </a>
+              {/* Student Coordinators */}
+              {workshop.studentCoordinators && workshop.studentCoordinators.map((coordinator, index) => (
+                <div key={index} className="flex items-center gap-4 text-white">
+                  <User className="w-6 h-6 text-purple-300" />
+                  <div>
+                    <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
+                      Student Coordinator {index+1}
                     </p>
-                  )}
+                    <p className="text-sm text-purple-300 mt-1">
+                      {coordinator.name}
+                    </p>
+                    {coordinator.contact && (
+                      <p className="text-sm text-purple-300 mt-1">
+                        Contact:{" "}
+                        <a
+                          href={`https://wa.me/91${coordinator.contact}?text=Hi, I would like to know more about ${workshop.name}`}
+                          className="hover:text-white transition-colors duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {coordinator.contact}
+                        </a>
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              ))}              
+              {/* Resource Person Vidwan Link */}
+              {workshop.resourcePerson.vidwanLink && (
+                <div className="flex items-center gap-3 text-white">
+                  <ExternalLink className="w-5 h-5 text-purple-300" />
+                  <div>
+                    <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
+                      About Resource Person
+                    </p>
+                    <a
+                      href={workshop.resourcePerson.vidwanLink}
+                      className="text-sm text-purple-300 hover:text-white transition-colors duration-300 mt-0.5 flex items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Vidwan Profile
+                      <img
+                        src="https://vidwan.indiascienceandtechnology.gov.in/favicon.ico"
+                        width={20}
+                        className="w-5 h-5 inline-block object-contain ml-2"
+                        onError={(e) => {
+                          e.target.style.display = "none";
+                        }}
+                      />
+                    </a>
+                  </div>
+                </div>
+              )}
 
               {/* Register Button */}
               <div>

@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import { Router } from 'lucide-react';
 import { Layout } from './components/Layout';
 import WorkshopPage from './components/events/WorkshopPage';
+import IdeathonPage from './components/events/IdeathonPage';
 function App() {
 
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/associations/event/:id" element={<EventPage />} />
           <Route path="/events/accommodations" element={<Accommodation/>} />
           <Route path="/events/contact" element={<Contact/>} />
+          <Route path="/ideathon" element={<IdeathonPage/>}/>
         </Routes>
         </Layout>
       </BrowserRouter>

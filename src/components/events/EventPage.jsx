@@ -54,7 +54,7 @@ const EventPage = () => {
             ...fetchedEvent,
             image: fetchedEvent.image ,
             subtitle: fetchedEvent.subtitle || fetchedEvent.description,
-            time: fetchedEvent.time || "10:00 AM - 5:00 PM",
+            startingTime: fetchedEvent.startingTime || "",
             organizer: fetchedEvent.organizer || "TBD",
             facultyCoordinator: fetchedEvent.facultyCoordinator || "TBD",
             studentCoordinator: fetchedEvent.studentCoordinator || "TBD",
@@ -197,7 +197,7 @@ const EventPage = () => {
                   <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
                     {event.date}
                   </p>
-                  <p className="text-sm text-purple-300 mt-1">{event.time}</p>
+                  <p className="text-sm text-purple-300 mt-1">{event.startingTime}</p>
                 </div>
               </div>
 
@@ -238,31 +238,33 @@ const EventPage = () => {
                 </div>
               </div>
 
-              {/* Student Coordinator */}
-              <div className="flex items-center gap-4 text-white">
-                <User className="w-6 h-6 text-purple-300" />
-                <div>
-                  <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
-                    Student Coordinator
-                  </p>
-                  <p className="text-sm text-purple-300 mt-1">
-                    {event.studentCoordinator}
-                  </p>
-                  {event.studentContact && (
-                    <p className="text-sm text-purple-300 mt-1">
-                      Contact:{" "}
-                      <a
-                        href={`https://wa.me/91${event.studentContact}?text=Hi, I would like to know more about ${event.name}`}
-                        className="hover:text-white transition-colors duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {event.studentContact}
-                      </a>
+{/* Student Coordinators */}
+{event.studentCoordinators && event.studentCoordinators.map((coordinator, index) => (
+                <div key={index} className="flex items-center gap-4 text-white">
+                  <User className="w-6 h-6 text-purple-300" />
+                  <div>
+                    <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
+                      Student Coordinator {index+1}
                     </p>
-                  )}
+                    <p className="text-sm text-purple-300 mt-1">
+                      {coordinator.name}
+                    </p>
+                    {coordinator.contact && (
+                      <p className="text-sm text-purple-300 mt-1">
+                        Contact:{" "}
+                        <a
+                          href={`https://wa.me/91${coordinator.contact}?text=Hi, I would like to know more about ${event.name}`}
+                          className="hover:text-white transition-colors duration-300"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {coordinator.contact}
+                        </a>
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              ))}
 
               {/* Register Button */}
               <div>

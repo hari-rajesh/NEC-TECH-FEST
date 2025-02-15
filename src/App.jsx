@@ -16,6 +16,7 @@ import WorkshopPage from './components/events/WorkshopPage';
 import UserDetails from './components/Registration/UserDetails';
 import EventSelection from './components/Registration/EventSelection';
 import Payment from './components/Registration/Payment';
+import IdeathonPage from './components/events/IdeathonPage';
 function App() {
 
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/associations/event/:id" element={<EventPage />} />
           <Route path="/events/accommodations" element={<Accommodation/>} />
           <Route path="/events/contact" element={<Contact/>} />
+          <Route path="/ideathon" element={<IdeathonPage/>} />
           <Route path="/registration/userdetail" element={<UserDetails/>} />
           <Route path="/registration/eventselection" element={<EventSelection/>} />
           <Route path="/registration/payment" element={<Payment/>} />

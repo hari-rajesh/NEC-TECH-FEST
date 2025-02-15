@@ -41,7 +41,7 @@ const UserDetails = () => {
     e.preventDefault();
     try {
       if (isFormValid) {
-        const response = await axios.get("http://localhost:5000/api/user/validateuser", { params: userData });
+        const response = await axios.get("http://localhost:5200/api/user/validateuser", { params: userData });
         if (response.data.message === "User Created Successfully") {
           navigate("/registration/eventselection", { state: userData });
         } else {

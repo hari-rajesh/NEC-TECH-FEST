@@ -22,7 +22,7 @@ const Payment = () => {
     const handleDBStore = async (Data) => {
         console.log(Data);
         try {
-            await axios.post("http://localhost:5000/api/registration/register", Data);
+            await axios.post("http://localhost:5200/api/registration/register", Data);
             setModalMessage( "Payment has been successfully made , For furthur details check your mail");
             setShowModal(true);
             setPaymentSuccess(true);

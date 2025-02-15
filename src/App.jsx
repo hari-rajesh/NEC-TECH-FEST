@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
- import Particle from './components/Particle'
+import Particle from './components/Particle'
 
 import Home from './pages/Home'
 import './index.css';
@@ -13,7 +13,9 @@ import Contact from './pages/Contact';
 import { Router } from 'lucide-react';
 import { Layout } from './components/Layout';
 import WorkshopPage from './components/events/WorkshopPage';
-import IdeathonPage from './components/events/IdeathonPage';
+import UserDetails from './components/Registration/UserDetails';
+import EventSelection from './components/Registration/EventSelection';
+import Payment from './components/Registration/Payment';
 function App() {
 
   return (
@@ -31,7 +33,9 @@ function App() {
           <Route path="/associations/event/:id" element={<EventPage />} />
           <Route path="/events/accommodations" element={<Accommodation/>} />
           <Route path="/events/contact" element={<Contact/>} />
-          <Route path="/ideathon" element={<IdeathonPage/>}/>
+          <Route path="/registration/userdetail" element={<UserDetails/>} />
+          <Route path="/registration/eventselection" element={<EventSelection/>} />
+          <Route path="/registration/payment" element={<Payment/>} />
         </Routes>
         </Layout>
       </BrowserRouter>

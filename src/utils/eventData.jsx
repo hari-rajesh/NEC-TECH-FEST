@@ -169,7 +169,7 @@ export const events = [
   //IT events
 
   {
-    id: "CODE-PARADOX",
+    id: 1,
     name: "CODE PARADOX (BLIND CODING)",
     subtitle: "Blind Coding Challenge",
     description:
@@ -195,7 +195,7 @@ export const events = [
     ],
   },
   {
-    id: "SQL-TREASURE-HUNT",
+    id: 2,
     name: "SQL TREASURE HUNT",
     subtitle: "Code and Conquer",
     description:
@@ -223,7 +223,7 @@ export const events = [
     ],
   },
   {
-    id: "STACK-RUN",
+    id: 3,
     name: "STACK & RUN",
     subtitle: "Balance, Speed, and Skill Challenge",
     description:
@@ -249,7 +249,7 @@ export const events = [
     ],
   },
   {
-    id: "PAPER-INSIGHTS",
+    id: 4,
     name: "PAPER INSIGHTS (PAPER PRESENTATION)",
     subtitle: "Technical Paper Presentation",
     description:
@@ -265,7 +265,7 @@ export const events = [
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Akila M",
-    studentCoordinators: { name: "Loga Naresh N ", contact: "9597965096" },
+    studentCoordinators: [{ name: "Loga Naresh N ", contact: "9597965096" }],
     // studentContact: " 9597965096, 9342208486",
     rules: [
       "Single round, teams of 2.",
@@ -274,7 +274,7 @@ export const events = [
     ],
   },
   {
-    id: 15,
+    id: 5,
     name: "TECH QUEST (TECHNICAL QUIZ)",
     subtitle: "The Ultimate Quiz Challenge",
     description:
@@ -290,8 +290,7 @@ export const events = [
     registrationLink: "",
     organizer: "",
     facultyCoordinator: "Malathi M",
-    studentCoordinators: " Akshai A",
-    studentContact: " 9345991426, 9342208486",
+    studentCoordinators: [{ name: "Akshai A", contact: " 9345991426, 9342208486" }],
     rules: [
       "Teams of 2.",
       "Round 1: Preliminary Round (Written MCQ, 20-30 minutes).",
@@ -299,7 +298,7 @@ export const events = [
     ],
   },
   {
-    id: 16,
+    id: 6,
     name: "CODE RELAY",
     subtitle: "Team-Based Programming Competition",
     description:
@@ -315,8 +314,7 @@ export const events = [
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Santhi S",
-    studentCoordinators: "Sadhasivam M ",
-    studentContact: " 9600757482, 9342208486",
+    studentCoordinators: [{ name: "Sadhasivam M", contact: "9600757482, 9342208486" }],
     rules: [
       "Teams of 2.",
       "Alternating coding turns (e.g., 10 minutes per turn).",
@@ -325,7 +323,7 @@ export const events = [
     ],
   },
   {
-    id: 17,
+    id: 7,
     name: "BUG BASH (CODE DEBUGGING)",
     subtitle: "Code Debugging Challenge",
     description:
@@ -341,8 +339,7 @@ export const events = [
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Anitha Mam",
-    studentCoordinators: " Keerthik V",
-    studentContact: " 6381258491, 9342208486",
+    studentCoordinators: [{ name: "Keerthik V", contact: "6381258491, 9342208486" }],
     rules: [
       "Round 1: Pen and Paper (10 questions, 20 minutes).",
       "Round 2: System-based (8 questions, 35 minutes).",
@@ -350,7 +347,7 @@ export const events = [
     ],
   },
   {
-    id: 18,
+    id: 8,
     name: "FLOATING BALLS",
     subtitle: "Teamwork and Precision Challenge",
     description:
@@ -366,8 +363,7 @@ export const events = [
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "",
-    studentCoordinators: " Gautham S N, Akash Velan A",
-    studentContact: " 6382695887, 9342208486",
+    studentCoordinators: [{ name: "Gautham S N", contact: "6382695887" }, { name: "Akash Velan A", contact: "9342208486" }],
     rules: [
       "Round 1: Transport balls through pipes into a bowl (points for each ball).",
       "Round 2: Throw balls into water-filled bowls at varying distances (points based on accuracy).",
@@ -375,7 +371,7 @@ export const events = [
     ],
   },
   {
-    id: "CREATORS-SPARK",
+    id: 9,
     name: "CREATOR'S SPARK",
     subtitle: "Unleashing creativity with AI",
     description:
@@ -401,7 +397,7 @@ export const events = [
     ],
   },
   {
-    id: "INCOGNITO-CODE",
+    id: 10,
     name: "INCOGNITO CODE",
     subtitle: "Hide the secret of Code",
     description:
@@ -429,7 +425,7 @@ export const events = [
     ],
   },
   {
-    id: "LOST-IN-LYRICS",
+    id: 11,
     name: "LOST IN LYRICS",
     subtitle: "Feel the Music, Find the Lyrics",
     description:
@@ -456,7 +452,7 @@ export const events = [
     ],
   },
   {
-    id: "DIG-THE-BUG",
+    id: 12,
     name: "DIG THE BUG",
     subtitle: "Dig the Code and debug faster",
     description:
@@ -483,7 +479,7 @@ export const events = [
     ],
   },
   {
-    id: "CSS-BATTLE",
+    id: 13,
     name: "CSS BATTLE",
     subtitle: "Style it Right, Ready for Fight",
     description:
@@ -510,7 +506,7 @@ export const events = [
     ],
   },
   {
-    id: "PICTURE-PURSUIT",
+    id: 14,
     name: "PICTURE PURSUIT",
     subtitle: "Your Eyes Hold the Key!",
     description:
@@ -538,7 +534,7 @@ export const events = [
     ],
   },
   {
-    id: "ideathon",
+    id: 15,
     name: "Ideathon",
     tags: [],
     category: "Ideathon",
@@ -619,6 +615,7 @@ export const events = [
   },
 
   {
+    id: 17,
     name: "Linux Workshop",
     title: "Linux Workshop",
     subtitle: "Linux Essentials and Git Fundamentals",
@@ -631,7 +628,7 @@ export const events = [
     date: "2025 - 03 - 14",
     startingTime: "10:00 AM",
     venue: "ICL lab",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "MISTRAL-LINUX CLUB",
     facultyCoordinator: "DR.J.NASKATH,Ms.Mahalakshmi",
     studentCoordinators: [
@@ -647,7 +644,7 @@ export const events = [
   },
   //from here CSEA
   {
-    id: "Freeze the Frame_cseA",
+    id: 18,
     name: "Freeze the Frame",
     subtitle: "One Click, Infinite Stories!",
     description:
@@ -660,7 +657,7 @@ export const events = [
     date: "2025-03-14",
     startingTime: "3:15 PM",
     venue: "S6 HALL / CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Janani Ratthna S G",
     studentCoordinators: [
@@ -681,7 +678,7 @@ export const events = [
     ],
   },
   {
-    id: "Cine Quiz_cseA",
+    id: 19,
     name: "Cine Quiz",
     subtitle: "A Blockbuster Battle of Movie Buffs!",
     description:
@@ -694,7 +691,7 @@ export const events = [
     date: "2025-03-14",
     startingTime: "03:15 PM",
     venue: "SEMINAR HALL / CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Pappathi Jancy Rani M",
     studentCoordinators: [
@@ -713,7 +710,7 @@ export const events = [
     ],
   },
   {
-    id: "Meme Forge_cseA",
+    id: 20,
     name: "Meme Forge",
     subtitle: "The Ultimate Meme Battle!",
     description:
@@ -726,7 +723,7 @@ export const events = [
     date: "2025-03-14",
     startingTime: "03:15 PM",
     venue: "APJ LAB, CVR LAB / CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "TBA",
     studentCoordinators: [
@@ -751,7 +748,7 @@ export const events = [
     ],
   },
   {
-    id: "Best Manager_cseA",
+    id: 21,
     name: "Best Manager",
     subtitle: "Think and Speak Your Way to Victory!",
     description:
@@ -764,7 +761,7 @@ export const events = [
     date: "2025-03-15",
     startingTime: "01:15 PM",
     venue: "F14 HALL / CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "TBA",
     studentCoordinators: [
@@ -786,7 +783,7 @@ export const events = [
     ],
   },
   {
-    id: "On Spot Sketch_cseA",
+    id: 22,
     name: "On Spot Sketch",
     subtitle: "Showcase Your Talent – Create, Perform, and Conquer!",
     description:
@@ -799,7 +796,7 @@ export const events = [
     date: "2025-03-15",
     startingTime: "03:15 PM",
     venue: "S6 HALL / CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Mahalakshmi M",
     studentCoordinators: [
@@ -822,7 +819,7 @@ export const events = [
   },
   //mechanical
   {
-    id: "PAPER PRESENTATION_MECH",
+    id: 23,
     name: "PAPER PRESENTATION",
     subtitle: "Present, Persuade, Inspire",
     description:
@@ -832,9 +829,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Presentation", "Mechanical", "Technical"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Seminar Hall - Mechanical Engineering Department",
-    registrationLink: ['"will be filled up by dev"'],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: " Mr. C. Veera Ajay AP/Mech ",
     studentCoordinators: [{ name: "Thegesh", contact: "9360225110" }],
@@ -848,7 +846,7 @@ export const events = [
     ],
   },
   {
-    id: "CAD MODELLING_MECH",
+    id: 24,
     name: "CAD MODELLING",
     subtitle: "Design. Innovate. Create",
     description:
@@ -858,9 +856,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["CAD", "Mechanical", "Technical"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "CAD Lab- Mechanical Engineering Department",
-    registrationLink: ['"will be filled up by dev"'],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Dr. A. Andrews AP(SG)/Mech",
     studentCoordinators: [{ name: "Nithin Ivan A", contact: "9150783160" }],
@@ -876,7 +875,7 @@ export const events = [
     ],
   },
   {
-    id: "Mr.TALENT_MECH",
+    id: 25,
     name: "Mr. TALENT",
     subtitle: "Talent. Passion. Glory.",
     description:
@@ -886,9 +885,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Talent", "Mechanical", "Technical"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Seminar Hall - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: " Mr. N. Muthu Saravanan AP/Mech",
     studentCoordinators: [{ name: "Vasanth Sankar B", contact: "9791523100" }],
@@ -901,7 +901,7 @@ export const events = [
     ],
   },
   {
-    id: "AI ART & MEME CONTEST_MECH",
+    id: 26,
     name: "AI ART & MEME CONTEST",
     subtitle: "Talent. Passion. Glory.",
     description:
@@ -911,9 +911,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Meme contest", "Mechanical", "Technical"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Seminar Hall - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: " Dr. K. Thoufiq Mohammed AP(SG) / Mech",
     studentCoordinators: [{ name: "Balaji K", contact: "9361925522" }],
@@ -926,7 +927,7 @@ export const events = [
     ],
   },
   {
-    id: "MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH",
+    id: 27,
     name: "MINIATURE ROLLER COASTER DESIGN CHALLENGE",
     subtitle: "Design, Build, Thrill",
     description:
@@ -937,9 +938,10 @@ export const events = [
       "/nectechfest2k25/images/MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH.png",
     category: "non-tech",
     tags: ["Design Challenge", "Mechanical", "non-tech"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Smart Classroom - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mrs. M. Rajeshwari AP/Mech",
     studentCoordinators: { name: "Seeninvasan S", contact: "7904224539" },
@@ -952,7 +954,7 @@ export const events = [
     ],
   },
   {
-    id: "PHOTOGRAPHY CONTEST_MECH",
+    id: 28,
     name: "PHOTOGRAPHY CONTEST",
     subtitle: "Design, Build, Thrill",
     description:
@@ -961,9 +963,10 @@ export const events = [
     poster: "/nectechfest2k25/images/PHOTOGRAPHY CONTEST_MECH.png",
     category: "non-tech",
     tags: ["Photography", "Mechanical", "non-tech"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Smart Classroom - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mrs. M. Rajeshwari AP/Mech",
     studentCoordinators: [{ name: "Seeninvasan S", contact: "7904224539" }],
@@ -976,7 +979,7 @@ export const events = [
     ],
   },
   {
-    id: "TECHNO CHILL_MECH",
+    id: 29,
     name: "TECHNO CHILL",
     subtitle: "Heat Up Your Knowledge!",
     description:
@@ -986,9 +989,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Thermal", "Mechanical", "Quiz"],
-    date: "March 14, 2025",
+    date: "2025-03-14",
+    startingTime: "",
     venue: "Smart Classroom - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ISHRAE",
     facultyCoordinator: "Mr. N. Muthu Saravanan AP/Mech",
     studentCoordinators: [{ name: "Sathya Seelan G", contact: "6382820726" }],
@@ -1001,7 +1005,7 @@ export const events = [
     ],
   },
   {
-    id: "MECH CONNECTION_MECH",
+    id: 30,
     name: "MECH CONNECTION",
     subtitle: "Link. Think. Solve!",
     description:
@@ -1011,9 +1015,10 @@ export const events = [
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Connection", "Mechanical", "Quiz"],
-    date: "March 15, 2025",
+    date: "2025-03-15",
+    startingTime: "",
     venue: "Smart Classroom - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mr. B. Prince Abraham AP/Mech",
     studentCoordinators: [{ name: "Johanan S A", contact: "7418308109" }],
@@ -1026,7 +1031,7 @@ export const events = [
     ],
   },
   {
-    id: "Mr. ASSEMBLER_MECH",
+    id: 31,
     name: "Mr. fASSEMBLER",
     subtitle: "Assemble. Align. Achieve",
     description:
@@ -1035,9 +1040,10 @@ export const events = [
     poster: "/nectechfest2k25/images/Mr.ASSEMBLER_MECH.png",
     category: "non-tech",
     tags: ["Assemble", "Mechanical", "non-tech"],
-    date: "March 15, 2025",
+    date: "2025-03-15",
+    startingTime: "",
     venue: "Workshop - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mr. B. Prince Abraham AP/Mech",
     studentCoordinators: [{ name: "Guhan S", contact: "9080834241" }],
@@ -1050,7 +1056,7 @@ export const events = [
     ],
   },
   {
-    id: "SCAVENGER HUNT_MECH",
+    id: 32,
     name: "SCAVENGER HUNT",
     subtitle: "Search. Solve. Conquer.",
     description:
@@ -1059,9 +1065,10 @@ export const events = [
     poster: "/nectechfest2k25/images/SCAVENGER HUNT_MECH.png",
     category: "non-tech",
     tags: ["Search", "Mechanical", "non-tech"],
-    date: "March 15, 2025",
+    date: "2025-03-15",
+    startingTime: "",
     venue: "Laboratories - Mechanical Engineering Department",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mrs. M. Rajeshwari AP/Mech",
     studentCoordinators: [
@@ -1077,7 +1084,7 @@ export const events = [
     ],
   },
   {
-    id: "WATER ROCKETRY_MECH",
+    id: 33,
     name: "WATER ROCKETRY",
     subtitle: "Fuel with Water, Fly to Glory!.",
     description:
@@ -1087,9 +1094,10 @@ export const events = [
     department: "Mechanical Association",
     category: "non-tech",
     tags: ["Rocketry ", "Mechanical", "non-tech"],
-    date: "March 15, 2025",
+    date: "2025-03-15",
+    startingTime: "",
     venue: "Play Ground",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mr. N. Muthu Saravanan AP/Mech",
     studentCoordinators: [{ name: "Maragatha Guru R", contact: "8508975135" }],
@@ -1103,6 +1111,7 @@ export const events = [
     ],
   },
   {
+    id: 34,
     name: "Creating Design with AR Development in Real World",
     title: "Creating Design with AR Development in Real World",
     subtitle:
@@ -1110,6 +1119,8 @@ export const events = [
     startingTime: "10:30 AM - 12:30 PM",
     date: "14/03/2025",
     organizer: "National Engineering College (Centralized)",
+    venue:"",
+    registrationLink: "will be filled up by dev",
     category: "workshops",
     facultyCoordinator:
       "Mr. Karthikeyan J (AP/CSE), Ms. Vazhan Arul Santhiya R (AP/CSE)",
@@ -1134,12 +1145,14 @@ export const events = [
   },
 
   {
+    id: 35,
     name: "Next-Gen Learning",
     title: "Next-Gen Learning",
     subtitle: "The Power of Metaverse in Education",
     time: "10:30 AM - 12:30 PM",
     date: "15/03/2025",
     venue: "CSE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "National Engineering College (Centralized)",
     category: "workshops",
     facultyCoordinator:
@@ -1166,6 +1179,7 @@ export const events = [
   //ece wrokshops
 
   {
+    id: 36,
     title: "Schematic Capture and PCB Layout",
     name: "Schematic Capture and PCB Layout",
     subtitle: "One Click, Infinite Stories!",
@@ -1195,6 +1209,7 @@ export const events = [
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
   {
+    id: 37,
     title: "Embedded System Design With Arm Processor",
     name: "Embedded System Design With Arm Processor",
     subtitle:
@@ -1226,6 +1241,7 @@ export const events = [
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
   {
+    id: 38,
     title:
       "Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications",
     name: "Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications",
@@ -1244,10 +1260,7 @@ export const events = [
     venue: "Networks Lab",
     registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
-    facultyCoordinator: [
-      "Ms. S. Priscilla Mary, AP/ECE",
-      "Dr. S. Subaselvi, AP/ECE",
-    ],
+    facultyCoordinator: "Ms. S. Priscilla Mary, AP/ECE,Dr. S. Subaselvi, AP/ECE",
     studentCoordinators: [
       { name: "E. Petchi Prabakaran", contact: "9344518072" },
     ],
@@ -1264,6 +1277,7 @@ export const events = [
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
   {
+    id: 39,
     title: "Software Defined Radio using USRP & LabVIEW",
     name: "Software Defined Radio using USRP & LabVIEW",
     subtitle:
@@ -1299,12 +1313,14 @@ export const events = [
   // EEE workshops
 
   {
+    id: 40,
     name: "Embedded Systems with Arduino: IoT Applications",
     title: "Embedded Systems with Arduino: IoT Applications",
     subtitle: "Build Smart Solutions with Embedded Systems & IoT",
     startingTime: "9:30 AM - 12:30 PM",
     date: "14/03/2025",
     venue: "EEE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "workshops",
     facultyCoordinator: "Dr. B. Venkatasamy, AP(SG)/EEE",
@@ -1330,12 +1346,14 @@ export const events = [
     video: "/nectechfest2k25/images/ArduinoProgramming.mp4",
   },
   {
+    id: 41,
     name: "High Voltage Insulator Flashover Analysis",
     title: "High Voltage Insulator Flashover Analysis",
     subtitle: "Enhancing Insulation Reliability in High Voltage Systems",
     startingTime: "9:30 AM - 12:30 PM",
     date: "15/03/2025",
     venue: "EEE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "workshops",
     facultyCoordinator: "Dr. B. Vigneshwaran, Asso.Prof/EEE",
@@ -1360,12 +1378,14 @@ export const events = [
     video: "/nectechfest2k25/images/HighVoltage.mp4",
   },
   {
+    id: 42,
     name: "Numerical Relays",
     title: "Numerical Relays",
     subtitle: "Modern Protection Techniques for Power Systems",
     startingTime: "9:30 AM - 12:30 PM",
     date: "14/03/2025",
     venue: "EEE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "workshops",
     facultyCoordinator: "Dr. S. Sankarakumar, AP(SG)/EEE",
@@ -1391,12 +1411,14 @@ export const events = [
     video: "/nectechfest2k25/images/NumericalRelays.mp4",
   },
   {
+    id: 43,
     name: "Battery Management Systems (BMS) Workshop",
     title: "Battery Management Systems (BMS) Workshop",
     subtitle: "Optimizing Energy Storage for the Future",
     startingTime: "9:30 AM - 12:30 PM",
     date: "15/03/2025",
     venue: "EEE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "workshops",
     facultyCoordinator: "Mr. K. Karthik Kumar, AP/EEE",
@@ -1422,12 +1444,14 @@ export const events = [
     video: "/nectechfest2k25/images/BMS.mp4",
   },
   {
+    id: 44,
     name: "Robotics and Automation Workshop",
     title: "Robotics and Automation Workshop",
     subtitle: "Innovating the Future with Intelligent Automation",
     startingTime: "9:30 AM - 12:30 PM",
     date: "15/03/2025",
     venue: "EEE DEPARTMENT",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "workshops",
     facultyCoordinator: "Mr. M. Sivapalanirajan, AP/EEE",
@@ -1454,7 +1478,7 @@ export const events = [
   },
   ///ece events
   {
-    id: "ElectroVision",
+    id: 45,
     name: "ElectroVision",
     subtitle: " Electro-Tech Quest ",
     description:
@@ -1467,7 +1491,7 @@ export const events = [
     date: "15-03-2025",
     startingTime: "1:15 PM",
     venue: "Smart Classroom /ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE/IEEE",
     facultyCoordinator: " Dr. R. Manjula Devi, AP(SG)/ECE ",
     studentCoordinators: [
@@ -1480,7 +1504,7 @@ export const events = [
     ],
   },
   {
-    id: "Linkage",
+    id: 46,
     name: "Linkage",
     subtitle: "Connect & Create",
     description:
@@ -1493,7 +1517,7 @@ export const events = [
     date: "2025-03-15",
     startingTime: "1:15 PM",
     venue: "H21,Classroom,ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Ms. S.Malathi , AP/ECE",
     studentCoordinators: [
@@ -1505,7 +1529,7 @@ export const events = [
     rules: ["A team must consists of two members"],
   },
   {
-    id: "Exquiz me",
+    id: 47,
     name: "Exquiz me",
     subtitle: "Think Fast, Team Up, Triumph!",
     description:
@@ -1518,7 +1542,7 @@ export const events = [
     date: "2025-03-15",
     startingTime: "3:15 PM",
     venue: "Smart Class Room/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Ms.G.Akalya Devi AP/ECE",
     studentCoordinators: [
@@ -1527,7 +1551,7 @@ export const events = [
     rules: ["A team must consists of two members"],
   },
   {
-    id: "Fusion Frenzy",
+    id: 48,
     name: "Fusion Frenzy",
     subtitle: "Bound by challenges, United in thoughts",
     description:
@@ -1540,14 +1564,14 @@ export const events = [
     date: "2025-03-14",
     startingTime: "3:15 PM",
     venue: "Embedded Lab/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: " Mrs S.Pricilla Mary AP/ECE",
     studentCoordinators: [{ name: "Shivagam", contact: "8300327157" }],
     rules: ["A team must consists of two members and should have laptop"],
   },
   {
-    id: "Filmora",
+    id: 49,
     name: "Filmora",
     subtitle: "Filmora where you’re gameplay becomes blockbuster ",
     description:
@@ -1560,14 +1584,14 @@ export const events = [
     date: "2025-03-14",
     startingTime: "3:15 PM",
     venue: "Dsp Lab",
-    "registration Link": "will be filled up by dev",
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Assistant professor S.Camillus ",
     studentCoordinators: [{ name: "Dhiviya J", contact: "9524258709" }],
     rules: ["A team must consists of two members"],
   },
   {
-    id: "Shake up the fun",
+    id: 50,
     name: "Shake up the fun",
     subtitle: " Think fast, play smart, and have a blast!",
     description:
@@ -1580,14 +1604,14 @@ export const events = [
     date: "2025-03-14",
     startingTime: "3:15 PM",
     venue: "Seminar Hall/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: " Dr.S.Subaselvi, AP/ECE ",
     studentCoordinators: [{ name: "Akshaya S", contact: "9698371424" }],
     rules: ["A team must consists of two members"],
   },
   {
-    id: "Decryptathon",
+    id: 51,
     name: "Decryptathon",
     subtitle: "Unleash your inner coder!",
     description:
@@ -1600,14 +1624,14 @@ export const events = [
     date: "2025-03-14",
     startingTime: "2:00 PM",
     venue: "Networks Lab/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Dr. K.Subramanian AP(SG)/ECE",
     studentCoordinators: [{ name: "Jumana Maryam M", contact: "9789713993" }],
     rules: ["2 members per team with Hackerrand I'd"],
   },
   {
-    id: "Circuit Debugging",
+    id: 52,
     name: "Circuit Debugging",
     subtitle: "Debug, Spark, and Rule the Circuit",
     description:
@@ -1620,7 +1644,7 @@ export const events = [
     date: "2025-03-14",
     startingTime: "1:15 PM",
     venue: "ED Lab/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Mr.M.Sathish Kumar,AP(SG)/ECE ",
     studentCoordinators: [
@@ -1629,7 +1653,7 @@ export const events = [
     rules: ["A team must consists of two members"],
   },
   {
-    id: "WAVE WIRE",
+    id: 53,
     name: "WAVE WIRE",
     subtitle: "Sync Up, Stay Connected—Test Your Bond, Prove Your Connection!",
     description:
@@ -1642,7 +1666,7 @@ export const events = [
     date: "2025-03-15",
     startingTime: "2:15 PM",
     venue: "DSP Lab / ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association ",
     facultyCoordinator: " Ms.G.Akalya Devi AP/ECE ",
     studentCoordinators: [
@@ -1653,7 +1677,7 @@ export const events = [
     ],
   },
   {
-    id: "Tech Detective",
+    id: 54,
     name: "Tech Detective",
     subtitle: "Unravel. Innovate. Solve – Be the Tech Sleuth!",
     description:
@@ -1664,16 +1688,16 @@ export const events = [
     category: "Technical",
     tags: ["Tech Detective"],
     date: "2025-03-15",
-    startingTime: " ",
+    startingTime: "",
     venue: "Will be Annouced",
-    "registration Link": "will be filled up dev",
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Ms.C.K.Balasundari, AP/ECE",
     studentCoordinators: [{ name: "Hema Rubini M", contact: "7010355129" }],
     rules: ["Annouced on the spot"],
   },
   {
-    id: "Crystal Pixel",
+    id: 55,
     name: "Crystal Pixel",
     subtitle: " Create, Code, Conquer.",
     description:
@@ -1686,14 +1710,14 @@ export const events = [
     date: "2025-03-15",
     startingTime: "1:15 PM ",
     venue: "DSP Lab/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Ms.K.Karthika,AP/ECE ",
     studentCoordinators: [{ name: "Uma R", contact: "9363574981" }],
     rules: ["A team must consists of two members"],
   },
   {
-    id: "Tamizhodu Vilayaadu",
+    id: 56,
     name: "Tamizhodu Vilayaadu",
     subtitle: "Explore Tamil World ",
     description:
@@ -1706,14 +1730,14 @@ export const events = [
     date: "2025-03-15",
     startingTime: "3.15 PM",
     venue: "Seminar Hall/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: " Ms.P.Arishenbagam AP/ECE",
     studentCoordinators: [{ name: "Kaleeswari B", contact: "8148920230" }],
     rules: ["A team must consists of two members"],
   },
   {
-    id: "EmbedX",
+    id: 57,
     name: "EmbedX",
     subtitle: "Let's Get Embedded-Join the Revolution",
     description:
@@ -1726,14 +1750,14 @@ export const events = [
     date: "14-03-2025",
     startingTime: "1:50 PM",
     venue: "Vlsi Lab/ECE",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "Embedded Club",
     facultyCoordinator: "Dr.I.Vivek Anand, AP(SG)/ECE ",
     studentCoordinators: [{ name: "Arun Karthik A", contact: "9543322330" }],
     rules: ["A team must consists of two members"],
   },
   {
-    id: "PAPER PRESENTATION_ECE",
+    id: 58,
     name: "PAPER PRESENTATION",
     subtitle: "Exploring Innovations and Insights",
     description:
@@ -1746,7 +1770,7 @@ export const events = [
     date: "2025-03-14",
     startingTime: "11 AM ",
     venue: "H12 Smart class Room",
-    "registration Link": ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "ECE Association",
     facultyCoordinator: "Ms.C.Kalieswari, AP/ECE",
     studentCoordinators: [{ name: "Guru Akash S V J", contact: "8098809543" }],
@@ -1758,12 +1782,14 @@ export const events = [
   //eee technical
 
   {
-    id: "PAPER_PRESENTATION_EEE",
+    id: 59,
     name: "PAPER PRESENTATION",
     subtitle: "Present Ideas, Inspire Innovation",
-    date: "14/02/2025",
+    date: "14/03/2025",
+    startingTime: "",
     department: "EEE Association",
     venue: "Seminar Hall - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Mr. K. Karthik Kumar, AP/EEE",
@@ -1781,12 +1807,14 @@ export const events = [
     poster: "/nectechfest2k25/images/PAPER_PRESENTATION_EEE.jpg",
   },
   {
-    id: "TECHNICAL_QUIZ_EEE",
+    id: 60,
     name: "TECHNICAL QUIZ",
     subtitle: "The Ultimate Knowledge Showdown",
-    date: "14/02/2025",
+    date: "14/03/2025",
+    startingTime: "",
     department: "EEE Association",
     venue: "Active Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Dr. M. Gengaraj, AP(SG)/EEE",
@@ -1805,13 +1833,14 @@ export const events = [
     poster: "/nectechfest2k25/images/TECHNICAL_QUIZ_EEE.jpg",
   },
   {
-    id: "PROJECT_EXPO_EEE",
+    id: 61,
     name: "PROJECT EXPO",
     department: "EEE Association",
     subtitle: "Innovate, Create, and Display",
-    date: "14/02/2025",
+    date: "14/03/2025",
     startingTime: "1:15 – 3:00",
     venue: "Power Electronics Lab - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Dr. B. Vigneshwaran, Asso.Prof/EEE",
@@ -1832,13 +1861,14 @@ export const events = [
   },
 
   {
-    id: "CIRCUIT_DEBUGGING_EEE",
+    id: 62,
     name: "CIRCUIT DEBUGGING",
     department: "EEE Association",
     subtitle: "Fix, Troubleshoot, and Win",
-    date: "14/02/2025",
+    date: "14/03/2025",
     startingTime: "1:15 – 3:00",
     venue: "Electrical Workshop Lab - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Mrs. C. Dhanalakshmi, AP/EEE",
@@ -1858,13 +1888,14 @@ export const events = [
     poster: "/nectechfest2k25/images/CIRCUIT_DEBUGGING_EEE.jpg",
   },
   {
-    id: "CODING_CONTEST_EEE",
+    id: 63,
     name: "CODING CONTEST",
     department: "EEE Association",
     subtitle: "Code, Compete, and Conquer",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "1:15 – 3:00",
     venue: "New Computer Lab - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Mr. K. Kumar, AP/EEE",
@@ -1884,13 +1915,14 @@ export const events = [
     poster: "/nectechfest2k25/images/CODING_CONTEST_EEE.jpg",
   },
   {
-    id: "TECH_ENCRYPT_EEE",
+    id: 64,
     name: "TECH ENCRYPT",
     department: "EEE Association",
     subtitle: "Decrypt Clues, Identify Components",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "1:15 – 3:00",
     venue: "H2 Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Dr. P. Samuel Pakianathan, AP(SG)/EEE",
@@ -1908,12 +1940,13 @@ export const events = [
     poster: "/nectechfest2k25/images/TECH_ENCRYPT_EEE.jpg",
   },
   {
-    id: "LOGIC_LADDER_EEE",
+    id: 65,
     name: "LOGIC LADDER",
     subtitle: "Solve, Build, and Compete",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "1:15 – 3:00",
     venue: "Electronics Lab - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "TECHNICAL",
     facultyCoordinator: "Mr. M. Sivapalanirajan, AP/EEE",
@@ -1934,12 +1967,13 @@ export const events = [
   },
   //eee non-tech
   {
-    id: "POSTER_DESIGN_EEE",
+    id: 66,
     name: "POSTER DESIGN",
     subtitle: "Design, Create, and Inspire Digitally!",
-    date: "14/02/2025",
+    date: "14/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "H3 Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Dr. P. Samuel Pakianathan, AP(SG)/EEE",
@@ -1960,12 +1994,13 @@ export const events = [
     poster: "/nectechfest2k25/images/POSTER_DESIGN_EEE.jpg",
   },
   {
-    id: "CUP_BRIDGE_EEE",
+    id: 67,
     name: "CUP BRIDGE",
     subtitle: "Stack, Act & Draw Your Way to Victory!",
-    date: "14/02/2025",
+    date: "14/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "Active Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Mr. K. Kumar, AP/EEE",
@@ -1984,12 +2019,13 @@ export const events = [
     poster: "/nectechfest2k25/images/CUP_BRIDGE_EEE.jpg",
   },
   {
-    id: "WALKER_BOTTLE_EEE",
+    id: 68,
     name: "WALKER BOTTLE",
     subtitle: "Flip, Fold, and Win!",
-    date: "14/02/2025",
+    date: "14/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "Seminar Hall - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Mr. M. Sivapalanirajan, AP/EEE",
@@ -2005,12 +2041,13 @@ export const events = [
     poster: "/nectechfest2k25/images/WALKER_BOTTLE_EEE.jpg",
   },
   {
-    id: "GUESS_THE_BEAT_EEE",
+    id: 69,
     name: "GUESS THE BEAT",
     subtitle: "Act, Connect, and Guess the Beat!",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "H5 Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Mr. F. Antony Jeffrey Vaz, AP/EEE",
@@ -2026,12 +2063,13 @@ export const events = [
     poster: "/nectechfest2k25/images/GUESS_THE_BEAT_EEE.jpg",
   },
   {
-    id: "CAPTURE_REMEMBER_EEE",
+    id: 70,
     name: "CAPTURE & REMEMBER",
     subtitle: "Where Observation Meets Memory",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "Seminar Hall",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Dr. F.X. Edwin Deepak, AP/EEE",
@@ -2052,12 +2090,13 @@ export const events = [
     poster: "/nectechfest2k25/images/CAPTURE_REMEMBER_EEE.jpg",
   },
   {
-    id: "FAST_N_FROLIC_EEE",
+    id: 71,
     name: "Fast'n Frolic",
     subtitle: "Think Fast, Move Faster!",
-    date: "15/02/2025",
+    date: "15/03/2025",
     startingTime: "3:15 – 5:00",
     venue: "Active Classroom - EEE",
+    registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
     category: "non-tech",
     facultyCoordinator: "Dr. B. Venkatasamy, AP(SG)/EEE",
@@ -2079,7 +2118,7 @@ export const events = [
   },
   //civil
   {
-    id: "WordDebate_Civil",
+    id: 72,
     name: "WORD DEBATE",
     subtitle: "A Debate Contest Among Teams",
     description:
@@ -2089,8 +2128,9 @@ export const events = [
     category: "non-tech",
     tags: ["DEBATE", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Smart Classroom, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "Civil Engineering Association (CEA)",
     facultyCoordinator: "Mr. Bala Murali G",
     studentCoordinators: [
@@ -2112,7 +2152,7 @@ export const events = [
     ],
   },
   {
-    id: "TechPirates_TreasureHunt",
+    id: 73,
     name: "TECH PIRATES",
     subtitle: "TREASURE HUNT",
     description:
@@ -2122,8 +2162,9 @@ export const events = [
     category: "non-tech",
     tags: ["TREASURE HUNT", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Survey Lab, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "Civil Engineering Association (CEA)",
     facultyCoordinator: "Mr. Marimuthu (A/P, Civil)",
     studentCoordinators: [
@@ -2146,7 +2187,7 @@ export const events = [
     ],
   },
   {
-    id: "CodeTwist_Civil",
+    id: 74,
     name: "CODE TWIST",
     subtitle: "Unravelling the Secrets of the Code Book",
     description:
@@ -2157,8 +2198,9 @@ export const events = [
     category: "technical",
     tags: ["CODE TWIST", "TECHNICAL", "CIVIL"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Smart Classroom, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "Civil Engineering Association (CEA)",
     facultyCoordinator: "Mr. S. Kannan (AP/ Civil)",
     studentCoordinators: [
@@ -2180,7 +2222,7 @@ export const events = [
     ],
   },
   {
-    id: "BuildBattle_Civil",
+    id: 75,
     name: "BUILD BATTLE",
     subtitle: "Technical Quiz",
     description:
@@ -2191,8 +2233,9 @@ export const events = [
     category: "technical",
     tags: ["QUIZ", "TECHNICAL", "CIVIL"],
     date: "2025-03-15",
+    startingTime: "",
     venue: "CAD Lab, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "Civil Engineering Association (CEA)",
     facultyCoordinator: "Mr. Gowtham B",
     studentCoordinators: [
@@ -2213,7 +2256,7 @@ export const events = [
     ],
   },
   {
-    id: "PaperPresentation_Civil",
+    id: 76,
     name: "Paper Presentation",
     subtitle: "A Research-Based Technical Event",
     description:
@@ -2224,8 +2267,9 @@ export const events = [
     category: "technical",
     tags: ["PRESENTATION", "TECHNICAL", "CIVIL"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Seminar Hall, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "Civil Engineering Association (CEA)",
     facultyCoordinator: "Dr. V. Kannan (Professor, Civil)",
     studentCoordinators: [
@@ -2243,7 +2287,7 @@ export const events = [
     ],
   },
   {
-    id: "CadModeling_Civil",
+    id: 77,
     name: "Cad Modeling",
     subtitle: "Craft-Based Technical Event",
     description:
@@ -2254,8 +2298,9 @@ export const events = [
     category: "technical",
     tags: ["modeling", "Technical", "Civil"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Cad Lab, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CEA",
     facultyCoordinator: "Mr. M. Ashok Pandian (AP/Civil)",
     studentCoordinators: [
@@ -2271,7 +2316,7 @@ export const events = [
     ],
   },
   {
-    id: "TeamTango_Civil",
+    id: 78,
     name: "TEAM TANGO",
     subtitle: "WORD GAME",
     description:
@@ -2281,8 +2326,9 @@ export const events = [
     category: "non-tech",
     tags: ["WORD GAME", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-15",
+    startingTime: "",
     venue: "LH3, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CEA",
     facultyCoordinator: "Mr. KASIRAJAN P",
     studentCoordinators: [
@@ -2307,7 +2353,7 @@ export const events = [
     ],
   },
   {
-    id: "QuoteOrQuit_Civil",
+    id: 79,
     name: "Quote or Quit",
     subtitle: "Building plan-based technical event",
     description:
@@ -2318,8 +2364,9 @@ export const events = [
     category: "technical",
     tags: ["BID", "PLAN", "TECHNICAL", "CIVIL"],
     date: "2025-03-15",
+    startingTime: "",
     venue: "Seminar Hall, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CEA",
     facultyCoordinator: "Ms. S. Harshini (Prof. Civil)",
     studentCoordinators: [
@@ -2343,7 +2390,7 @@ export const events = [
     ],
   },
   {
-    id: "TriwizardTruss_Civil",
+    id: 80,
     name: "Triwizard Truss",
     subtitle: "Truss Design and Construction Challenge",
     description:
@@ -2353,8 +2400,9 @@ export const events = [
     category: "non-tech",
     tags: ["Non-Technical", "Civil"],
     date: "2025-03-14",
+    startingTime: "",
     venue: "Soil Lab, Civil Department",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CEA",
     facultyCoordinator: "Ms. K. Ramani (AP/Civil)",
     studentCoordinators: [
@@ -2374,6 +2422,7 @@ export const events = [
   },
   //civil workshop
   {
+    id: 81,
     name: "BIM in Civil Engineering",
     title: "BIM in Civil Engineering",
     subtitle: "Exploring Building Information Modeling (BIM) in Civil Projects",
@@ -2400,6 +2449,7 @@ export const events = [
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
   {
+    id: 82,
     name: "AI Applications in Civil Engineering",
     title: "AI Applications in Civil Engineering",
     subtitle:
@@ -2427,6 +2477,7 @@ export const events = [
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
   {
+    id: 83,
     name: "Standard Penetration Test",
     title: "Standard Penetration Test",
     subtitle:
@@ -2439,7 +2490,7 @@ export const events = [
     studentCoordinators: [{ name: "Vasanth M", contact: "9345508862" }],
     description:
       "This workshop provides a comprehensive overview of the Standard Penetration Test (SPT), a widely used in-situ testing method for determining the geotechnical properties of soils. Participants will learn about the principles, procedures, and applications of SPT, including test equipment, sampling methods, and data interpretation.",
-
+    registrationLink: "will be filled up by dev",
     resourcePerson: {
       name: "Mrs. M. Balamaheswari",
       image: "/nectechfest2k25/images/CEA_Workshops_SPT.jpg",
@@ -2453,9 +2504,9 @@ export const events = [
     venue: "Data Analytics Lab",
     video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
   },
-
+  //AI&DS
   {
-    id: "Devfest_aids",
+    id: 84,
     name: "Devfest",
     subtitle: "Data Exploration & Visualization",
     description:
@@ -2468,7 +2519,7 @@ export const events = [
     date: "2025-03-14",
     startingtime: "1:15 PM",
     venue: "Data Analytics Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: " AI&DS Association ",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2489,7 +2540,7 @@ export const events = [
   },
 
   {
-    id: "AI Builders Sprint_aids",
+    id: 85,
     name: "AI Builders Sprint",
     subtitle: "Generative AI Hackathon",
     description:
@@ -2502,7 +2553,7 @@ export const events = [
     date: "2025-03-14",
     startingtime: "1:15 PM",
     venue: "AI Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: "AI Club",
     facultyCoordinator: "Ms.K.Poorani, AP/AI&DS",
     studentCoordinators: [
@@ -2521,7 +2572,7 @@ export const events = [
   },
 
   {
-    id: "Unfold Chronicles of Data_aids",
+    id: 86,
     name: "Unfold Chronicles of Data",
     subtitle: "Data Science Case Study",
     description:
@@ -2534,7 +2585,7 @@ export const events = [
     date: "2025-03-14",
     startingtime: "3:15 PM",
     venue: "Deep Learning Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: "AI&DS Association",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2555,7 +2606,7 @@ export const events = [
     ],
   },
   {
-    id: "Connexion_aids",
+    id: 87,
     name: "Connexion",
     subtitle: "Team-Based Logic Event",
     description:
@@ -2568,7 +2619,7 @@ export const events = [
     date: "2025-03-14",
     startingtime: "3:15 PM",
     venue: "Seminar Hall",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: " AI&DS Association",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2586,7 +2637,7 @@ export const events = [
   },
 
   {
-    id: "Listen and Identify_aids",
+    id: 88,
     name: "Listen and Identify",
     subtitle: "Music and Rhythm Challenge",
     description:
@@ -2598,7 +2649,7 @@ export const events = [
     date: "2025-03-14",
     startingtime: "3:15 PM",
     venue: "AI Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: " AI&DS Association",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2617,7 +2668,7 @@ export const events = [
   },
 
   {
-    id: "AI Product Demo_aids",
+    id: 89,
     name: "AI Product Demo",
     subtitle: "AI Paper/Project Expo",
     description:
@@ -2630,7 +2681,7 @@ export const events = [
     date: "2025-03-15",
     startingtime: "1:15 PM",
     venue: "Lecture Hall",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: " AI Club ",
     facultyCoordinator: "Ms.K.Poorani, AP/AI&DS",
     studentCoordinators: [
@@ -2650,7 +2701,7 @@ export const events = [
     ],
   },
   {
-    id: "AI Thought Craft_aids",
+    id: 90,
     name: "AI Thought Craft",
     subtitle: "AI-Powered Storytelling",
     description:
@@ -2663,7 +2714,7 @@ export const events = [
     date: "2025-03-15",
     startingtime: "1:15 PM",
     venue: "AI Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "",
     organizer: " AI&DS Association ",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2682,7 +2733,7 @@ export const events = [
   },
 
   {
-    id: "Act and React_aids",
+    id: 91,
     name: "Act and React",
     subtitle: "Tech Charades",
     description:
@@ -2695,7 +2746,7 @@ export const events = [
     date: "2025-03-15",
     startingtime: "3:15 PM",
     venue: "Seminar Hall",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: "AI&DS Association",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2712,7 +2763,7 @@ export const events = [
     ],
   },
   {
-    id: "Adventure Hunt_aids",
+    id: 92,
     name: "Adventure Hunt",
     subtitle: "Online Treasure Hunt",
     description:
@@ -2725,7 +2776,7 @@ export const events = [
     date: "2025-03-15",
     startingtime: "3:15 PM",
     venue: "AI Lab",
-    registrationLink: ["will be filled up by dev"],
+    registrationLink: "will be filled up by dev",
     organizer: " AI&DS Association ",
     facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
     studentCoordinators: [
@@ -2745,7 +2796,7 @@ export const events = [
   //cse Technical
 
   {
-    id: "Paper Presentation",
+    id: 93,
     name: "Paper Presentation",
     subtitle: "Showcase Your Research on Emerging Tech",
     description:
@@ -2755,10 +2806,10 @@ export const events = [
     department: "CSE Association",
     category: "Technical",
     tags: ["Research", "Innovation", "Technology"],
-    date: "2025 - 03 - 14",
+    date: "2025-03-14",
     startingTime: "9:30 AM",
     venue: "APJ Lab, CVR Lab, F7 Hall, F12 Hall/CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Kanthimathi M",
     studentCoordinators: [
@@ -2780,7 +2831,7 @@ export const events = [
     ],
   },
   {
-    id: "War-of-UI-UX",
+    id: 94,
     name: "War of UI/UX",
     subtitle: "Design with Precision and Creativity",
     description:
@@ -2793,7 +2844,7 @@ export const events = [
     date: "2025 - 03 - 14",
     startingTime: "1.15 PM",
     venue: "CISCO Lab, RM Lab/CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Vazhan Arul Santhiya R",
     studentCoordinators: [
@@ -2816,7 +2867,7 @@ export const events = [
     ],
   },
   {
-    id: "Code Cool",
+    id: 95,
     name: "Code Cool",
     subtitle: "The Ultimate Coding Face-Off",
     description:
@@ -2829,7 +2880,7 @@ export const events = [
     date: "2025 - 03 - 14",
     startingTime: "1.15 PM",
     venue: "ICL Lab, IBM Lab/CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "TBA",
     studentCoordinators: [
@@ -2851,7 +2902,7 @@ export const events = [
     ],
   },
   {
-    id: "promptengineering",
+    id: 96,
     name: "Prompt Engineering",
     subtitle: "The Battle Between Prompts",
     description:
@@ -2864,7 +2915,7 @@ export const events = [
     date: "2025 - 03 - 15",
     startingTime: "1.15 PM",
     venue: "CISCO Lab, RM Lab/CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "Ms. Vazhan Arul Santhiya R",
     studentCoordinators: [
@@ -2886,7 +2937,7 @@ export const events = [
     ],
   },
   {
-    id: "techquizfaceoff",
+    id: 97,
     name: "Tech Quiz Face-Off",
     subtitle: "Battle of Technical Brilliance",
     description:
@@ -2899,7 +2950,7 @@ export const events = [
     date: "2025 - 03 -14",
     startingTime: "3.15 PM",
     venue: "CISCO Lab/CSE",
-    registrationLink: "[will be filled up by dev]",
+    registrationLink: "will be filled up by dev",
     organizer: "CSEA",
     facultyCoordinator: "TBA",
     studentCoordinators: [

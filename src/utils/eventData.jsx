@@ -127,6 +127,32 @@ export const events = [
       "Round 2: Complex Problem Solving (40 minutes, System-based, 2 complex questions, 5-minute switches, blank screens).",
     ],
   },
+  // {
+  //   id: 1,
+  //   name: "BLIND CODING",
+  //   subtitle: "Blind Coding Challenge",
+  //   description:
+  //     "An exciting blind coding challenge where participants tackle evolving problems with no preview, testing their ability to adapt, innovate, and write flawless code under uncertainty. Teams of 2 members will choose C, Java for the challenge.",
+  //   image: "/events/it/blind-coding.jpg",
+  //   poster: "/events/it/blind-coding.jpg",
+  //   department: "IT Association",
+  //   category: "technical",
+  //   tags: ["coding", "blind coding", "problem solving"],
+  //   date: "2025-03-14",
+  //   startingtime: "1.30 PM",
+  //   venue: "UG III / IT",
+  //   registrationLink: "",
+  //   organizer: "IT Association",
+  //   facultyCoordinator: "Suguna P",
+  //   studentCoordinators: [
+  //     { name: "Manoj Kumar B", contact: "8220605419" },
+  //     { name: "Subha Shunmugaa T", contact: "7904990391" },
+  //   ],
+  //   rules: [
+  //     "Round 1: Online Coding Challenge (15 minutes, Socrative.com, 10 questions, both members use same language, collective marks).",
+  //     "Round 2: Complex Problem Solving (40 minutes, System-based, 2 complex questions, 5-minute switches, blank screens).",
+  //   ],
+  // },
   {
     id: 2,
     name: "SQL TREASURE HUNT",
@@ -3219,3 +3245,5 @@ export const useEvents = () => {
     getWorkshopByTitle,
   };
 };
+
+

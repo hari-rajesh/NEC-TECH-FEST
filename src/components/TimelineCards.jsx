@@ -69,7 +69,7 @@ export const TimelineCard = ({ title, description, icon }) => {
           {link && (
             <button 
               onClick={handleClick}
-              className="mt-4 opacity-0 group-hover:opacity-100 
+              className="mt-4 
                          transition-all duration-300 ease-in-out
                          px-6 py-2 rounded-lg
                          bg-gradient-to-r from-purple-600 to-pink-600

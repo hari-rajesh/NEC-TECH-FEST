@@ -6,14 +6,18 @@ import {
   IconBuilding,
   IconDeviceGamepad2,
   IconBulb,
+  IconMenu2,
+  IconX,
   IconBook2,
   IconBed,
-  IconPhone
+  IconPhone,
+  IconChevronDown
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [showDepartments, setShowDepartments] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const associationsRef = useRef(null);
 
   const departments = [
@@ -34,7 +38,7 @@ export function Navbar() {
       icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
-      name: "Associations",
+      name: `Associations`,
       link: "#",
       icon: <IconBuilding className="h-4 w-4 text-white" />,
       hasDropdown: true,
@@ -71,8 +75,119 @@ export function Navbar() {
     },
   ];
 
+  const MobileDrawer = () => {
+    const [openDropdown, setOpenDropdown] = useState(null);
+  
+    return (
+      <motion.div
+        initial={{ x: -300 }}
+        animate={{ x: 0 }}
+        exit={{ x: -300 }}
+        className="fixed top-0 left-0 h-full w-[250px] bg-purple-900/95 backdrop-blur-md z-[1001] shadow-lg flex flex-col"
+      >
+        <div className="p-4 border-b border-purple-800">
+          <button
+            onClick={() => setIsDrawerOpen(false)}
+            className="absolute top-4 right-4 text-white"
+          >
+            <IconX size={24} />
+          </button>
+        </div>
+  
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-4 flex flex-col space-y-4">
+            {navItems.map((item, idx) => (
+              <div key={idx}>
+                <a
+                  href={item.hasDropdown ? '#' : item.link}
+                  className="flex items-center space-x-2 text-white p-2 hover:bg-purple-800/50 rounded-md"
+                  onClick={(e) => {
+                    if (item.hasDropdown) {
+                      e.preventDefault();
+                      setOpenDropdown(openDropdown === idx ? null : idx);
+                    } else {
+                      setIsDrawerOpen(false);
+                    }
+                  }}
+                >
+                  {item.icon}
+                  <span className="flex items-center gap-2">
+                    {item.name}
+                    {item.hasDropdown && (
+                      <motion.div
+                        animate={{ rotate: openDropdown === idx ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <IconChevronDown className="h-4 w-4 text-white" />
+                      </motion.div>
+                    )}
+                  </span>
+                </a>
+  
+                {item.hasDropdown && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{
+                      height: openDropdown === idx ? 'auto' : 0,
+                      opacity: openDropdown === idx ? 1 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="ml-8 mt-2 space-y-2">
+                      {departments.map((dept, index) => (
+                        <a
+                          key={index}
+                          href={`/associations/department/${dept.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="block text-white text-sm p-2 hover:bg-purple-800/50 rounded-md"
+                          onClick={() => setIsDrawerOpen(false)}
+                        >
+                          {dept}
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
+  
+  
+
+
 
   return (
+    <>
+     {!isDrawerOpen && <button
+  className="sm:hidden fixed top-4 right-4 z-[1002] bg-purple-900/30 p-2 rounded-md backdrop-blur-md"
+  onClick={() => setIsDrawerOpen(true)}
+>
+  <IconMenu2 className="h-6 w-6 text-white" />
+</button>}
+
+
+      {/* Mobile Drawer Overlay */}
+      <AnimatePresence>
+        {isDrawerOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 z-[1000] sm:hidden"
+            onClick={() => setIsDrawerOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {isDrawerOpen && <MobileDrawer />}
+      </AnimatePresence>
+      <div className="hidden sm:flex fixed top-4 w-full z-[1000] flex-col items-center">
     <div className="fixed top-4 w-full z-[1000] flex flex-col items-center">
       <div className="relative w-[75%] sm:w-[80%] md:w-[70%] lg:w-[900px]">
         {/* Navbar */}
@@ -114,5 +229,7 @@ export function Navbar() {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 }

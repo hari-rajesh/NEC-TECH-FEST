@@ -4,6 +4,11 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 
 export default function PricingCards() {
+
+  const handleRegistration=()=>{
+    window.open('registration/userdetail', '_blank');
+  }
+
   return (
     <div className="w-full py-16 relative overflow-hidden">
       <div className="max-w-4xl mx-auto grid gap-6 lg:grid-cols-2 px-4 relative z-10 place-items-center">
@@ -31,7 +36,7 @@ export default function PricingCards() {
           </CardContent>
           <CardFooter className="mt-auto pb-4">
             <button className="w-full px-6 py-3 text-lg font-semibold text-white border-2 border-[#FF0080] rounded-xl bg-transparent hover:bg-[#FF0080]/20 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,0,128,0.3)] relative group overflow-hidden">
-              <span className="relative z-10">Book Your Spot</span>
+              <span className="relative z-10" onClick={handleRegistration}>Book Your Spot</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF0080]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </CardFooter>
@@ -63,7 +68,7 @@ export default function PricingCards() {
           </CardContent>
           <CardFooter className="mt-auto pb-4">
             <button className="w-full px-6 py-3 text-lg font-semibold text-[#FF0080] border-2 border-[#FF0080] rounded-xl bg-white hover:bg-[#FF0080]/20 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,0,128,0.3)] relative group overflow-hidden">
-              <span className="relative z-10">Book Your Spot</span>
+              <span className="relative z-10" onClick={handleRegistration}>Book Your Spot</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#FF0080]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </CardFooter>

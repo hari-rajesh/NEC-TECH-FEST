@@ -9,7 +9,7 @@ export const departments = [
   { id: "it-association", name: "IT Association" },
   { id: "ai&ds-association", name: "AI&DS Association" },
   { id: "eee-association", name: "EEE Association" },
-  {},
+  { id: "s&h-association", name: "S&H Association" },
 ];
 
 export const tags = {
@@ -60,6 +60,11 @@ export const tags = {
     "Deep Learning Workshop",
     "ML Hackathon",
   ],
+  "S&H Association":[
+    "Paper Presentation",
+    "Coding",
+    "Poster Presentation",
+  ],
   "non-tech": [
     "Photography",
     "Treasure Hunt",
@@ -102,8 +107,8 @@ export const events = [
     subtitle: "Blind Coding Challenge",
     description:
       "An exciting blind coding challenge where participants tackle evolving problems with no preview, testing their ability to adapt, innovate, and write flawless code under uncertainty. Teams of 2 members will choose C, Java for the challenge.",
-    image: "/events/blind-coding.jpg",
-    poster: "",
+    image: "/events/it/blind-coding.jpg",
+    poster: "/events/it/blind-coding.jpg",
     department: "IT Association",
     category: "technical",
     tags: ["coding", "blind coding", "problem solving"],
@@ -128,8 +133,8 @@ export const events = [
     subtitle: "Code and Conquer",
     description:
       "Embark on an exciting journey of with and logic with SQL Quest: Code and Conquer, a thrilling two-round treasure hunt designed for database enthusiasts!",
-    image: "",
-    poster: "",
+    image: "/events/it/SQL Treasure Hunt.png",
+    poster: "/events/it/SQL Treasure Hunt.png",
     department: "IT Association",
     category: "technical",
     tags: ["sql", "database", "treasure hunt"],
@@ -156,8 +161,8 @@ export const events = [
     subtitle: "Balance, Speed, and Skill Challenge",
     description:
       "Stack and Run is an exciting event that tests participants' balance, speed, and skill through unique challenges. It promises thrilling competition and high-energy fun. Only the fastest and most focused will claim victory!",
-    image: "/events/stack-run.jpg",
-    poster: "",
+    image: "/events/it/Stack Run.png",
+    poster: "/events/it/Stack Run.png",
     category: "non-tech",
     tags: ["Gaming"],
     date: "2025-03-14",
@@ -182,8 +187,8 @@ export const events = [
     subtitle: "Technical Paper Presentation",
     description:
       "The Paper Presentation event consists of a single round, where participants can choose any technical topic of their choice to present. Each team will have two members, and the total time allotted for each presentation is 10 minutes.",
-    image: "",
-    poster: "",
+    image: "/events/it/Paper Presentation.png",
+    poster: "/events/it/Paper Presentation.png",
     department: "IT Association",
     category: "technical",
     tags: ["paper presentation", "technical", "research"],
@@ -206,8 +211,8 @@ export const events = [
     subtitle: "The Ultimate Quiz Challenge",
     description:
       "Tech Quest: The Ultimate Quiz Challenge is an electrifying two-round quiz event designed to test participants' technical expertise and quick-thinking. This event offers a platform to showcase your knowledge across various tech domains while competing with the brightest minds in the room. Team of 2 members.",
-    image: "/events/tech-quest.jpg",
-    poster: "",
+    image: "/events/it/Tech Quest.png",
+    poster: "/events/it/Tech Quest.png",
     department: "IT Association",
     category: "technical",
     tags: ["quiz", "technical", "knowledge"],
@@ -230,8 +235,8 @@ export const events = [
     subtitle: "Team-Based Programming Competition",
     description:
       "Code Relay is an exciting and dynamic team-based programming competition designed to test your coding skills, teamwork, and quick thinking! Each team will consist of 2 members who will work together to solve programming problems in a relay format. The event combines strategy, technical expertise, and time management, making it a thrilling experience for coders of all levels.",
-    image: "/events/code-relay.jpg",
-    poster: "",
+    image: "/events/it/Code Relay.png",
+    poster: "/events/it/Code Relay.png",
     department: "IT Association",
     category: "technical",
     tags: ["coding", "relay"],
@@ -255,8 +260,8 @@ export const events = [
     subtitle: "Code Debugging Challenge",
     description:
       "Join us for Bug Bash, an exciting code debugging event where participants put their problem-solving skills to the test by identifying and fixing code errors. Sharpen your coding expertise and compete for glory! This event includes only C programming.",
-    image: "/events/bug-bash.jpg",
-    poster: "",
+    image: "/events/it/Bug Bash.png",
+    poster: "/events/it/Bug Bash.png",
     department: "IT Association",
     category: "technical",
     tags: ["coding", "debugging", "c programming"],
@@ -279,8 +284,8 @@ export const events = [
     subtitle: "Teamwork and Precision Challenge",
     description:
       "The Floating Balls Challenge is a two-round competition testing teamwork and precision. In Round 1, teams transport balls through pipes into a bowl, earning points for each successful ball. Round 2 challenges players to throw balls into water-filled bowls at varying distances, with points based on accuracy. The team with the highest total score across both rounds wins!",
-    image: "/events/floating-balls.jpg",
-    poster: "",
+    image: "/events/it/Floating Balls.png",
+    poster: "/events/it/Floating Balls.png",
     // department: "IT Association",
     category: "non-tech",
     tags: ["teamwork", "challenge"],
@@ -297,14 +302,15 @@ export const events = [
       "Highest total score wins.",
     ],
   },
+  //cse association
   {
     id: 9,
     name: "CREATOR'S SPARK",
     subtitle: "Unleashing creativity with AI",
     description:
       " Step into the future of development with Creators Spark, a tech challenge where AI tools boost your creativity and coding efficiency. Teams will tackle a real-time problem statement, using AI-powered coding assistants to build a functional application. ",
-    image: "",
-    poster: "",
+    image: "/events/cse/Paper Presentation.png",
+    poster: "/events/cse/Paper Presentation.png",
     department: "CSE Association",
     category: "technical",
     tags: ["prompt", "CSI"],
@@ -496,7 +502,7 @@ export const events = [
 
     resourcePerson: {
       name: "Dr. Aisha Patel",
-      image: "/images/person1.jpg",
+      image: "/events/person1.jpg",
       designation: "AI Research Scientist",
       organization: "OpenAI",
       bio: "Dr. Aisha Patel is a leading AI researcher specializing in machine learning, deep learning, and natural language processing. With over a decade of experience, she has contributed to groundbreaking AI advancements and has been a keynote speaker at global conferences.",
@@ -509,7 +515,7 @@ export const events = [
       link: "www.google.com",
     },
 
-    video: "/images/river.mp4",
+    video: "/events/river.mp4",
   },
 
   {
@@ -519,8 +525,8 @@ export const events = [
     subtitle: "Linux Essentials and Git Fundamentals",
     description:
       " Join us for an intensive session on Linux Essentials and Git Fundamentals. Gain a deep understanding of Linux system operations, file management, and user administration, while mastering Git for advanced version control, collaboration, and workflow optimization. Perfect for professionals and learners seeking a solid foundation in modern development tools.",
-    image: "/nectechfest2k25/images/",
-    poster: "/nectechfest2k25/images/",
+    image: "/events/",
+    poster: "/events/",
     category: "workshops",
     tags: ["Linux OS", "Innovation", "Technology"],
     date: "2025 - 03 - 14",
@@ -538,7 +544,7 @@ export const events = [
       designation: "Module Lead Mistarl Solutions",
     },
     rules: ["Open to all steams"],
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   //from here CSEA
   {
@@ -547,8 +553,8 @@ export const events = [
     subtitle: "One Click, Infinite Stories!",
     description:
       "Freeze the Frame is an individual photography event where participants capture a powerful image based on their surroundings. Whether it’s a scenic nature shot, a college building, or a picture conveying a strong social message, the goal is to freeze a moment in time that tells a compelling story through a single photograph. Choose from one of the following themes:\n● Nature's Beauty\n● Architectural Wonders (college buildings)\n● Social Change (capturing a strong social message)",
-    image: "/nectechfest2k25/images/Freeze the Frame.jpg",
-    poster: "/nectechfest2k25/images/Freeze the Frame.jpg",
+    image: "/events/Freeze the Frame.jpg",
+    poster: "/events/Freeze the Frame.jpg",
     department: "CSE",
     category: "non-tech",
     tags: ["PHOTOGRAPHY", "non-tech", "CSE"],
@@ -581,8 +587,8 @@ export const events = [
     subtitle: "A Blockbuster Battle of Movie Buffs!",
     description:
       "Dive into the world of movies and test your cinematic knowledge at Cine Quiz! This exciting event is designed for movie enthusiasts who love everything about films—be it classics, blockbusters, or cult favorites. With questions spanning Hollywood and Bollywood, it’s the ultimate challenge for cinephiles. Packed with thrilling surprises and mind-boggling challenges.",
-    image: "/nectechfest2k25/images/Cine Quiz.jpg",
-    poster: "/nectechfest2k25/images/Cine Quiz.jpg",
+    image: "/events/Cine Quiz.jpg",
+    poster: "/events/Cine Quiz.jpg",
     department: "CSE",
     category: "non-tech",
     tags: ["CINE", "non-tech", "CSE"],
@@ -613,8 +619,8 @@ export const events = [
     subtitle: "The Ultimate Meme Battle!",
     description:
       "Welcome to Meme Forge, the most hilarious, creative, and entertaining event of the symposium! Gear up to become the Meme Lords, where wit meets creativity in an epic battle of memes.",
-    image: "/nectechfest2k25/images/Meme Forge.jpg",
-    poster: "/nectechfest2k25/images/Meme Forge.jpg",
+    image: "/events/Meme Forge.jpg",
+    poster: "/events/Meme Forge.jpg",
     department: "CSE",
     category: "non-tech",
     tags: ["MEME", "non-tech", "CSE"],
@@ -651,8 +657,8 @@ export const events = [
     subtitle: "Think and Speak Your Way to Victory!",
     description:
       "Sharpen your decision-making, negotiation, and adaptability skills through puzzles, auctions, and impromptu speaking. Think fast, strategize wisely, and showcase your management prowess!",
-    image: "/nectechfest2k25/images/Best Manager.jpg",
-    poster: "/nectechfest2k25/images/Best Manager.jpg",
+    image: "/events/Best Manager.jpg",
+    poster: "/events/Best Manager.jpg",
     department: "CSE",
     category: "non-tech",
     tags: ["MANAGEMENT", "non-tech", "CSE"],
@@ -686,8 +692,8 @@ export const events = [
     subtitle: "Showcase Your Talent – Create, Perform, and Conquer!",
     description:
       "On-Spot Talent Showcase is an exciting individual event where participants get the chance to exhibit their unique skills and creativity in various forms of art. Whether it’s sketching, singing, dancing, or any other expressive activity, the stage is set for you to shine and captivate the audience with your talent.",
-    image: "/nectechfest2k25/images/On Spot Sketch.jpg",
-    poster: "/nectechfest2k25/images/On Spot Sketch.jpg",
+    image: "/events/On Spot Sketch.jpg",
+    poster: "/events/On Spot Sketch.jpg",
     department: "CSE",
     category: "non-tech",
     tags: ["ART", "non-tech", "CSE"],
@@ -722,8 +728,8 @@ export const events = [
     subtitle: "Present, Persuade, Inspire",
     description:
       " This event provides a platform for budding engineers and researchers to showcase their innovative ideas, research findings, and case studies related to mechanical engineering and its allied fields. Participants will present their papers to a panel of experts and compete for the title of the best research presenter.",
-    image: "/nectechfest2k25/images/PAPER PRESENTATION_MECH.png",
-    poster: "/nectechfest2k25/images/PAPER PRESENTATION_MECH.png",
+    image: "/events/mech/PAPER PRESENTATION_MECH.png",
+    poster: "/events/mech/PAPER PRESENTATION_MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Presentation", "Mechanical", "Technical"],
@@ -749,8 +755,8 @@ export const events = [
     subtitle: "Design. Innovate. Create",
     description:
       " Unleash your design skills and creativity in this CAD modelling competition! Participants will be given a problem statement and must create a 3D model using CAD software within the stipulated time. The best designs will be judged based on accuracy, creativity, and feasibility.",
-    image: "/nectechfest2k25/images/ DESIGN-O-MANIA_MECH.png",
-    poster: "/nectechfest2k25/images/ DESIGN-O-MANIA _MECH.png",
+    image: "/events/mech/DESIGN-O-MANIA_MECH.png",
+    poster: "/events/mech/DESIGN-O-MANIA _MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["CAD", "Mechanical", "Technical"],
@@ -778,8 +784,8 @@ export const events = [
     subtitle: "Talent. Passion. Glory.",
     description:
       " The event consists of three exciting rounds, designed to test technical knowledge, creativity, and overall personality.",
-    image: "/nectechfest2k25/images/Mr.TALENT_MECH.png",
-    poster: "/nectechfest2k25/images/Mr.TALENT_MECH.png",
+    image: "/events/mech/Mr.TALENT_MECH.png",
+    poster: "/events/mech/Mr.TALENT_MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Talent", "Mechanical", "Technical"],
@@ -804,9 +810,8 @@ export const events = [
     subtitle: "Talent. Passion. Glory.",
     description:
       " The Technical Meme Contest is the perfect platform for mechanical engineers to express their wit through funny, relatable, and insightful memes on engineering concepts, industry trends, and student life!",
-    image: "/nectechfest2k25/images/AI ART & MEME CONTEST_MECH.png ",
-    poster: "/nectechfest2k25/images/AI ART & MEME CONTEST_MECH.png",
-    department: "Mechanical Association",
+    image: "/events/mech/AI ART & MEME CONTEST_MECH.png ",
+    poster: "/events/AI ART & MEME CONTEST_MECH.png",
     category: "Non-Technical",
     tags: ["Meme contest", "Mechanical", "Non-Technical"],
     date: "2025-03-14",
@@ -831,9 +836,9 @@ export const events = [
     description:
       "Get ready for an exciting test of creativity, engineering skills, and teamwork in the Miniature Roller Coaster Design Challenge! Participants will design and build a working miniature roller coaster model using given materials, applying principles of physics and mechanical engineering.",
     image:
-      "/nectechfest2k25/images/MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH.png",
+      "/events/mech/MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH.png",
     poster:
-      "/nectechfest2k25/images/MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH.png",
+      "/events/mech/MINIATURE ROLLER COASTER DESIGN CHALLENGE_MECH.png",
     category: "non-tech",
     tags: ["Design Challenge", "Mechanical", "non-tech"],
     date: "2025-03-14",
@@ -857,8 +862,8 @@ export const events = [
     subtitle: "Heat Up Your Knowledge!",
     description:
       "Techno Chill is an engaging thermal engineering quiz competition designed to test participants on thermodynamics, heat transfer, fluid mechanics, HVAC systems, IC engines, and refrigeration & air conditioning. Compete in a battle of wits and showcase your expertise in the world of thermal sciences!",
-    image: "/nectechfest2k25/images/TECHNO CHILL_MECH.png",
-    poster: "/nectechfest2k25/images/TECHNO CHILL_MECH.png",
+    image: "/events/mech/TECHNO CHILL_MECH.png",
+    poster: "/events/TECHNO CHILL_MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Thermal", "Mechanical", "Quiz"],
@@ -883,8 +888,8 @@ export const events = [
     subtitle: "Link. Think. Solve!",
     description:
       "MECH CONNECTION is an exciting event where participants must identify, connect, and solve mechanical engineering-related puzzles and challenges within a given time!",
-    image: "/nectechfest2k25/images/MECH_CONNECTION_MECH.png",
-    poster: "/nectechfest2k25/images/MECH_CONNECTION_MECH.png",
+    image: "/events/mech/MECH_CONNECTION_MECH.png",
+    poster: "/events/mech/MECH_CONNECTION_MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Connection", "Mechanical", "Quiz"],
@@ -909,8 +914,9 @@ export const events = [
     subtitle: "Assemble. Align. Achieve",
     description:
       "Mr. Assembler is a hands-on challenge designed to test your mechanical aptitude, problem-solving skills, and technical knowledge in assembling machine parts!",
-    image: "/nectechfest2k25/images/Mr.ASSEMBLER_MECH.png",
-    poster: "/nectechfest2k25/images/Mr.ASSEMBLER_MECH.png",
+    image: "/events/mech/Mr.ASSEMBLER_MECH.png",
+    poster: "/events/mech/Mr.ASSEMBLER_MECH.png",
+    department: "Mechanical Association",
     category: "Technical",
     tags: ["Assemble", "Mechanical", "Technical"],
     date: "2025-03-15",
@@ -934,8 +940,9 @@ export const events = [
     subtitle: "Search. Solve. Conquer.",
     description:
       "The Scavenger Hunt is a thrilling event that challenges participants to solve clues, find hidden items, and complete engineering-related tasks to reach the final destination!",
-    image: "/nectechfest2k25/images/SCAVENGER HUNT_MECH.png",
-    poster: "/nectechfest2k25/images/SCAVENGER HUNT_MECH.png",
+    image: "/events/mech/SCAVENGER HUNT_MECH.png",
+    poster: "/events/mech/SCAVENGER HUNT_MECH.png",
+    department: "Mechanical Association",
     category: "non-tech",
     tags: ["Search", "Mechanical", "non-tech"],
     date: "2025-03-15",
@@ -962,8 +969,8 @@ export const events = [
     subtitle: "Fuel with Water, Fly to Glory!.",
     description:
       "Get ready to launch into action with Water Rocketry, an exciting event where participants design, build, and launch water-powered rockets! This challenge tests your aerodynamics, creativity, and engineering skills in constructing a high-performance rocket.",
-    image: "/nectechfest2k25/images/ ROCKET LAUNCHING CONTEST_MECH.png",
-    poster: "/nectechfest2k25/images/ ROCKET LAUNCHING CONTEST_MECH.png",
+    image: "/events/mech/ROCKET LAUNCHING CONTEST_MECH.png",
+    poster: "/events/mech/ROCKET LAUNCHING CONTEST_MECH.png",
     department: "Mechanical Association",
     category: "non-tech",
     tags: ["Rocketry ", "Mechanical", "non-tech"],
@@ -1006,7 +1013,7 @@ export const events = [
 
     resourcePerson: {
       name: "Mr. J. Karthikeyan",
-      image: "/nectechfest2k25/images/ARDevelopment.jpg",
+      image: "/events/ARDevelopment.jpg",
       designation: "AP/CSE",
       organization: "National Engineering College",
       bio: "Mr. Karthikeyan J is an Assistant Professor in the Department of Computer Science and Engineering at National Engineering College, Kovilpatti. With over a decade of academic and research experience, he has contributed to projects like cognitive rehabilitation for autism using VR and authored multiple research publications. He is also a recipient of the NPTEL Discipline Star award and is passionate about emerging technologies in computer science.",
@@ -1014,7 +1021,7 @@ export const events = [
       link: "https://www.linkedin.com/in/karthikeyanmecse",
     },
 
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   {
     id: 35,
@@ -1038,7 +1045,7 @@ export const events = [
 
     resourcePerson: {
       name: "Mr. J. Karthikeyan",
-      image: "/nectechfest2k25/images/NextGenLearning.jpg",
+      image: "/events/NextGenLearning.jpg",
       designation: "AP/CSE",
       organization: "National Engineering College",
       bio: "Mr. Karthikeyan J is an Assistant Professor in the Department of Computer Science and Engineering at National Engineering College, Kovilpatti. With over a decade of academic and research experience, he has contributed to projects like cognitive rehabilitation for autism using VR and authored multiple research publications. He is also a recipient of the NPTEL Discipline Star award and is passionate about emerging technologies in computer science.",
@@ -1046,7 +1053,7 @@ export const events = [
       vidwanLink: "https://www.linkedin.com/in/karthikeyanmecse",
     },
 
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
 
   //ece workshops
@@ -1058,8 +1065,8 @@ export const events = [
     subtitle: "One Click, Infinite Stories!",
     description:
       "This workshop covers schematic capture and PCB layout design using industry best practices. Topics include component selection, routing techniques, design rule checks, and Gerber file generation. Participants will learn to optimize designs for signal integrity and manufacturing. Suitable for students, hobbyists, and professionals aiming for real-world PCB design skills.",
-    image: "/nectechfest2k25/images/Antenna Design and Fabrication.png",
-    poster: "/nectechfest2k25/images/Antenna Design and Fabrication.png",
+    image: "/events/ece/Antenna Design and Fabrication.png",
+    poster: "/events/ece/Antenna Design and Fabrication.png",
     category: "workshops",
     tags: ["Schematic Capture and PCB Layout"],
     date: "2025-03-14",
@@ -1085,7 +1092,7 @@ export const events = [
       expertise: ["Antena  Fabrication "],
       link: "https://vidwan.inflibnet.ac.in/profile/287246"
     }],
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   {
     id: 37,
@@ -1096,9 +1103,9 @@ export const events = [
     description:
       "This workshop covers ARM-based embedded system design, including architecture, programming, and real-time applications. Participants will gain hands-on experience in coding, interfacing, and system optimization.",
     image:
-      "/nectechfest2k25/images/Embedded System Design With Arm Processor.png",
+      "/events/ece/Embedded System Design With Arm Processor.png",
     poster:
-      "/nectechfest2k25/images/Embedded System Design With Arm Processor.png",
+      "/events/ece/Embedded System Design With Arm Processor.png",
     department: "ECE",
     category: "workshops",
     tags: ["Embedded System Design With Arm Processor"],
@@ -1117,7 +1124,7 @@ export const events = [
       image: "",
       vidwanLink: "https://vidwan.inflibnet.ac.in/profile/211457",
     },
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   {
     id: 38,
@@ -1128,9 +1135,9 @@ export const events = [
     description:
       "This workshop explores emerging middleware technologies for smart wireless sensor networks in IoT, covering architectures, energy efficiency, scalability, and security. Attendees will gain insights into advancements, challenges, and real-world applications through case studies and expert discussions.",
     image:
-      "/nectechfest2k25/images/Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications.png",
+      "/events/ece/Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications.png",
     poster:
-      "/nectechfest2k25/images/Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications.png",
+      "/events/ece/Emerging Middleware Technologies For Smart Wireless Sensor Networks In Iot Applications.png",
     department: "ECE",
     category: "workshops",
     tags: ["Emerging Middleware Technologies"],
@@ -1153,7 +1160,7 @@ export const events = [
       expertise: ["Middleware Development"],
       vidwanLink: "https://www.linkedin.com/in/siva-sakthi-dharan-v/",
     },
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   {
     id: 39,
@@ -1164,9 +1171,9 @@ export const events = [
     description:
       "Join our immersive workshop on Software Defined Radio (SDR) using USRP & LabVIEW and dive into the future of wireless communication! This program offers a unique blend of theoretical knowledge and practical demonstration, guiding you through the evolution of wireless technologies from 5G to the cutting-edge advancements in 6G. Gain practical skills in designing and implementing wireless systems using Universal Software Radio Peripheral (USRP) hardware and LabVIEW software, empowering you to tackle real-world challenges in the field. This workshop will equip the students and researchers with the expertise and insights needed to excel in the rapidly growing domains of 5G and 6G, while also exploring exciting career opportunities in these transformative technologies. Don’t miss this chance to elevate your skills and stay ahead in the wireless communication revolution!",
     image:
-      "/nectechfest2k25/images/Software Defined Radio using USRP & LabVIEW.png",
+      "/events/ece/Software Defined Radio using USRP & LabVIEW.png",
     poster:
-      "/nectechfest2k25/images/Software Defined Radio using USRP & LabVIEW.png",
+      "/events/ece/Software Defined Radio using USRP & LabVIEW.png",
 
     category: "workshops",
     tags: ["SDR", "Wireless Communication", "5G6GTechnology"],
@@ -1187,7 +1194,7 @@ export const events = [
       expertise: ["Wireless Communication", "IoT"],
       vidwanlink: "https://vidwan.inflibnet.ac.in/profile/180623",
     },
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/Workshop_venue_video.mp4",
   },
   // EEE workshops
 
@@ -1209,7 +1216,7 @@ export const events = [
 
     resourcePerson: {
       name: "Dr. B. Venkatasamy",
-      image: "/nectechfest2k25/images/ArduinoProgramming.jpg",
+      image: "/events/ArduinoProgramming.jpg",
       designation: "AP(SG)/EEE",
       organization: "National Engineering College",
       bio: "Dr. B. Venkatasamy, Assistant Professor (Senior Grade), holds a Ph.D. in Power Electronics from Anna University, Chennai. His expertise spans power electronics, embedded systems, renewable energy, and IoT applications. He has published research and developed innovative IoT-based solutions.",
@@ -1222,7 +1229,7 @@ export const events = [
       link: "https://vidwan.inflibnet.ac.in/profile/214277",
     },
 
-    video: "/nectechfest2k25/images/ArduinoProgramming.mp4",
+    video: "/events/ArduinoProgramming.mp4",
   },
   {
     id: 41,
@@ -1242,7 +1249,7 @@ export const events = [
 
     resourcePerson: {
       name: "Dr. B. Vigneshwaran",
-      image: "/nectechfest2k25/images/HighVoltage.jpg",
+      image: "/events/HighVoltage.jpg",
       designation: "Asso.Prof/EEE",
       organization: "National Engineering College",
       bio: "Dr. B. Vigneshwaran, Associate Professor in the Department of Electrical and Electronics Engineering at National Engineering College, specializes in high-voltage engineering and insulation studies. With over 10 years of teaching and research experience, his work focuses on partial discharge analysis, insulation performance enhancement, and high-voltage system reliability. His interests include signal processing, pattern recognition, and AI techniques in high-voltage engineering.",
@@ -1254,7 +1261,7 @@ export const events = [
       link: "https://vidwan.inflibnet.ac.in/profile/211507",
     },
 
-    video: "/nectechfest2k25/images/HighVoltage.mp4",
+    video: "/events/HighVoltage.mp4",
   },
   {
     id: 42,
@@ -1274,7 +1281,7 @@ export const events = [
 
     resourcePerson: {
       name: "Dr. S. Sankarakumar",
-      image: "/nectechfest2k25/images/NumericalRelays.jpg",
+      image: "/events/NumericalRelays.jpg",
       designation: "AP(SG)/EEE",
       organization: "National Engineering College",
       bio: "Dr. S. Sankarakumar, Assistant Professor (Senior Grade), specializes in power electronics, electrical drives, and renewable energy systems. He has significant expertise in power system protection, particularly in using numerical relays and SCADA automation for substation management.",
@@ -1287,7 +1294,7 @@ export const events = [
       link: "https://vidwan.inflibnet.ac.in/profile/214290",
     },
 
-    video: "/nectechfest2k25/images/NumericalRelays.mp4",
+    video: "/events/NumericalRelays.mp4",
   },
   {
     id: 43,
@@ -1307,7 +1314,7 @@ export const events = [
 
     resourcePerson: {
       name: "Mr. K. Karthik Kumar",
-      image: "/nectechfest2k25/images/BMS.jpg",
+      image: "/events/BMS.jpg",
       designation: "AP/EEE",
       organization: "National Engineering College",
       bio: "Mr. K. Karthik Kumar, Assistant Professor, holds a Master’s degree in Power Electronics and Drives. His expertise includes power electronics, system modeling, and energy storage technologies, focusing on optimizing battery management solutions.",
@@ -1320,7 +1327,7 @@ export const events = [
       link: "https://vidwan.inflibnet.ac.in/profile/287444",
     },
 
-    video: "/nectechfest2k25/images/BMS.mp4",
+    video: "/events/BMS.mp4",
   },
   {
     id: 44,
@@ -1340,7 +1347,7 @@ export const events = [
 
     resourcePerson: {
       name: "Mr. M. Sivapalanirajan",
-      image: "/nectechfest2k25/images/Robotics.jpg",
+      image: "/events/Robotics.jpg",
       designation: "AP/EEE",
       organization: "National Engineering College",
       bio: "Mr. M. Sivapalanirajan, Assistant Professor, holds a Master’s degree in Power Systems and has expertise in automation, robotics, and electrical system modeling. He is involved in developing intelligent control systems for robotics and industrial automation.",
@@ -1353,17 +1360,17 @@ export const events = [
       link: "https://vidwan.inflibnet.ac.in/profile/214201",
     },
 
-    video: "/nectechfest2k25/images/Robotics.mp4",
+    video: "/events/Robotics.mp4",
   },
-  ///ece events
+  //ece events
   {
     id: 45,
     name: "ElectroVision",
     subtitle: " Electro-Tech Quest ",
     description:
       " Electro-Tech Quest: Decode, Compete, and Innovate! A thrilling fusion of quizzes,charades, and Verilog challenges to test your electronics prowess.",
-    image: "/nectechfest2k25/images/ElectroVision.png",
-    poster: "/nectechfest2k25/images/ElectroVision.png",
+    image: "/events/ece/ElectroVision.png",
+    poster: "/events/ece/ElectroVision.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Tech", "Verilog"],
@@ -1388,8 +1395,8 @@ export const events = [
     subtitle: "Connect & Create",
     description:
       "Linkage is an interactive and engaging game that challenges participants to connect technical components through a series of images. The event is structured for students to learn about analyzing challenges, think critically. This event combines Rapid fire, ConneXion to encourage both logical and creative thinking through connections.",
-    image: "/nectechfest2k25/images/Linkage.png",
-    poster: "/nectechfest2k25/images/Linkage.png",
+    image: "/events/ece/Linkage.png",
+    poster: "/events/ece/Linkage.png",
     department: "ECE Association",
     category: "Technical",
     tags: [""],
@@ -1413,8 +1420,8 @@ export const events = [
     subtitle: "Think Fast, Team Up, Triumph!",
     description:
       "'Exquiz me' is a fun, dynamic event with four exciting rounds—Mind Mash, Music Master, Feelopoly & Vision Vault—testing IQ, teamwork, and quick thinking. Join with friends, showcase  your wit, and enjoy a thrilling competition!",
-    image: "/nectechfest2k25/images/Exquiz me.png",
-    poster: "/nectechfest2k25/images/Exquiz me.png",
+    image: "/events/ece/Exquiz me.png",
+    poster: "/events/ece/Exquiz me.png",
     department: "ECE Association",
     category: "non-tech",
     tags: ["Exquiz me"],
@@ -1435,8 +1442,8 @@ export const events = [
     subtitle: "Bound by challenges, United in thoughts",
     description:
       "An interesting event that tests team spirit and compatibility with your team mate and helps you to gain knowledge in electronics and communication domain. Explore the fun and knowledge at the same league!",
-    image: "/nectechfest2k25/images/Fusion Frenzy.png",
-    poster: "/nectechfest2k25/images/Fusion Frenzy.png",
+    image: "/events/ece/Fusion Frenzy.png",
+    poster: "/events/ece/Fusion Frenzy.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Fusion Frenzy"],
@@ -1455,8 +1462,8 @@ export const events = [
     subtitle: "Filmora where you’re gameplay becomes blockbuster ",
     description:
       "Gear up for an electrifying experience at EmbedX – where innovation meets creativity, and ideas spark into reality! Join us for a journey through the future of embedded systems, with cutting-edge technologies and exciting challenges. Let’s create, innovate, and connect",
-    image: "/nectechfest2k25/images/Filmora.png",
-    poster: "/nectechfest2k25/images/Filmora.png",
+    image: "/events/ece/Filmora.png",
+    poster: "/events/ece/Filmora.png",
     department: "ECE Association",
     category: "non-tech",
     tags: ["Filmora"],
@@ -1475,8 +1482,8 @@ export const events = [
     subtitle: " Think fast, play smart, and have a blast!",
     description:
       " Shake Up the Fun is an exciting event with four interactive rounds—Lyric Mania, Clue Rush, Quickfire Countdown, and Bingo Buzz—blending music, clues, and strategy. Participants will enjoy a thrilling mix of entertainment, teamwork, and cognitive challenges!",
-    image: "/nectechfest2k25/images/Shake up the fun.png",
-    poster: "/nectechfest2k25/images/Shake up the fun.png",
+    image: "/events/ece/Shake up the fun.png",
+    poster: "/events/ece/Shake up the fun.png",
     department: "ECE Association",
     category: "non-tech",
     tags: ["Shake up the fun"],
@@ -1495,8 +1502,8 @@ export const events = [
     subtitle: "Unleash your inner coder!",
     description:
       "Crack the Code, Conquer the Challenge! Get ready for an electrifying challenge where participants race against time to fix errors, solve coding puzzles, and prove their programming powers!!! ",
-    image: "/nectechfest2k25/images/pngDecryptathon.png",
-    poster: "/nectechfest2k25/images/pngDecryptathon.png",
+    image: "/events/ece/pngDecryptathon.png",
+    poster: "/events/ece/pngDecryptathon.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Decryptathon"],
@@ -1515,8 +1522,8 @@ export const events = [
     subtitle: "Debug, Spark, and Rule the Circuit",
     description:
       "Test your circuit knowledge in Circuit Debugging! Identify components, solve circuit problems, and debug breadboard errors",
-    image: "/nectechfest2k25/images/Circuit Debugging.png",
-    poster: "/nectechfest2k25/images/Circuit Debugging.png",
+    image: "/events/ece/Circuit Debugging.png",
+    poster: "/events/ece/Circuit Debugging.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Circuit Debugging"],
@@ -1537,8 +1544,8 @@ export const events = [
     subtitle: "Sync Up, Stay Connected—Test Your Bond, Prove Your Connection!",
     description:
       "Wave Wire challenges partners to test their compatibility, communication, and teamwork to solve the Technical and non-tech Problems .",
-    image: "/nectechfest2k25/images/WAVE WIRE.png",
-    poster: "/nectechfest2k25/images/WAVE WIRE.png",
+    image: "/events/ece/WAVE WIRE.png",
+    poster: "/events/ece/WAVE WIRE.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Wave Wire"],
@@ -1561,8 +1568,8 @@ export const events = [
     subtitle: "Unravel. Innovate. Solve – Be the Tech Sleuth!",
     description:
       "Tech Detective is an exciting event that challenges participants to analyze real-world technological problems and propose innovative solutions. This event encourages critical thinking, creativity, and teamwork, making it a perfect platform for future innovators.",
-    image: "/nectechfest2k25/images/Tech Detective.png",
-    poster: "/nectechfest2k25/images/Tech Detective.png",
+    image: "/events/ece/Tech Detective.png",
+    poster: "/events/ece/Tech Detective.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Tech Detective"],
@@ -1581,8 +1588,8 @@ export const events = [
     subtitle: " Create, Code, Conquer.",
     description:
       "Crystel pixel is a thrilling two stage competition that tests your creativity and technical skills. The rounds include logo magic and Build-a-thon. This event helps you learn new skills, gain realworld experience, build your portfolio, and boost your confidence. Complete, showcase your talent, and have fun while unlocking your potential!",
-    image: "/nectechfest2k25/images/Crystal Pixel.png",
-    poster: "/nectechfest2k25/images/Crystal Pixel.png",
+    image: "/events/ece/Crystal Pixel.png",
+    poster: "/events/ece/Crystal Pixel.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["Crystal Pixel"],
@@ -1601,8 +1608,8 @@ export const events = [
     subtitle: "Explore Tamil World ",
     description:
       " Tamilzhodu Vilayaadu is a fun interactive game that makes us to experience tamil culture, tradition and language. The game features quizzes, challenges, and riddles that test knowledge and vocabulary while promoting engagement and entertainment.",
-    image: "/nectechfest2k25/images/Tamizhodu Vilayaadu.png",
-    poster: "/nectechfest2k25/images/Tamizhodu Vilayaadu.png",
+    image: "/events/ece/Tamizhodu Vilayaadu.png",
+    poster: "/events/ece/Tamizhodu Vilayaadu.png",
     department: "ECE Association",
     category: "non-tech",
     tags: ["Tamizhodu Vilayaadu"],
@@ -1621,8 +1628,8 @@ export const events = [
     subtitle: "Let's Get Embedded-Join the Revolution",
     description:
       "Gear up for an electrifying experience at EmbedX – where innovation meets creativity, and ideas spark into reality! Join us for a journey through the future of embedded systems, with cuttingedge technologies and exciting challenges. Let’s create, innovate, and connect",
-    image: "/nectechfest2k25/images/EmbedX.png",
-    poster: "/nectechfest2k25/images/EmbedX.png",
+    image: "/events/ece/EmbedX.png",
+    poster: "/events/ece/EmbedX.png",
     department: "ECE Association",
     category: "Technical",
     tags: ["EmbedX"],
@@ -1641,8 +1648,8 @@ export const events = [
     subtitle: "Exploring Innovations and Insights",
     description:
       "Showcase your research skills and present your paper. Share your ideas, insights and findings with fellow enthusiasts and experts. Get feedback, network and take your research to the next level!",
-    image: "/nectechfest2k25/images/PAPER PRESENTATION_ECE.png",
-    poster: "/nectechfest2k25/images/PAPER PRESENTATION_ECE.png",
+    image: "/events/ece/Paper Presentation.jpg",
+    poster: "/events/ece/Paper Presentation.jpg",
     department: "ECE Association",
     category: "Technical",
     tags: ["Paper Presentation"],
@@ -1682,8 +1689,8 @@ export const events = [
       "No plagiarism.",
       "Judge's decision is final.",
     ],
-    image: "/nectechfest2k25/images/PAPER_PRESENTATION_EEE.jpg",
-    poster: "/nectechfest2k25/images/PAPER_PRESENTATION_EEE.jpg",
+    image: "/events/PAPER_PRESENTATION_EEE.jpg",
+    poster: "/events/PAPER_PRESENTATION_EEE.jpg",
   },
   {
     id: 60,
@@ -1708,8 +1715,8 @@ export const events = [
       "Judges' decision is final.",
       "All rounds must be completed independently by the teams.",
     ],
-    image: "/nectechfest2k25/images/TECHNICAL_QUIZ_EEE.jpg",
-    poster: "/nectechfest2k25/images/TECHNICAL_QUIZ_EEE.jpg",
+    image: "/events/TECHNICAL_QUIZ_EEE.jpg",
+    poster: "/events/TECHNICAL_QUIZ_EEE.jpg",
   },
   {
     id: 61,
@@ -1735,8 +1742,8 @@ export const events = [
       "Teams must bring the completed project and a clear project description.",
       "Scoring based on innovation, functionality, and presentation.",
     ],
-    image: "/nectechfest2k25/images/PROJECT_EXPO_EEE.jpg",
-    poster: "/nectechfest2k25/images/PROJECT_EXPO_EEE.jpg",
+    image: "/events/PROJECT_EXPO_EEE.jpg",
+    poster: "/events/PROJECT_EXPO_EEE.jpg",
   },
 
   {
@@ -1763,8 +1770,8 @@ export const events = [
       "External assistance is prohibited.",
       "All work must be done independently by the team.",
     ],
-    image: "/nectechfest2k25/images/CIRCUIT_DEBUGGING_EEE.jpg",
-    poster: "/nectechfest2k25/images/CIRCUIT_DEBUGGING_EEE.jpg",
+    image: "/events/CIRCUIT_DEBUGGING_EEE.jpg",
+    poster: "/events/CIRCUIT_DEBUGGING_EEE.jpg",
   },
   {
     id: 63,
@@ -1790,8 +1797,8 @@ export const events = [
       "All programs must be coded in C, C++, or Python only.",
       "No external help is allowed during the contest.",
     ],
-    image: "/nectechfest2k25/images/CODING_CONTEST_EEE.jpg",
-    poster: "/nectechfest2k25/images/CODING_CONTEST_EEE.jpg",
+    image: "/events/CODING_CONTEST_EEE.jpg",
+    poster: "/events/CODING_CONTEST_EEE.jpg",
   },
   {
     id: 64,
@@ -1815,8 +1822,8 @@ export const events = [
       "Judges' decision is final.",
       "Teams must work independently and complete the tasks without external assistance.",
     ],
-    image: "/nectechfest2k25/images/TECH_ENCRYPT_EEE.jpg",
-    poster: "/nectechfest2k25/images/TECH_ENCRYPT_EEE.jpg",
+    image: "/events/TECH_ENCRYPT_EEE.jpg",
+    poster: "/events/TECH_ENCRYPT_EEE.jpg",
   },
   {
     id: 65,
@@ -1841,8 +1848,8 @@ export const events = [
       "Time management is key.",
       "Judge's decision is final.",
     ],
-    image: "/nectechfest2k25/images/LOGIC_LADDER_EEE.jpg",
-    poster: "/nectechfest2k25/images/LOGIC_LADDER_EEE.jpg",
+    image: "/events/LOGIC_LADDER_EEE.jpg",
+    poster: "/events/LOGIC_LADDER_EEE.jpg",
   },
   //eee non-tech
   {
@@ -1869,8 +1876,8 @@ export const events = [
       "Teams must submit the final design in a high-resolution format by the end of the allotted time.",
       "Judging will be based on creativity, relevance to the topic, and overall design quality.",
     ],
-    image: "/nectechfest2k25/images/POSTER_DESIGN_EEE.jpg",
-    poster: "/nectechfest2k25/images/POSTER_DESIGN_EEE.jpg",
+    image: "/events/POSTER_DESIGN_EEE.jpg",
+    poster: "/events/POSTER_DESIGN_EEE.jpg",
   },
   {
     id: 67,
@@ -1894,8 +1901,8 @@ export const events = [
       "Speed, accuracy, and teamwork will determine the winners.",
       "Judges' decisions will be final.",
     ],
-    image: "/nectechfest2k25/images/CUP_BRIDGE_EEE.jpg",
-    poster: "/nectechfest2k25/images/CUP_BRIDGE_EEE.jpg",
+    image: "/events/CUP_BRIDGE_EEE.jpg",
+    poster: "/events/CUP_BRIDGE_EEE.jpg",
   },
   {
     id: 68,
@@ -1916,8 +1923,8 @@ export const events = [
       "Round 1: Ddakji – Traditional Korean paper folding game.",
       "Round 2: Bottle Flip Challenge – Teams will compete to successfully flip a bottle and land it upright the most times within a set time.",
     ],
-    image: "/nectechfest2k25/images/WALKER_BOTTLE_EEE.jpg",
-    poster: "/nectechfest2k25/images/WALKER_BOTTLE_EEE.jpg",
+    image: "/events/WALKER_BOTTLE_EEE.jpg",
+    poster: "/events/WALKER_BOTTLE_EEE.jpg",
   },
   {
     id: 69,
@@ -1938,8 +1945,8 @@ export const events = [
       "Round 1: Connection – Teams will be given clues to identify the connection between different song beats or themes.",
       "Round 2: Dumb Charades – Teams will act out popular songs without speaking, while others guess the song title.",
     ],
-    image: "/nectechfest2k25/images/GUESS_THE_BEAT_EEE.jpg",
-    poster: "/nectechfest2k25/images/GUESS_THE_BEAT_EEE.jpg",
+    image: "/events/GUESS_THE_BEAT_EEE.jpg",
+    poster: "/events/GUESS_THE_BEAT_EEE.jpg",
   },
   {
     id: 70,
@@ -1965,8 +1972,8 @@ export const events = [
       "Round 1: An image will be displayed on the screen. Participants must write down the most pictures that they can recall.",
       "Round 2: Participants will be shown an image, and they must identify the location within the picture by describing where something is located. For example: 'The object is on the left side, near the top corner.' etc.",
     ],
-    image: "/nectechfest2k25/images/CAPTURE_REMEMBER_EEE.jpg",
-    poster: "/nectechfest2k25/images/CAPTURE_REMEMBER_EEE.jpg",
+    image: "/events/CAPTURE_REMEMBER_EEE.jpg",
+    poster: "/events/CAPTURE_REMEMBER_EEE.jpg",
   },
   {
     id: 71,
@@ -1992,8 +1999,8 @@ export const events = [
       "No of rounds: 3",
       "Rules will be explained at the time of the event.",
     ],
-    image: "/nectechfest2k25/images/FAST_N_FROLIC_EEE.jpg",
-    poster: "/nectechfest2k25/images/FAST_N_FROLIC_EEE.jpg",
+    image: "/events/FAST_N_FROLIC_EEE.jpg",
+    poster: "/events/FAST_N_FROLIC_EEE.jpg",
   },
   //civil
   {
@@ -2002,8 +2009,8 @@ export const events = [
     subtitle: "A Debate Contest Among Teams",
     description:
       "A discussion contest to support and enrich your stands. Engage in a thought-provoking debate on non-technical topics and showcase your speaking and argumentation skills.",
-    image: "/nectechfest2k25/images/word_debate_image.jpg",
-    poster: "/nectechfest2k25/images/word_debate_poster.jpg",
+    image: "/events/civil/word_debate_image.jpg",
+    poster: "/events/civil/word_debate_image.jpg",
     category: "non-tech",
     tags: ["DEBATE", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-14",
@@ -2036,8 +2043,8 @@ export const events = [
     subtitle: "TREASURE HUNT",
     description:
       "This event focuses on the adventure activity in which participants search for hidden objects by the clues, solving puzzles, and completing challenges. The evaluation criteria include time taken, rule adherence, and clue-solving accuracy.",
-    image: "/nectechfest2k25/images/tech_pirates_image.jpg",
-    poster: "/nectechfest2k25/images/tech_pirates_poster.jpg",
+    image: "/events/civil/tech_pirates_image.jpg",
+    poster: "/events/civil/tech_pirates_image.jpg",
     category: "non-tech",
     tags: ["TREASURE HUNT", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-14",
@@ -2071,8 +2078,8 @@ export const events = [
     subtitle: "Unravelling the Secrets of the Code Book",
     description:
       "An engaging quiz competition organized by the Civil Engineering Association. The event consists of three rounds with increasing difficulty: Easy, Moderate, and High.",
-    image: "/nectechfest2k25/images/code_twist_image.jpg",
-    poster: "/nectechfest2k25/images/code_twist_poster.jpg",
+    image: "/events/civil/code_twist_image.jpg",
+    poster: "/events/civil/code_twist_image.jpg",
     department: "Civil Association",
     category: "technical",
     tags: ["CODE TWIST", "TECHNICAL", "CIVIL"],
@@ -2106,8 +2113,8 @@ export const events = [
     subtitle: "Technical Quiz",
     description:
       "Conducting a quiz game based on civil engineering can be a fun and engaging way to test knowledge and promote learning.",
-    image: "/nectechfest2k25/images/build_battle_image.jpg",
-    poster: "/nectechfest2k25/images/build_battle_poster.jpg",
+    image: "/events/civil/build_battle_image.jpg",
+    poster: "/events/civil/build_battle_image.jpg",
     department: "Civil Association",
     category: "technical",
     tags: ["QUIZ", "TECHNICAL", "CIVIL"],
@@ -2140,8 +2147,8 @@ export const events = [
     subtitle: "A Research-Based Technical Event",
     description:
       "This event focuses on the research work of students in Civil Engineering. Participants will present their research findings, followed by a Q&A session. The evaluation criteria include content quality, presentation skills, slide visuals, and performance in Q&A.",
-    image: "/nectechfest2k25/images/paper_presentation_image.jpg",
-    poster: "/nectechfest2k25/images/paper_presentation_poster.jpg",
+    image: "/events/civil/paper_presentation_image.jpg",
+    poster: "/events/civil/paper_presentation_image.jpg",
     department: "Civil Association",
     category: "technical",
     tags: ["PRESENTATION", "TECHNICAL", "CIVIL"],
@@ -2171,8 +2178,8 @@ export const events = [
     subtitle: "Craft-Based Technical Event",
     description:
       "This event is based on crafting the design based on civil engineering with the software AutoCAD.",
-    image: "/nectechfest2k25/images/CadModeling_Civil.png",
-    poster: "/nectechfest2k25/images/CadModeling_Civil.png",
+    image: "/events/civil/CadModeling_Civil.png",
+    poster: "/events/civil/CadModeling_Civil.png",
     department: "Civil Association",
     category: "technical",
     tags: ["modeling", "Technical", "Civil"],
@@ -2200,8 +2207,8 @@ export const events = [
     subtitle: "WORD GAME",
     description:
       "It’s a thrilling word game that challenges you and your friends to create, connect, and conquer words.",
-    image: "/nectechfest2k25/images/TeamTango_Civil.png",
-    poster: "/nectechfest2k25/images/TeamTango_Civil.png",
+    image: "/events/civil/TeamTango_Civil.png",
+    poster: "/events/civil/TeamTango_Civil.png",
     category: "non-tech",
     tags: ["WORD GAME", "NON-TECHNICAL", "CIVIL"],
     date: "2025-03-15",
@@ -2237,8 +2244,8 @@ export const events = [
     subtitle: "Building plan-based technical event",
     description:
       "This event focuses on the estimation and planning knowledge of students in Civil Engineering. Participants will quote the rate of the land, and the owners of the land must provide the building plan for the land. The evaluation criteria include accuracy of the plan, the efficient usage of the virtual amount, and Time Management.",
-    image: "/nectechfest2k25/images/QuoteOrQuit_Civil.png",
-    poster: "/nectechfest2k25/images/QuoteOrQuit_Civil.png",
+    image: "/events/civil/QuoteOrQuit_Civil.png",
+    poster: "/events/civil/QuoteOrQuit_Civil.png",
     department: "Civil Association",
     category: "technical",
     tags: ["BID", "PLAN", "TECHNICAL", "CIVIL"],
@@ -2274,8 +2281,8 @@ export const events = [
     subtitle: "Truss Design and Construction Challenge",
     description:
       "Using the materials provided, participants will construct their trusses according to the design specifications. They must ensure that their structure is stable, and all the joints are securely connected. Teams will have a limited amount of time to complete the build, testing their efficiency and teamwork.",
-    image: "/nectechfest2k25/images/TriwizardTruss_Civil.png",
-    poster: "/nectechfest2k25/images/TriwizardTruss_Civil.png",
+    image: "/events/civil/TriwizardTruss_Civil.png",
+    poster: "/events/civil/TriwizardTruss_Civil.png",
     category: "non-tech",
     tags: ["Non-Technical", "Civil"],
     date: "2025-03-14",
@@ -2308,6 +2315,8 @@ export const events = [
     time: "9:30 AM - 12:30 PM",
     date: "14/03/2025",
     organizer: "Civil Engineering Association",
+    image: "/events/civil/BIM.png",
+    poster: "/events/civil/BIM.png",
     category: "workshops",
     facultyCoordinator: "Mr. K. Marimuthu, AP/Civil",
     studentCoordinators: [{ name: "Soorya V.A", contact: "8754997131" }],
@@ -2316,7 +2325,7 @@ export const events = [
     registrationLink: "will be filled up by dev",
     resourcePerson: {
       name: "Mr. K. Marimuthu",
-      image: "/nectechfest2k25/images/CEA_Workshops_BIM.png",
+      image: "/events/CEA_Workshops_BIM.png",
       designation: "Assistant Professor",
       organization: "NEC Faculty",
       bio: "Mr. K. Marimuthu is an Assistant Professor in the Civil Engineering department at National Engineering College. With extensive experience in the field, he specializes in building information modeling (BIM) and has led several civil engineering projects involving BIM for efficient project management and design.",
@@ -2325,7 +2334,7 @@ export const events = [
     },
 
     venue: "CAD Lab, Civil Department",
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/civil/Workshop_venue_video.mp4",
   },
   {
     id: 82,
@@ -2336,6 +2345,8 @@ export const events = [
     time: "9:30 AM - 12:30 PM",
     date: "15/03/2025",
     organizer: "Civil Engineering Association",
+    image: "/events/civil/AI Applications.png",
+    poster: "/events/civil/AI Applications.png",
     category: "workshops",
     facultyCoordinator: "Mr. V. Arulpandian, AP/Civil",
     studentCoordinators: [{ name: "T. Yuvasri", contact: "9080178579" }],
@@ -2344,7 +2355,7 @@ export const events = [
     registrationLink: "will be filled up by dev",
     resourcePerson: {
       name: "Mr. V. Arulpandian",
-      image: "/nectechfest2k25/images/CEA_Workshops_AI.jpg",
+      image: "/events/CEA_Workshops_AI.jpg",
       designation: "Assistant Professor",
       organization: "NEC Faculty",
       bio: "Mr. V. Arulpandian is an Assistant Professor in the Civil Engineering department at National Engineering College. He specializes in the application of Artificial Intelligence in civil engineering and has been a part of several projects that leverage AI for smarter infrastructure solutions.",
@@ -2353,7 +2364,7 @@ export const events = [
     },
 
     venue: "CAD Lab, Civil Department",
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/civil/Workshop_venue_video.mp4",
   },
   {
     id: 83,
@@ -2364,6 +2375,8 @@ export const events = [
     time: "9:30 AM - 12:30 PM",
     date: "15/03/2025",
     organizer: "Civil Engineering Association",
+    image: "/events/civil/Standard Penetration Test.png",
+    poster: "/events/civil/Standard Penetration Test.png",
     category: "workshops",
     facultyCoordinator: "Mrs. M. Balamaheswari, AP/Civil",
     studentCoordinators: [{ name: "Vasanth M", contact: "9345508862" }],
@@ -2372,7 +2385,7 @@ export const events = [
     registrationLink: "will be filled up by dev",
     resourcePerson: {
       name: "Mrs. M. Balamaheswari",
-      image: "/nectechfest2k25/images/CEA_Workshops_SPT.jpg",
+      image: "/events/CEA_Workshops_SPT.jpg",
       designation: "Assistant Professor",
       organization: "NEC Faculty",
       bio: "Mrs. M. Balamaheswari is an Assistant Professor in the Civil Engineering department at National Engineering College. She specializes in geotechnical engineering and has extensive experience in soil testing techniques, including the Standard Penetration Test (SPT).",
@@ -2381,7 +2394,7 @@ export const events = [
     },
 
     venue: "Data Analytics Lab",
-    video: "/nectechfest2k25/images/Workshop_venue_video.mp4",
+    video: "/events/civil/Workshop_venue_video.mp4",
   },
   //AI&DS
   {
@@ -2390,8 +2403,8 @@ export const events = [
     subtitle: "Data Exploration & Visualization",
     description:
       "Devfest is the ultimate event for diving into the world of data exploration and visualization! Participants will explore innovative techniques for analyzing complex datasets and transforming them into clear, visually impactful insights.",
-    image: "/nectechfest2k25/images/Devfest.jpg",
-    poster: "/nectechfest2k25/images/Devfest.jpg",
+    image: "/events/Devfest.jpg",
+    poster: "/events/Devfest.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["DATA SCIENCE", "TECHFEST", "AI"],
@@ -2424,8 +2437,8 @@ export const events = [
     subtitle: "Generative AI Hackathon",
     description:
       "AI Builder Sprint is a high-energy, Gen AI-focused hackathon where participants create innovative solutions using the latest generative AI technologies. Teams will compete to build AI-driven applications using language models, image generation tools, and more.",
-    image: "/nectechfest2k25/images/AI Builders Sprint.jpg",
-    poster: "/nectechfest2k25/images/AI Builders Sprint.jpg",
+    image: "/events/AI Builders Sprint.jpg",
+    poster: "/events/AI Builders Sprint.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["AI", "HACKATHON", "GENERATIVE AI"],
@@ -2456,8 +2469,8 @@ export const events = [
     subtitle: "Data Science Case Study",
     description:
       "Unleash the power of coding in this thrilling data science showdown! Participants will receive a real-world scenario and a CSV dataset, analyze data, and provide innovative solutions—all using code.",
-    image: "/nectechfest2k25/images/Unfold Chronicles of Data.jpg",
-    poster: "/nectechfest2k25/images/Unfold Chronicles of Data.jpg",
+    image: "/events/Unfold Chronicles of Data.jpg",
+    poster: "/events/Unfold Chronicles of Data.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["DATA SCIENCE", "CASE STUDY", "PYTHON"],
@@ -2490,8 +2503,8 @@ export const events = [
     subtitle: "Team-Based Logic Event",
     description:
       "Get ready to connect ideas and collaborate in this exciting event! Participants will team up to tackle challenges and create innovative solutions.",
-    image: "/nectechfest2k25/images/Connexion.jpg",
-    poster: "/nectechfest2k25/images/Connexion.jpg",
+    image: "/events/Connexion.jpg",
+    poster: "/events/Connexion.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["LOGIC", "TEAMWORK", "TECH"],
@@ -2521,7 +2534,7 @@ export const events = [
     subtitle: "Music and Rhythm Challenge",
     description:
       "Team up for an exciting musical journey in Harmony Quest! This non-technical event invites duos to showcase their creativity, rhythm, and passion for music. No experience needed—just bring your love for melody and let the fun begin!",
-    image: "/nectechfest2k25/images/Listen and Identify.jpg",
+    image: "/events/Listen and Identify.jpg",
     poster: "Listen and Identify.jpg",
     category: "non-tech",
     tags: ["MUSIC", "CREATIVITY", "ENTERTAINMENT"],
@@ -2552,8 +2565,8 @@ export const events = [
     subtitle: "AI Paper/Project Expo",
     description:
       "Present your cutting-edge AI research or projects at the AI Paper/Project Expo. Share innovative solutions, spark discussions, and gain valuable feedback from experts and peers.",
-    image: "/nectechfest2k25/images/ai_product_demo.jpg",
-    poster: "/nectechfest2k25/images/ai_product_demo.jpg",
+    image: "/events/ai_product_demo.jpg",
+    poster: "/events/ai_product_demo.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["AI", "Research", "Projects", "Innovation"],
@@ -2585,8 +2598,8 @@ export const events = [
     subtitle: "AI-Powered Storytelling",
     description:
       "Participants will create 45 to 60-second advertisement videos using AI, combining their imagination with cutting-edge tools. They’ll experiment with innovative techniques and learn how AI enhances storytelling.",
-    image: "/nectechfest2k25/images/AI Thought Craft.jpg",
-    poster: "/nectechfest2k25/images/AI Thought Craft.jpg",
+    image: "/events/AI Thought Craft.jpg",
+    poster: "/events/AI Thought Craft.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["AI", "CREATIVITY", "VIDEO"],
@@ -2617,8 +2630,8 @@ export const events = [
     subtitle: "Tech Charades",
     description:
       "Explore the dynamic interplay of actions and reactions in AI and interactive systems at Act and React. Design and experiment with real-time AI applications that respond to stimuli, actions, and user input.",
-    image: "/nectechfest2k25/images/act_and_react.jpg",
-    poster: "/nectechfest2k25/images/act_and_react.jpg",
+    image: "/events/act_and_react.jpg",
+    poster: "/events/act_and_react.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["AI", "Interactive Systems", "Automation", "Chatbots"],
@@ -2647,8 +2660,8 @@ export const events = [
     subtitle: "Online Treasure Hunt",
     description:
       "Embark on an exciting treasure hunt with a tech twist! Participants will navigate through AI-powered clues and challenges, testing problem-solving skills.",
-    image: "/nectechfest2k25/images/Adventure Hunt.jpg",
-    poster: "/nectechfest2k25/images/Adventure Hunt.jpg",
+    image: "/events/Adventure Hunt.jpg",
+    poster: "/events/Adventure Hunt.jpg",
     department: "AI&DS Association",
     category: "Technical",
     tags: ["PUZZLE", "AI", "TEAMWORK"],
@@ -2680,8 +2693,8 @@ export const events = [
     subtitle: "Showcase Your Research on Emerging Tech",
     description:
       "Present your research on the latest computer science technologies and contribute to the future of digital transformation. Inspire the audience with groundbreaking ideas and innovative solutions.",
-    image: "/nectechfest2k25/images/paperpresentation.jpg",
-    poster: "/nectechfest2k25/images/paperpresentation.jpg",
+    image: "/events/paperpresentation.jpg",
+    poster: "/events/paperpresentation.jpg",
     department: "CSE Association",
     category: "Technical",
     tags: ["Research", "Innovation", "Technology"],
@@ -2715,8 +2728,8 @@ export const events = [
     subtitle: "Design with Precision and Creativity",
     description:
       "Compete in a high-intensity UI/UX challenge where designers craft user-centric interfaces based on a surprise theme. Showcase your creativity and problem-solving skills using Figma or similar tools.",
-    image: "/nectechfest2k25/images/warofuiux.jpg",
-    poster: "/nectechfest2k25/images/warofuiux.jpg",
+    image: "/events/warofuiux.jpg",
+    poster: "/events/warofuiux.jpg",
     department: "CSE Association",
     category: "Technical",
     tags: ["UI/UX", "Design", "Creativity"],
@@ -2751,8 +2764,8 @@ export const events = [
     subtitle: "The Ultimate Coding Face-Off",
     description:
       "A team-based coding competition testing logic, speed, and adaptability. Navigate intense rounds, including Code Relay and Blind Coding, to prove your problem-solving prowess.",
-    image: "/nectechfest2k25/images/codecool.jpg",
-    poster: "/nectechfest2k25/images/codecool.jpg",
+    image: "/events/codecool.jpg",
+    poster: "/events/codecool.jpg",
     department: "CSE Association",
     category: "Technical",
     tags: ["Coding", "Logic", "Teamwork"],
@@ -2786,8 +2799,8 @@ export const events = [
     subtitle: "The Battle Between Prompts",
     description:
       "Test your AI expertise in a two-round challenge designed to push the boundaries of prompt engineering. Compete in a knowledge-packed quiz and tackle real-world AI problem-solving scenarios.",
-    image: "/nectechfest2k25/images/promptengineering.jpg",
-    poster: "/nectechfest2k25/images/promptengineering.jpg",
+    image: "/events/promptengineering.jpg",
+    poster: "/events/promptengineering.jpg",
     department: "CSE Association",
     category: "Technical",
     tags: ["AI", "Prompt Engineering", "Problem-Solving"],
@@ -2821,8 +2834,8 @@ export const events = [
     subtitle: "Battle of Technical Brilliance",
     description:
       "A high-energy, three-round quiz competition testing technical expertise, logical reasoning, and problem-solving skills. Engage in fast-paced rounds and emerge victorious!",
-    image: "/nectechfest2k25/images/techquizfaceoff.jpg",
-    poster: "/nectechfest2k25/images/techquizfaceoff.jpg",
+    image: "/events/techquizfaceoff.jpg",
+    poster: "/events/techquizfaceoff.jpg",
     department: "CSE Association",
     category: "Technical",
     tags: ["Quiz", "Tech Knowledge", "Problem-Solving"],
@@ -2853,6 +2866,7 @@ export const events = [
   //mech workshops
   {
     id: 98,
+    name:"An Introduction to Industrial Geometric Dimensioning and Tolerancing",
     title: "An Introduction to Industrial Geometric Dimensioning and Tolerancing",
     name:"An Introduction to Industrial Geometric Dimensioning and Tolerancing",
     subtitle: " ",
@@ -2875,7 +2889,290 @@ export const events = [
     },
     video: "",
   },
-
+  //s&h events
+  {
+    id: 99,
+    name: "Elevate Your Mind",
+    subtitle: "The Path to Aptitude Success",
+    description:
+      "This Aptitude Training Workshop is designed to enhance participants' problem-solving abilities and numerical proficiency through structured learning and practical exercises. The workshop will cover key aptitude areas such as quantitative aptitude, logical reasoning, and data interpretation, with expert guidance.",
+    image: "/events/sh/Elevate Your Mind.jpg",
+    poster: "/events/sh/Elevate Your Mind.jpg",
+    department: "S&H",
+    category: "workshops",
+    tags: [],
+    date: "2025-03-14",
+    startingTime: "9:30 am",
+    venue: "First Smart Classroom (S&H)",
+    registrationLink: "",
+    organizer: "Science & Humanities",
+    facultyCoordinator: "Dr. S. S. Basitha Parveen",
+    studentCoordinators: [
+      {
+        name: "S. Gomathisankar",
+        contact: "6374367922",
+      },
+    ],
+  },
+  {
+    id: 100,
+    name: "CEREBRAL EVENT",
+    subtitle: "A Battle of Wits",
+    description:
+      "Competition designed to test participants’ thinking, understanding, and quick reactions.",
+    image: "/events/sh/CEREBRAL EVENT.jpg",
+    poster: "/events/sh/CEREBRAL EVENT.jpg",
+    department: "S&H",
+    category: "non-tech",
+    tags: [],
+    date: "2025-03-15",
+    startingTime:"1:15 pm",
+    venue: "Seminar Hall",
+    registrationLink: "",
+    organizer: "Quiz Club",
+    facultyCoordinator: "Mr. P. Ganapathy AP, Ms. P. Dharani AP",
+    studentCoordinators: [
+      {
+        name: "Mr. R. Gurusivabalan",
+        contact: "9597089504",
+      },
+    ],
+    rules: [
+      "Team must consist of 2 participants.",
+      "One team per college.",
+      "The decision made by the judges/committee will be conclusive.",
+      "The certificate and attractive prize will be awarded to the winning teams.",
+    ],
+  },
+  {
+    id: 101,
+    name: "LITSPHERE",
+    subtitle: "Ignite Your Imagination",
+    description:
+      "This event enhances non-verbal and bilingual communication, fostering creativity, teamwork, and confidence for effective expression in public speaking and interviews.",
+    image: "/events/sh/LITSPHERE.jpg",
+    poster: "/events/sh/LITSPHERE.jpg",
+    department: "S&H",
+    category: "non-tech",
+    tags: [],
+    date: "2025-03-14",
+    startingTime:"3:15 pm",
+    venue: "Seminar Hall (S&H)",
+    registrationLink: "",
+    organizer: "Science and Humanities",
+    facultyCoordinator: "Ms. S. Jeba",
+    studentCoordinators: [
+      {
+        name: "M. Sankar",
+        contact: "9952044102",
+      },
+    ],
+    rules: [
+      "Each team must have 2 participants.",
+      "Non-verbal clues only.",
+      "Proper choice of words must be used.",
+      "Time limit: 100 seconds.",
+    ],
+  },
+  {
+    id: 102,
+    name: "MATHLETICS",
+    subtitle: "Unleash the Math Genius",
+    description:
+      "Mathletics is an exciting and interactive event designed to challenge and enhance students' mathematical reasoning, pattern recognition, and logical thinking through picture puzzles, mathematical connections, and Sudoku challenges.",
+    image: "/events/sh/MATHLETICS.jpg",
+    poster: "/events/sh/MATHLETICS.jpg",
+    department: "S&H",
+    category: "non-tech",
+    tags: [],
+    date: "2025-03-14",
+    startingTime: "4:00 PM - 5:30 PM",
+    venue: "Seminar Hall",
+    registrationLink: "",
+    organizer: "Science & Humanities",
+    facultyCoordinator: "",
+    studentCoordinators: [
+      {
+        name: "Jeyapandi",
+        contact: "8122125950",
+      },
+    ],
+    rules: [
+      "A maximum of one team per college is allowed to participate.",
+      "Each team must consist of two members.",
+      "The use of mobile phones or digital aids is strictly prohibited.",
+      "Round 1: Picture Puzzle Bonanza (Elimination Round) - 30 min.",
+      "Round 2: Sudoku Lightning Round - 20 min.",
+      "Round 3: Mathematical Connection - 20 min.",
+      "Winners will be given prizes.",
+      "Judge’s decision will be final and binding.",
+    ],
+  },
+  {
+    id: 103,
+    name: "Fusion Frontiers",
+    subtitle: "The Science Adventure Game!",
+    description:
+      "Fusion Frontiers is an engaging and educational science game designed to challenge and inspire players through interactive gameplay that explores fundamental scientific principles.",
+    image: "/events/sh/Fusion Frontiers.jpg",
+    poster: "/events/sh/Fusion Frontiers.jpg",
+    department: "S&H",
+    category: "non-tech",
+    tags: [],
+    date: "2025-03-15",
+    startingTime: "11:00 AM",
+    venue: "HALL NO 2, HALL NO 3 / S&H",
+    registrationLink: "",
+    organizer: "Science Club",
+    facultyCoordinators: "Dr. V. Ramasubbu, Dr. B. Rajkumar",
+    studentCoordinators: [
+      {
+        name: "Nanthini G",
+        contact: "7418894891",
+      },
+      {
+        name: "Mahesh Raja E",
+        contact: "7708235498",
+      },
+    ],
+    rules: [
+      "Teams must consist of 2 members.",
+      "Time limit: 60 sec for each team/game.",
+      "Round 1: Eureka – Players match scientific laws and theorems with real-world objects and phenomena.",
+      "Round 2: Orbital Order – A cosmic adventure where players identify constellations and organize celestial bodies.",
+      "Round 3: Hydro Logic – A problem-solving quest focused on the water cycle and hydrological processes.",
+      "Round 4: Alchemy – A chemistry-based challenge where players identify medicinal cures.",
+      "Round 5: Eco-Builders – A strategic simulation where players build and sustain ecosystems.",
+    ],
+  },
+  
+  {
+    id: 104,
+    name: "Poster Presentation",
+    subtitle: "Mysteries of Prime Numbers, The Golden Ratio, Calculus in Real-World Applications",
+    description: "A technical mathematical event that challenges students to explore the fascinating world of mathematics and its real-world applications",
+    image: "/events/sh/posterpresenationsh.jpg",
+    poster: "/events/sh/posterpresentationsh.jpg",
+    department: "S&H Association",
+    category: "Technical",
+    tags: ["Poster Presentation"],
+    date: "2025-03-14",
+    startingTime: "9:15 AM",
+    venue: "Mathematics Lab",
+    registrationLink: "",
+    organizer: "Maths club",
+    facultyCoordinator: "Dr.M.Annapoopathi, AP(SG)/S&H, Dr.R.Geetha, AP/S&H",
+    studentCoordinators: [
+      { name: "C.Harini", contact: "9342092304" }
+    ],
+    rules: [
+      "Design an A3/A4 poster, covering relevant content, properties, patterns, and applications.",
+      "Time Frame 5 minutes including explanation and judge’s evaluations.",
+      "Only one team allowed to participate from a college.",
+      "A team should have a maximum of two members."
+    ]
+  },
+  {
+    id: 105,
+    name: "TECH MEETS TEXT",
+    subtitle: "Lend your ears, The Art of Tech Tale",
+    description: "This event strengthens active listening, analytical thinking, and storytelling, helping participants grasp technical concepts and present them clearly. It enhances communication skills for academic, technical, and professional success",
+    image: "/events/sh/techmeetstext.jpg",
+    poster: "/events/sh/techmeetstext.jpg",
+    department: "S&H Association",
+    category: "Technical",
+    tags: [],
+    date: "2025-03-15",
+    venue: "S&H English Lab",
+    startingTime:"1:45 PM",
+    registrationLink: "",
+    organizer: "Science and Humanities",
+    facultyCoordinator: "Ms.S.Gopika Devi, Mr.Karthik",
+    studentCoordinators: [
+      { name: "Mr.A.Jeno Kevin", contact: "9600786645" }
+    ],
+    rules: [
+      "1 Participant",
+      "Time limit: 5 Minutes"
+    ]
+  },
+  {
+    id: 106,
+    name: "TECHNO SPARK",
+    subtitle: "Coding War",
+    description: "Competition designed to test participants’ knowledge and skills in engineering, science, and technology",
+    image: "/events/sh/technospark.jpg",
+    poster: "/events/sh/technospark.jpg",
+    department: "S&H Association",
+    category: "Technical",
+    tags: ["TECHNICAL", "S&H","Coding"],
+    date: "2025-03-14",
+    venue: "Seminar Hall",
+    startingTime:"11 AM",
+    registrationLink: "",
+    organizer: "S&H",
+    facultyCoordinator: "Mr.P.GANAPATHY AP/SH, Ms.P.DHARANI AP/S&H",
+    studentCoordinators: [
+      { name: "Mr.R.GURUSIVABALAN, Mech", contact: "9597089504" }
+    ],
+    rules: [
+      "1. Team must consist of 2 participants.",
+      "2. One team per college.",
+      "3. The decision made by the judges/committee will be conclusive.",
+      "4. The certificate and attractive prize will be awarded to the winning teams.",
+      "Round 1: Preliminary round (if necessary)",
+      "Objective: To select the top teams for the subsequent rounds.",
+      "Format: MCQ (Multiple Choice Questions)",
+      "Duration: 10 minutes",
+      "Questions: Questions covering basic engineering concepts, science, and technology",
+      "Round 2: Circuit Breaker (Technical Round)",
+      "Objective: To test teams' technical knowledge and problem-solving skills",
+      "Format: MCQ (Multiple Choice Questions)",
+      "Duration: 20 minutes",
+      "Questions: Questions focused on specific engineering disciplines.",
+      "Round 3: Code Crusade (Programming Round)",
+      "Objective: To evaluate teams' programming skills and ability.",
+      "Format: Spot the error in coding program.",
+      "Duration: 20 minutes",
+      "Questions: Coding problems in languages like C, C++, Python.",
+      "Round 4: Techno Trivia (Techno Challenge)",
+      "Objective: This round tests knowledge with pictures to make it more interesting.",
+      "Format: Visual questions",
+      "Duration: 20 minutes",
+      "Questions: Questions covering science, technology, engineering, and Science."
+    ]
+  },
+  {
+    id: 107,
+    name: "PAPER PRESENTATION",
+    subtitle: "Revolutionizing the world: The role of science in modern life",
+    description: "From groundbreaking medical advancements to cutting-edge technology and sustainable innovations, science continues to revolutionize modern life in profound ways. This presentation event explores the transformative impact of scientific discoveries across various fields, highlighting their role in solving global challenges, enhancing quality of life, and shaping the future. Students gain insights into the latest scientific advancements and their real-world applications. It also develops the ability to question and improve confidence in expressing ideas and develop networks with experts and fellow students.",
+    image: "/events/sh/paperpresentationsh.jpg",
+    poster: "/events/sh/paperpresentationsh.jpg",
+    department: "S&H Association",
+    category: "Technical",
+    tags: ["Paper Presentation", "technical", "s&h"],
+    date: "2025-03-14",
+    startingTime:"1:15 pm",
+    venue: "LH3(S&H)",
+    registrationLink: "",
+    organizer: "Science and Humanities",
+    facultyCoordinator: "Dr.A.V.P.Rakkini, Dr.M.Aravind",
+    studentCoordinators: [
+      { name: "A.Jeno Kevin", contact: "9600786645" },
+      { name: "L.Dhessiha", contact: "9843096543" }
+    ],
+    rules: [
+      "Team size: Two participants per team",
+      "Time Limit: 7 mins",
+      "Use a consistent and professional template throughout the presentation",
+      "Limit text on each slide (aim for no more than 6-7 lines per slide; max 15 slides)",
+      "Use readable fonts (minimum 24pt for body text, 32pt+ for headings)",
+      "No external resource or reference allowed during the contest",
+      "Plagiarism will lead to immediate disqualification",
+      "Judges' decision will be final"
+    ]
+  }
 ];
 
 // Custom hook for managing events

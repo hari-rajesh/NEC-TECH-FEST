@@ -89,10 +89,10 @@ const Footer = () => {
                 K.R.Nagar, Kovilpatti
               </p>
               <p className="hover:[text-shadow:_0_0_10px_#8000ff] transition-all duration-300">
-                support@nectechfest.com
+                techfest@nec.edu.in
               </p>
               <p className="hover:[text-shadow:_0_0_10px_#8000ff] transition-all duration-300">
-                +91 1234567890
+                
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Footer = () => {
               More Details
             </h4>
             <nav className="flex flex-col gap-4">
-              {[{ name: "Guidelines", path: "#", onClick: scrollToTop }].map(
+              {[{ name: "Guidelines", path: "#", onClick: scrollToTop },{name:"Developers"}].map(
                 (item) => (
                   <a
                     key={item.name}

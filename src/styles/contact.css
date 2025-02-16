@@ -32,16 +32,6 @@
 }
 
 
-@font-face {
-  font-family: 'Netron';
-  src: url('/path-to-your-font/Netron.woff2') format('woff2'),
-       url('/path-to-your-font/Netron.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
 .text-responsive {
   font-size: 40px;
 }

@@ -28,6 +28,7 @@ export function Navbar() {
     "Mechanical Association",
     "Civil Association",
     "AI&DS Association",
+    "S&H Association"
   ];
 
 

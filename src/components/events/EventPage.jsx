@@ -88,9 +88,7 @@ const EventPage = () => {
   };
 
   const handleRegister = () => {
-    if (event?.registrationLink) {
-      window.location.href = event.registrationLink;
-    }
+    window.open('../../registration/userdetail', '_blank');
   };
 
   if (loading || navigating) {

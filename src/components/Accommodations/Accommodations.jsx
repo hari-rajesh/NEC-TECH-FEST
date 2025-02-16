@@ -46,7 +46,7 @@ const Accommodations = () => {
               Accommodations will be provided free for the students who are participating in the symposium from other districts.
             </p>
             <ul className="text-white text-xl sm:text-2xl list-disc mt-4 ml-5 sm:ml-8">
-              <li>One night stay on 21st February</li>
+              <li>One night stay on 14th March</li>
               <li>Food can be bought from the college cafe</li>
               <li>Healthy snacks will be provided</li>
             </ul>

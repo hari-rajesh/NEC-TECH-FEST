@@ -163,7 +163,7 @@ export function Navbar() {
   return (
     <>
      {!isDrawerOpen && <button
-  className="sm:hidden fixed top-4 right-4 z-[1002] bg-purple-900/30 p-2 rounded-md backdrop-blur-md"
+  className="max-[970px]:block hidden fixed top-4 right-4 z-[1002] bg-purple-900/30 p-2 rounded-md backdrop-blur-md"
   onClick={() => setIsDrawerOpen(true)}
 >
   <IconMenu2 className="h-6 w-6 text-white" />
@@ -177,7 +177,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-[1000] sm:hidden"
+            className="fixed inset-0 bg-black/50 z-[1000] max-[970px]:block hidden"
             onClick={() => setIsDrawerOpen(false)}
           />
         )}
@@ -187,7 +187,7 @@ export function Navbar() {
       <AnimatePresence>
         {isDrawerOpen && <MobileDrawer />}
       </AnimatePresence>
-      <div className="hidden sm:flex fixed top-4 w-full z-[1000] flex-col items-center">
+      <div className="hidden min-[970px]:flex fixed top-4 w-full z-[1000] flex-col items-center">
     <div className="fixed top-4 w-full z-[1000] flex flex-col items-center">
       <div className="relative w-[75%] sm:w-[80%] md:w-[70%] lg:w-[900px]">
         {/* Navbar */}

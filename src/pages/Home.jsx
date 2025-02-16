@@ -63,20 +63,35 @@ function Home() {
       </div>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         <RegisterButton />
-        {/* NEC Logo - Left side */}
-        <div className="absolute top-2.5 sm:top-24 md:top-2.5 left-2 sm:left-4 z-[5]">
+        {/* NEC Logo and Founder Logo Container for mobile */}
+        <div className="lg:hidden flex items-center absolute top-2.5 left-2 z-[5] gap-2">
           <img
             src={necLogo}
             alt="NEC Tech Fest logo"
-            className="w-8 sm:w-12 md:w-14 lg:w-14 h-auto hover:scale-105 transition-transform duration-300"
+            className="w-8 sm:w-10 h-auto hover:scale-105 transition-transform duration-300"
           />
-        </div>
-        {/* Founder Logo - Right side */}
-        <div className="absolute top-0.5 sm:top-24 md:top-0.5 right-0 sm:right-0 md:right-12 lg:right-0 z-[5]"> {/* Increased right spacing */}
           <img
             src={founderLogo}
             alt="Founder logo"
-            className="w-12 sm:w-16 md:w-20 lg:w-24 h-auto hover:scale-105 transition-transform duration-300" // Further increased sizes
+            className="w-12 sm:w-14 h-auto hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+
+        {/* NEC Logo - Desktop */}
+        <div className="hidden lg:block absolute top-2.5 left-4 z-[5]">
+          <img
+            src={necLogo}
+            alt="NEC Tech Fest logo"
+            className="w-14 h-auto hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+
+        {/* Founder Logo - Desktop */}
+        <div className="hidden lg:block absolute top-0.5 right-0 z-[5]">
+          <img
+            src={founderLogo}
+            alt="Founder logo"
+            className="w-20 h-auto hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,40,217,0.2)] via-transparent to-[rgba(139,92,246,0.2)] z-0">

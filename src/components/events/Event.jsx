@@ -14,7 +14,7 @@ const Event = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
   const { events, tags, departments } = useEvents();
-
+// 
   // Convert URL department name to proper format
   const getDepartmentName = () => {
     if (!department) return null;

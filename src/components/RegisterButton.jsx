@@ -2,6 +2,11 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const RegisterButton = () => {
+
+  const handleRegistration=()=>{
+    window.open('registration/userdetail', '_blank');
+  }
+
   return (
     <motion.div
       initial={{ x: 100, rotate: 90 }}
@@ -9,7 +14,7 @@ const RegisterButton = () => {
       className="fixed right-4 top-1/2 translate-y-[-50%] z-50"
       style={{ transformOrigin: '100% 50%' }}
     >
-      <div className="group relative cursor-pointer p-2 w-32 border-2 border-pink-500 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg overflow-hidden text-white text-center font-semibold">
+      <div onClick={handleRegistration} className="group relative cursor-pointer p-2 w-32 border-2 border-pink-500 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg overflow-hidden text-white text-center font-semibold">
         <span className="translate-x-1 group-hover:translate-x-12 group-hover:opacity-0 transition-all duration-500 ease-in-out inline-block">
           Register
         </span>

@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Calendar, User, Users, ArrowLeft, MapPin, Home, List } from "lucide-react";
+import {
+  Calendar,
+  User,
+  Users,
+  ArrowLeft,
+  MapPin,
+  Home,
+  List,
+} from "lucide-react";
 import { useEvents } from "../../utils/eventData";
 
 const styles = {
@@ -52,9 +60,9 @@ const EventPage = () => {
         if (fetchedEvent) {
           setEvent({
             ...fetchedEvent,
-            image: fetchedEvent.image ,
+            image: fetchedEvent.image,
             subtitle: fetchedEvent.subtitle || fetchedEvent.description,
-            time: fetchedEvent.time || "10:00 AM - 5:00 PM",
+            startingTime: fetchedEvent.startingTime || "",
             organizer: fetchedEvent.organizer || "TBD",
             facultyCoordinator: fetchedEvent.facultyCoordinator || "TBD",
             studentCoordinator: fetchedEvent.studentCoordinator || "TBD",
@@ -113,14 +121,14 @@ const EventPage = () => {
       {/* Navigation Buttons */}
       <div className="fixed top-4 right-4 z-50 flex gap-4">
         <button
-          onClick={() => navigate('/events/non-tech')}
+          onClick={() => navigate("/events/non-tech")}
           className="p-2 rounded-full bg-purple-600/50 hover:bg-purple-600 transition-colors duration-300 text-white"
           title="View All Events"
         >
           <List className="w-6 h-6" />
         </button>
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="p-2 rounded-full bg-purple-600/50 hover:bg-purple-600 transition-colors duration-300 text-white"
           title="Go to Home"
         >
@@ -135,7 +143,7 @@ const EventPage = () => {
       >
         <ArrowLeft className="w-5 h-5" />
         {/* <span>Back to Events</span> */}
-        <span>Back to Home</span> 
+        <span>Back to Home</span>
       </button>
 
       {/* Header */}
@@ -197,7 +205,9 @@ const EventPage = () => {
                   <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
                     {event.date}
                   </p>
-                  <p className="text-sm text-purple-300 mt-1">{event.time}</p>
+                  <p className="text-sm text-purple-300 mt-1">
+                    {event.startingTime}
+                  </p>
                 </div>
               </div>
 
@@ -238,31 +248,38 @@ const EventPage = () => {
                 </div>
               </div>
 
-              {/* Student Coordinator */}
-              <div className="flex items-center gap-4 text-white">
-                <User className="w-6 h-6 text-purple-300" />
-                <div>
-                  <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
-                    Student Coordinator
-                  </p>
-                  <p className="text-sm text-purple-300 mt-1">
-                    {event.studentCoordinator}
-                  </p>
-                  {event.studentContact && (
-                    <p className="text-sm text-purple-300 mt-1">
-                      Contact:{" "}
-                      <a
-                        href={`https://wa.me/91${event.studentContact}?text=Hi, I would like to know more about ${event.name}`}
-                        className="hover:text-white transition-colors duration-300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {event.studentContact}
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
+              {/* Student Coordinators */}
+              {event.studentCoordinators &&
+                event.studentCoordinators.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 text-white"
+                  >
+                    <User className="w-6 h-6 text-purple-300" />
+                    <div>
+                      <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
+                        Student Coordinator &nbsp;
+                        {event.studentCoordinators.length > 1 ? index + 1 : ""}
+                      </p>
+                      <p className="text-sm text-purple-300 mt-1">
+                        {coordinator.name}
+                      </p>
+                      {coordinator.contact && (
+                        <p className="text-sm text-purple-300 mt-1">
+                          Contact:{" "}
+                          <a
+                            href={`https://wa.me/91${coordinator.contact}?text=Hi, I would like to know more about ${event.name}`}
+                            className="hover:text-white transition-colors duration-300"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {coordinator.contact}
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
 
               {/* Register Button */}
               <div>

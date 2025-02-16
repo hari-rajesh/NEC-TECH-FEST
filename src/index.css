@@ -46,7 +46,9 @@ body{
 
 .fixed {
   position: fixed;
- 
+
+  z-index: 50;
+
 }
 .bottom-5 {
   bottom: 1.25rem;

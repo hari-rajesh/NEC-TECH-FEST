@@ -73,6 +73,7 @@ const EventPage = () => {
         console.error("Error fetching event:", error);
       } finally {
         setLoading(false);
+          window.scrollTo(0, 0); // Scroll to top when event is loaded
       }
     }
 

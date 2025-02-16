@@ -7,7 +7,7 @@ const VisitorCounter = () => {
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    console.log("VisitorCounter component mounted");
+   // console.log("VisitorCounter component mounted");
     // Initialize GA4 with your measurement ID
     // ReactGA.initialize('G-CQ48B6XGD2');
     
@@ -27,7 +27,7 @@ const VisitorCounter = () => {
     get(visitorCountRef)
     .then((snapshot) => {
       if (snapshot.exists()) {
-        console.log("Initial Visitor Count:", snapshot.val()?.count);
+       // console.log("Initial Visitor Count:", snapshot.val()?.count);
         setVisitorCount(snapshot.val()?.count || 0);
       } else {
         console.warn("No visitor count found in the database.");
@@ -49,7 +49,7 @@ const VisitorCounter = () => {
   // Real-time Listener
   const unsubscribe = onValue(visitorCountRef, (snapshot) => {
     const data = snapshot.val();
-    console.log("Live Visitor Count:", data?.count || 0);
+   // console.log("Live Visitor Count:", data?.count || 0);
     setVisitorCount(data?.count || 0);
   }, {
     onlyOnce: false // Ensure real-time updates
@@ -62,10 +62,14 @@ const VisitorCounter = () => {
 
 
   return (
-    <div className="fixed bottom-5  left-5 bg-black text-white px-3  rounded-full shadow-lg animate-bounce border-2 border-white">
-       <p className='text-center'>👀</p> 
-   <span className="font-bold">{visitorCount} visits</span>
+    <div
+    className="fixed bottom-5 left-5 bg-gradient-to-r cursor-pointer from-purple-600 to-purple-500 text-white px-4 py-2 rounded-full shadow-xl  transition-transform transform hover:scale-110 hover:shadow-2xl border-1 border-white"
+  >
+    <p className="text-center font-bold flex items-center gap-2">
+      <span className="animate-pulse">{visitorCount}</span> 👀
+    </p>
   </div>
+  
   );
 };
 

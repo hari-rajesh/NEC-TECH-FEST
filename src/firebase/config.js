@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-TFPSLZQDWE"
 };
 
-// Initialize Firebase only if it hasn't been initialized
+
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 export const database = getDatabase(app);
 export const analytics = getAnalytics(app);

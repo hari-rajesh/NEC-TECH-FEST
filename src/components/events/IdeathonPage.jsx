@@ -134,7 +134,7 @@ export default function IdeathonPage() {
 
       {/* Back Button */}
       <button
-        onClick={handleBack}
+        onClick={() => navigate("/")}
         className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors duration-300 mb-4"
       >
         <ArrowLeft className="w-5 h-5" />

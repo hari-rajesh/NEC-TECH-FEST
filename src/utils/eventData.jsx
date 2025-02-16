@@ -1,76 +1,4 @@
-// // utils/eventData.js
-// export const tags = {
-//   "CSE Association": [
-//     "CSI",
-//     "IEEE",
-//     "IT CLUB",
-//     "LINUX CLUB",
-//     "Coding",
-//     "Reverse Coding",
-//     "Hackathon",
-//     "UI/UX",
-//     "debugging",
-//     "styles",
-//     "design",
-//     "puzzles","prompt"
-//   ],
-//   "IT Association": [
-//     "coding",
-//     "blind coding",
-//     "problem solving",
-//     "sql",
-//     "database",
-//     "treasure hunt",
-//     "paper presentation",
-//     "technical",
-//     "research",
-//     "knowledge",
-//     "relay",
-//   ],
-//   "ECE Association": [
-//     "Circuit Debugging",
-//     "Embedded Systems",
-//     "IoT Challenge",
-//     "Robo Race",
-//   ],
-//   "EEE Association": [
-//     "Power Quiz",
-//     "EV Design",
-//     "Automation Challenge",
-//     "Green Energy Hack",
-//   ],
-//   "Mechanical Association": [
-//     "CAD Modeling",
-//     "RC Car Race",
-//     "Aero Modelling",
-//     "Mech Trivia",
-//   ],
-//   "Civil Association": [
-//     "Bridge Design",
-//     "Smart City Plan",
-//     "Surveying Challenge",
-//     "Blueprint Analysis",
-//   ],
-//   "AI&DS Association": [
-//     "AI Coding",
-//     "Data Science Challenge",
-//     "Deep Learning Workshop",
-//     "ML Hackathon",
-//   ],
-//   "non-tech": ["Gaming", "challenge", "teamwork", "song", "lyrics"],
-//   workshops: [
-//     "AI/ML Bootcamp",
-//     "Cyber Security Workshop",
-//     "Robotics Hands-on",
-//     "Design Thinking",
-//     "Oracle APEX",
-//     "AI",
-//     "Cloud Solutions",
-//     "Machine Learning",
-//     "AI",
-//     "Data Science",
-//   ],
-// };
+
 
 import { Images } from "lucide-react";
 export const departments = [
@@ -175,7 +103,7 @@ export const events = [
 
   {
     id: 1,
-    name: "CODE PARADOX (BLIND CODING)",
+    name: "BLIND CODING",
     subtitle: "Blind Coding Challenge",
     description:
       "An exciting blind coding challenge where participants tackle evolving problems with no preview, testing their ability to adapt, innovate, and write flawless code under uncertainty. Teams of 2 members will choose C, Java for the challenge.",
@@ -186,13 +114,13 @@ export const events = [
     tags: ["coding", "blind coding", "problem solving"],
     date: "2025-03-14",
     startingtime: "1.30 PM",
-    venue: "",
+    venue: "UG III / IT",
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Suguna P",
     studentCoordinators: [
       { name: "Manoj Kumar B", contact: "8220605419" },
-      { name: "Subha Shunmugaa T", contact: "9342208486" },
+      { name: "Subha Shunmugaa T", contact: "7904990391" },
     ],
     rules: [
       "Round 1: Online Coding Challenge (15 minutes, Socrative.com, 10 questions, both members use same language, collective marks).",
@@ -212,14 +140,14 @@ export const events = [
     tags: ["sql", "database", "treasure hunt"],
     date: "2025-03-14",
     startingtime: "1.30 PM",
-    venue: "",
+    venue: "Smart Classroom,UG I/IT",
     registrationLink: "",
     organizer: "",
     facultyCoordinator: "Ummu Sabura H",
     studentCoordinators: [
       { name: "Mariappan R", contact: "9489746417" },
-      { name: "Guru Vellapandi G", contact: "9342208486" },
-      { name: "Naveen Kumar M", contact: "" },
+      { name: "Guru Vellapandi G", contact: "8248183678 " },
+      { name: "Naveen Kumar M", contact: " 6382836334" },
     ],
     rules: [
       "Round 1: Code Sprint (Pre-inserted SQL tables, run queries, extract answers).",
@@ -239,14 +167,14 @@ export const events = [
     tags: ["Gaming"],
     date: "2025-03-14",
     startingtime: "3.30 PM",
-    venue: "",
+    venue: "Seminar Hall/IT",
     registrationLink: "",
     organizer: "",
     facultyCoordinator: "Ajitha S",
 
     studentCoordinators: [
       { name: "Aakash Dalmetha R", contact: "6385525468" },
-      { name: "Jegatheesh S", contact: "9342208486" },
+      { name: "Jegatheesh S", contact: "7558110650" },
     ],
     rules: [
       "Round 1: Blow & Carry (Inflate balloon to lift cup, 60 seconds, restart if cup falls, fastest time wins).",
@@ -255,7 +183,7 @@ export const events = [
   },
   {
     id: 4,
-    name: "PAPER INSIGHTS (PAPER PRESENTATION)",
+    name: "PAPER PRESENTATION",
     subtitle: "Technical Paper Presentation",
     description:
       "The Paper Presentation event consists of a single round, where participants can choose any technical topic of their choice to present. Each team will have two members, and the total time allotted for each presentation is 10 minutes.",
@@ -266,12 +194,11 @@ export const events = [
     tags: ["paper presentation", "technical", "research"],
     date: "2025-03-15",
     startingtime: "10.00 AM",
-    venue: "",
+    venue: "Smart Classroom 2/IT",
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Akila M",
     studentCoordinators: [{ name: "Loga Naresh N ", contact: "9597965096" }],
-    // studentContact: " 9597965096, 9342208486",
     rules: [
       "Single round, teams of 2.",
       "10 minutes total time (5-6 minutes presentation, 4-5 minutes Q&A).",
@@ -291,11 +218,11 @@ export const events = [
     tags: ["quiz", "technical", "knowledge"],
     date: "2025-03-15",
     startingtime: "10.00 AM",
-    venue: "",
+    venue: "Seminar Hall/IT",
     registrationLink: "",
     organizer: "",
     facultyCoordinator: "Malathi M",
-    studentCoordinators: [{ name: "Akshai A", contact: " 9345991426, 9342208486" }],
+    studentCoordinators: [{ name: "Akshai A", contact: "9345991426" }],
     rules: [
       "Teams of 2.",
       "Round 1: Preliminary Round (Written MCQ, 20-30 minutes).",
@@ -315,11 +242,11 @@ export const events = [
     tags: ["coding", "relay"],
     date: "2025-03-15",
     startingtime: "1.30 PM",
-    venue: "",
+    venue: "UG3/IT",
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Santhi S",
-    studentCoordinators: [{ name: "Sadhasivam M", contact: "9600757482, 9342208486" }],
+    studentCoordinators: [{ name: "Sadhasivam M", contact: "9600757482" }],
     rules: [
       "Teams of 2.",
       "Alternating coding turns (e.g., 10 minutes per turn).",
@@ -340,11 +267,11 @@ export const events = [
     tags: ["coding", "debugging", "c programming"],
     date: "2025-03-15",
     startingtime: "1.30 PM",
-    venue: "",
+    venue: "UG2/IT",
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "Anitha Mam",
-    studentCoordinators: [{ name: "Keerthik V", contact: "6381258491, 9342208486" }],
+    studentCoordinators: [{ name: "Keerthik V", contact: "6381258491" }],
     rules: [
       "Round 1: Pen and Paper (10 questions, 20 minutes).",
       "Round 2: System-based (8 questions, 35 minutes).",
@@ -368,7 +295,7 @@ export const events = [
     registrationLink: "",
     organizer: "IT Association",
     facultyCoordinator: "",
-    studentCoordinators: [{ name: "Gautham S N", contact: "6382695887" }, { name: "Akash Velan A", contact: "9342208486" }],
+    studentCoordinators: [{ name: "Gautham S N", contact: "6382695887" }, { name: "Akash Velan A", contact: " 6381453013" }],
     rules: [
       "Round 1: Transport balls through pipes into a bowl (points for each ball).",
       "Round 2: Throw balls into water-filled bowls at varying distances (points based on accuracy).",
@@ -2964,6 +2891,12 @@ export const events = [
     date: "14-03-2025",
     organizer: "Mechanical Association",
     category: "workshops",
+    subtitle: " ",
+    time: "9.30 am.",
+    date: "14-03-2025",
+    organizer: "Mechanical Association",
+    category: "Workshops",
+=
     facultyCoordinator: "Mr. C. Veera Ajay AP/Mech ",
     studentCoordinator: [{ name: "Mahesh Kumar M", contact: 7358897167 }],
     description: "This workshop covers the basics of Geometric Dimensioning and Tolerancing (GD&T), a key system used in engineering and manufacturing for precise part design and quality control. Participants will learn essential GD&T symbols, datums and tolerances, helping them understand how to improve accuracy and efficiency in industrial applications.",

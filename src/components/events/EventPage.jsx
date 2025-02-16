@@ -88,7 +88,9 @@ const EventPage = () => {
   };
 
   const handleRegister = () => {
-    window.open('../../registration/userdetail', '_blank');
+    if (event?.registrationLink) {
+      window.location.href = event.registrationLink;
+    }
   };
 
   if (loading || navigating) {
@@ -248,32 +250,37 @@ const EventPage = () => {
               </div>
 
               {/* Student Coordinators */}
-              {event.studentCoordinators && event.studentCoordinators.map((coordinator, index) => (
-                <div key={index} className="flex items-center gap-4 text-white">
-                  <User className="w-6 h-6 text-purple-300" />
-                  <div>
-                    <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
-                      Student Coordinator {index+1}
-                    </p>
-                    <p className="text-sm text-purple-300 mt-1">
-                      {coordinator.name}
-                    </p>
-                    {coordinator.contact && (
-                      <p className="text-sm text-purple-300 mt-1">
-                        Contact:{" "}
-                        <a
-                          href={`https://wa.me/91${coordinator.contact}?text=Hi, I would like to know more about ${event.name}`}
-                          className="hover:text-white transition-colors duration-300"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {coordinator.contact}
-                        </a>
+              {event.studentCoordinators &&
+                event.studentCoordinators.map((coordinator, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 text-white"
+                  >
+                    <User className="w-6 h-6 text-purple-300" />
+                    <div>
+                      <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
+                        Student Coordinator &nbsp;
+                        {event.studentCoordinators.length > 1 ? index + 1 : ""}
                       </p>
-                    )}
+                      <p className="text-sm text-purple-300 mt-1">
+                        {coordinator.name}
+                      </p>
+                      {coordinator.contact && (
+                        <p className="text-sm text-purple-300 mt-1">
+                          Contact:{" "}
+                          <a
+                            href={`https://wa.me/91${coordinator.contact}?text=Hi, I would like to know more about ${event.name}`}
+                            className="hover:text-white transition-colors duration-300"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {coordinator.contact}
+                          </a>
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
 
               {/* Register Button */}
               <div>

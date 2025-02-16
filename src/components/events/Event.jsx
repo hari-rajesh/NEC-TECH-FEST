@@ -87,7 +87,7 @@ const Event = () => {
       <div className="relative z-10 bg-gradient-to-br from-purple-600/20 via-transparent to-violet-500/20">
         {/* Back Button */}
         <button
-          onClick={handleBack}
+          onClick={() => navigate("/")}
           className="fixed top-4 left-4 z-50 flex items-center gap-2 text-white hover:text-purple-300 transition-colors duration-300 mb-4 font-['Orbitron'] tracking-widest"
         >
           <ArrowLeft className="w-5 h-5" />

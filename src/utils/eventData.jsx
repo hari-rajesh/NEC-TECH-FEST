@@ -2868,7 +2868,6 @@ export const events = [
     id: 98,
     name:"An Introduction to Industrial Geometric Dimensioning and Tolerancing",
     title: "An Introduction to Industrial Geometric Dimensioning and Tolerancing",
-    name:"An Introduction to Industrial Geometric Dimensioning and Tolerancing",
     subtitle: " ",
     time: "9.30 am.",
     date: "14-03-2025",

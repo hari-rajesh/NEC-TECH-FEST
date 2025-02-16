@@ -2897,7 +2897,6 @@ export const events = [
     date: "14-03-2025",
     organizer: "Mechanical Association",
     category: "Workshops",
-=
     facultyCoordinator: "Mr. C. Veera Ajay AP/Mech ",
     studentCoordinator: [{ name: "Mahesh Kumar M", contact: 7358897167 }],
     description: "This workshop covers the basics of Geometric Dimensioning and Tolerancing (GD&T), a key system used in engineering and manufacturing for precise part design and quality control. Participants will learn essential GD&T symbols, datums and tolerances, helping them understand how to improve accuracy and efficiency in industrial applications.",

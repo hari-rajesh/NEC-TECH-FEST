@@ -34,25 +34,48 @@ function Home() {
       image: "/sarah.jpg",
       github: "https://github.com/sarahc"
     },
-
+    {
+      name: "Hari Rajesh",
+      role: "Frontend Lead",
+      image: "/hari.jpg",
+      github: "https://github.com/hari-rajesh"
+    },
     {
       name: "Palani Kumar",
       role: "Backend Dev",
-      image: "/mike.jpg",
+      image: "/palani.jpg",
       github: "https://github.com/mikep"
     },
     {
       name: "Sankar",
       role: "Backend Dev",
-      image: "/mike.jpg",
-      github: "https://github.com/mikep"
+      image: "/sankar.jpg",
+      github: "https://github.com/Sankar2408"
     },
     {
       name: "Shyam",
       role: "Backend Dev",
-      image: "/mike.jpg",
-      github: "https://github.com/mikep"
+      image: "/shyam.jpg",
+      github: "https://github.com/ShyamG004"
     },
+    {
+      name: "Fioana Jores",
+      role: "Frontend Dev",
+      image: "/fiona.jpg",
+      github: "https://github.com/rockstar-narmu"
+    },
+    {
+      name: "Narmatha",
+      role: "Frontend Dev",
+      image: "/narmatha.jpg",
+      github: "https://github.com/rockstar-narmu"
+    },
+    {
+      name: "Sankareswari",
+      role: "Frontend Dev",
+      image: "/sankareswari.jpg",
+      github: "https://github.com/SANKARESWARI-M"
+    }
 
   ];
   return (

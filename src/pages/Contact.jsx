@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { useEffect, useNavigate } from "react";
+import { useEffect} from "react";
 import Call from "../assets/call-logo.png";
 import Mail from "../assets/mail-logo.png";
 import AOS from "aos";
@@ -9,10 +9,8 @@ import NEC from "../assets/NEC.mp4";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
 import ParticleBackground from "../components/Accommodations/ParticleBackground";
+import { useNavigate } from "react-router-dom";
 
-const handleBack = () => {
-  window.location.href = '/';
-};
 
 const Contact = () => {
 

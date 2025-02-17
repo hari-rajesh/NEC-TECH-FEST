@@ -310,8 +310,8 @@ export const events = [
     subtitle: "Unleashing creativity with AI",
     description:
       " Step into the future of development with Creators Spark, a tech challenge where AI tools boost your creativity and coding efficiency. Teams will tackle a real-time problem statement, using AI-powered coding assistants to build a functional application. ",
-    image: "/events/cse/Paper Presentation.png",
-    poster: "/events/cse/Paper Presentation.png",
+    image: "/events/cse/CREATOR'S SPARK.png",
+    poster: "/events/cse/CREATOR'S SPARK.png",
     department: "CSE Association",
     category: "technical",
     tags: ["prompt", "CSI"],
@@ -336,8 +336,8 @@ export const events = [
     subtitle: "Hide the secret of Code",
     description:
       " A coding challenge like no other! Incognito Code pushes your problem-solving and analytical skills to the limit through two mind-bending rounds. Get ready to decode hidden patterns and craft solutions from scratch!",
-    image: "",
-    poster: "",
+    image: "/events/cse/INCOGNITO CODE.jpg",
+    poster: "/events/cse/INCOGNITO CODE.jpg",
     department: "CSE Association",
     category: "technical",
     tags: ["Coding", "CSI"],
@@ -364,8 +364,8 @@ export const events = [
     subtitle: "Feel the Music, Find the Lyrics",
     description:
       " Do you have a sharp memory for song lyrics? Can you recognize a song just from a few lines? Put your music knowledge to the test in Lost in Lyrics!",
-    image: "",
-    poster: "",
+    image: "/events/cse/LOST IN LYRICS.jpg",
+    poster: "/events/cse/LOST IN LYRICS.jpg",
     // department: "CSE Association",
     category: "non-tech",
     tags: ["song", "lyrics", "CSI"],
@@ -391,8 +391,8 @@ export const events = [
     subtitle: "Dig the Code and debug faster",
     description:
       "Gear up for a high-intensity coding event where your programming and debugging skills will be tested! Compete in two rounds: a challenging quiz and a bug-hunting debugging battle. Only the quickest and sharpest minds will rise to the top!",
-    image: "",
-    poster: "",
+    image: "/events/cse/DIG THE BUG.jpg",
+    poster: "/events/cse/DIG THE BUG.jpg",
     department: "CSE Association",
     category: "technical",
     tags: ["debugging", "coding", "CSI"],
@@ -418,8 +418,8 @@ export const events = [
     subtitle: "Style it Right, Ready for Fight",
     description:
       " Are you ready to put your HTML & CSS skills to the test? Compete in a high-speed coding challenge where precision, creativity, and efficiency will determine the ultimate CSS Battle Champion!.",
-    image: "",
-    poster: "",
+    image: "/events/cse/CSS BATTLE.jpg",
+    poster: "/events/cse/CSS BATTLE.jpg",
     department: "CSE Association",
     category: "technical",
     tags: ["styles", "design", "CSI"],
@@ -445,8 +445,8 @@ export const events = [
     subtitle: "Your Eyes Hold the Key!",
     description:
       " Picture Pursuits is a fun and challenging visual quiz where participants identify logos and solve image puzzles. Test your observation and problem-solving skills across two exciting rounds!",
-    image: "",
-    poster: "",
+    image: "/events/cse/PICTURE PURSUIT.jpg",
+    poster: "/events/cse/PICTURE PURSUIT.jpg",
     department: "CSE Association",
     category: "technical",
     tags: ["image", "puzzles", "CSI"],
@@ -487,40 +487,6 @@ export const events = [
     ],
   },
   {
-    id: 16,
-    name: "AR VR Workshop",
-    title: "AR VR Workshop",
-    subtitle: "Innovate, Ideate, Create – Unleash Your Ideas!",
-    image: "/events/cse/AR VR.png",
-    poster: "/events/cse/AR VR.png",
-    time: "10:00 AM - 5:00 PM",
-    date: "2025-03-14",
-    organizer: "CSI/IEEE",
-    category: "workshops",
-    facultyCoordinator: "TBD",
-    studentCoordinators: [{}],
-    studentContact: "7548836628",
-    description: "About workshop",
-    tags: ["Linux OS", "Innovation", "Technology"],
-    resourcePerson: {
-      name: "Dr. Aisha Patel",
-      image: "/events/person1.jpg",
-      designation: "AI Research Scientist",
-      organization: "OpenAI",
-      bio: "Dr. Aisha Patel is a leading AI researcher specializing in machine learning, deep learning, and natural language processing. With over a decade of experience, she has contributed to groundbreaking AI advancements and has been a keynote speaker at global conferences.",
-      expertise: [
-        "Machine Learning",
-        "Deep Learning",
-        "Natural Language Processing",
-        "AI Ethics",
-      ],
-      link: "www.google.com",
-    },
-
-    video: "/events/river.mp4",
-  },
-
-  {
     id: 17,
     name: "Linux Workshop",
     title: "Linux Workshop",
@@ -545,7 +511,7 @@ export const events = [
       name: "Mr.Jaya Surya L",
       designation: "Module Lead Mistarl Solutions",
     },
-    rules: ["Open to all steams"],
+    rules: ["Open to all streams"],
     video: "/events/Workshop_venue_video.mp4",
   },
   //CSEA
@@ -812,7 +778,7 @@ export const events = [
     subtitle: "Talent. Passion. Glory.",
     description:
       " The Technical Meme Contest is the perfect platform for mechanical engineers to express their wit through funny, relatable, and insightful memes on engineering concepts, industry trends, and student life!",
-    image: "/events/mech/AI ART & MEME CONTEST_MECH.png ",
+    image: "/events/mech/AI ART & MEME CONTEST_MECH.png",
     poster: "/events/mech/AI ART & MEME CONTEST_MECH.png",
     category: "Non-Technical",
     tags: ["Meme contest", "Mechanical", "Non-Technical"],
@@ -865,7 +831,7 @@ export const events = [
     description:
       "Techno Chill is an engaging thermal engineering quiz competition designed to test participants on thermodynamics, heat transfer, fluid mechanics, HVAC systems, IC engines, and refrigeration & air conditioning. Compete in a battle of wits and showcase your expertise in the world of thermal sciences!",
     image: "/events/mech/TECHNO CHILL_MECH.png",
-    poster:"/events/mech/TECHNO CHILL_MECH.png",
+    poster: "/events/mech/TECHNO CHILL_MECH.png",
     department: "Mechanical Association",
     category: "Technical",
     tags: ["Thermal", "Mechanical", "Quiz"],
@@ -997,70 +963,69 @@ export const events = [
     id: 34,
     name: "Creating Design with AR Development in Real World",
     title: "Creating Design with AR Development in Real World",
-    subtitle:
-      "Bringing Augmented Reality to Life: Hands-on Development with Unity & Vuforia",
-    image: "/events/centralized/Creating Design with AR Development in Real World.png",
-    poster: "/events/centralized/Creating Design with AR Development in Real World.png",
+    subtitle: "",
+    image: "/events/cse/Creating_Design_with_AR_Development_in_Real_World.jpg",
+    poster: "/events/cse/Creating_Design_with_AR_Development_in_Real_World.jpg",
     startingTime: "10:30 AM - 12:30 PM",
-    date: "14/03/2025",
+    date: "2025-03-14",
     organizer: "National Engineering College (Centralized)",
-    venue: "",
-    registrationLink: "will be filled up by dev",
     category: "workshops",
-    facultyCoordinator:
-      "Mr. Karthikeyan J (AP/CSE), Ms. Vazhan Arul Santhiya R (AP/CSE)",
+    facultyCoordinator: "Mr. Karthikeyan J (AP/CSE), Ms. Vazhan Arul Santhiya R (AP/CSE)",
     studentCoordinators: [
-      { name: "Aruna Varshini S", contact: "9791769009" },
-      { name: "Harihara Sudhan M", contact: "6380816379" },
+      {
+        name: "Aruna Varshini S",
+        contact: "9791769009"
+      },
+      {
+        name: "Harihara Sudhan M",
+        contact: "6380816379"
+      }
     ],
-    description:
-      "Gain hands-on experience in building AR mobile applications! Learn AR fundamentals, set up Unity with Vuforia, and develop your first AR app with expert guidance. Perfect for students, developers, and tech enthusiasts. Join us to create immersive digital experiences!",
-
+    description: "Gain hands-on experience in building AR mobile applications! Learn AR fundamentals, set up Unity with Vuforia, and develop your first AR app with expert guidance.",
     resourcePerson: {
       name: "Mr. J. Karthikeyan",
-      image: "/events/ARDevelopment.jpg",
-      designation: "AP/CSE",
+      image: "ARDevelopment.jpg",
+      designation: "(AP/CSE)",
       organization: "National Engineering College",
       bio: "Mr. Karthikeyan J is an Assistant Professor in the Department of Computer Science and Engineering at National Engineering College, Kovilpatti. With over a decade of academic and research experience, he has contributed to projects like cognitive rehabilitation for autism using VR and authored multiple research publications. He is also a recipient of the NPTEL Discipline Star award and is passionate about emerging technologies in computer science.",
       expertise: ["AR/VR"],
-      link: "https://www.linkedin.com/in/karthikeyanmecse",
+      link: "https://www.linkedin.com/in/karthikeyanmecse"
     },
-
-    video: "/events/Workshop_venue_video.mp4",
+    video: "/images/Workshop_venue_video.mp4"
   },
   {
     id: 35,
     name: "Next-Gen Learning",
     title: "Next-Gen Learning",
-    subtitle: "The Power of Metaverse in Education",
-    time: "10:30 AM - 12:30 PM",
-    date: "15/03/2025",
-    venue: "CSE DEPARTMENT",
-    image: "/events/centralized/Next-Gen Learning.png",
-    poster: "/events/centralized/Next-Gen Learning.png",
-    registrationLink: "will be filled up by dev",
+    subtitle: "The power of Metaverse in Education",
+    image: "/events/cse/Next-Gen_Learning.jpg",
+    poster: "/events/cse/Next-Gen_Learning.jpg",
+    startingTime: "10:30 AM - 12:30 PM",
+    date: "2025-03-15",
     organizer: "National Engineering College (Centralized)",
     category: "workshops",
-    facultyCoordinator:
-      "Mr. Karthikeyan J (AP/CSE), Ms. Janani Ratthna S G (AP/CSE)",
+    facultyCoordinator: "Mr. Karthikeyan J (AP/CSE), Ms. Janani Ratthna S G (AP/CSE)",
     studentCoordinators: [
-      { name: "Shri Kannan D", contact: "9080305479" },
-      { name: "Anisha S", contact: "9363255203" },
+      {
+        name: "Shri Kannan D",
+        contact: "9080305479"
+      },
+      {
+        name: "Anisha S",
+        contact: "9363255203"
+      }
     ],
-    description:
-      "Discover how Virtual Reality transforms education! This hands-on workshop guides you in building interactive VR learning spaces using Unity, enabling real-time collaboration and immersive learning experiences. Step into the future of digital education with us!",
-
+    description: "Discover how Virtual Reality transforms education! This hands-on workshop guides you in building interactive VR learning spaces using Unity, enabling real-time collaboration and immersive learning experiences. Step into the future of digital education with us!",
     resourcePerson: {
       name: "Mr. J. Karthikeyan",
-      image: "/events/NextGenLearning.jpg",
-      designation: "AP/CSE",
+      image: "NextGenLearning.jpg",
+      designation: "(AP/CSE)",
       organization: "National Engineering College",
       bio: "Mr. Karthikeyan J is an Assistant Professor in the Department of Computer Science and Engineering at National Engineering College, Kovilpatti. With over a decade of academic and research experience, he has contributed to projects like cognitive rehabilitation for autism using VR and authored multiple research publications. He is also a recipient of the NPTEL Discipline Star award and is passionate about emerging technologies in computer science.",
       expertise: ["AR/VR"],
-      vidwanLink: "https://www.linkedin.com/in/karthikeyanmecse",
+      link: "https://www.linkedin.com/in/karthikeyanmecse"
     },
-
-    video: "/events/Workshop_venue_video.mp4",
+    video: "/images/Workshop_venue_video.mp4"
   },
 
   //ece workshops
@@ -1694,7 +1659,7 @@ export const events = [
     venue: "Seminar Hall - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Mr. K. Karthik Kumar, AP/EEE",
     studentCoordinators: [{ name: "Keerthika S", contact: "7094882206" }],
     description:
@@ -1719,7 +1684,7 @@ export const events = [
     venue: "Active Classroom - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Dr. M. Gengaraj, AP(SG)/EEE",
     studentCoordinators: [{ name: "Shanmugavel S", contact: "7639519852" }],
     description:
@@ -1745,7 +1710,7 @@ export const events = [
     venue: "Power Electronics Lab - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Dr. B. Vigneshwaran, Asso.Prof/EEE",
     studentCoordinators: [{ name: "Madhubala S", contact: "7418323003" }],
     description:
@@ -1773,7 +1738,7 @@ export const events = [
     venue: "Electrical Workshop Lab - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Mrs. C. Dhanalakshmi, AP/EEE",
     studentCoordinators: [{ name: "Sasi Kumar S", contact: "9361922379" }],
     description:
@@ -1800,7 +1765,7 @@ export const events = [
     venue: "New Computer Lab - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Mr. K. Kumar, AP/EEE",
     studentCoordinators: [{ name: "Santhosh Kumar M", contact: "6381867074" }],
     description:
@@ -1827,7 +1792,7 @@ export const events = [
     venue: "H2 Classroom - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Dr. P. Samuel Pakianathan, AP(SG)/EEE",
     studentCoordinators: [{ name: "Nandhana P", contact: "7845243046" }],
     description:
@@ -1851,7 +1816,7 @@ export const events = [
     venue: "Electronics Lab - EEE",
     registrationLink: "will be filled up by dev",
     organizer: "EEE Association",
-    category: "TECHNICAL",
+    category: "Technical",
     facultyCoordinator: "Mr. M. Sivapalanirajan, AP/EEE",
     studentCoordinators: [{ name: "Reginold A", contact: "9360665059" }],
     description:
@@ -2893,7 +2858,7 @@ export const events = [
     organizer: "Mechanical Association",
     category: "workshops",
     facultyCoordinator: "Mr. C. Veera Ajay AP/Mech ",
-    studentCoordinator: [{ name: "Mahesh Kumar M", contact: 7358897167 }],
+    studentCoordinators: [{ name: "Mahesh Kumar M", contact: 7358897167 }],
     description: "This workshop covers the basics of Geometric Dimensioning and Tolerancing (GD&T), a key system used in engineering and manufacturing for precise part design and quality control. Participants will learn essential GD&T symbols, datums and tolerances, helping them understand how to improve accuracy and efficiency in industrial applications.",
     registrationLink: "will be filled up by dev",
     resourcePerson: {
@@ -3267,14 +3232,14 @@ export const events = [
     category: "workshops",
     facultyCoordinator: "Dr.S.S.Basitha Parveen",
     studentCoordinators: [{ name: "S.Gomathisankar", contact: "6374367922" }],
-    description: "This Aptitude Training Workshop is designed to enhance participants' problem-solving abilities and numerical proficiency through structured learning and practical exercises. The workshop will cover key aptitude areas such as quantitative aptitude, logical reasoning and data interpretation, with expert guidance.",
+    description: "This Aptitude Training Workshop is designed to enhance participants' problem-solving abilities",
     resourcePerson: {
       name: "Murali Dharan R",
       image: "",
       designation: "Adjunct Faculty",
       organization: "Dept of S&H, National Engineering College",
       bio: "",
-      expertise: "Career Coach & Corporate Trainer",
+      expertise: ["Career Coach & Corporate Trainer"],
       link: "https://in.linkedin.com/in/connectmurali"
     },
     video: ""
@@ -3297,7 +3262,7 @@ export const events = [
       designation: "Associate Professor",
       organization: "Dept of S&H, National Engineering College",
       bio: "",
-      expertise: "Bio inorganic chemistry",
+      expertise: ["Bio inorganic chemistry"],
       link: "https://vidwan.inflibnet.ac.in/profile/286364"
     },
     video: ""
@@ -3320,7 +3285,7 @@ export const events = [
       designation: "Assistant Professor(SG)",
       organization: "Dept of S&H, National Engineering College",
       bio: "",
-      expertise: "Nano materials & Batteries",
+      expertise: ["Nano materials & Batteries"],
       link: "https://nec.edu.in/wp-content/uploads/2021/07/Dr.A.Nichelson.pdf"
     },
     video: ""
@@ -3343,7 +3308,7 @@ export const events = [
       designation: "Associate Professor",
       organization: "Dept of S&H, National Engineering College",
       bio: "",
-      expertise: "Graph Theory",
+      expertise: ["Graph Theory"],
       link: "https://vidwan.inflibnet.ac.in/profile/249904"
     },
     video: ""
@@ -3366,11 +3331,163 @@ export const events = [
       designation: "Assistant Professor",
       organization: "Dept of S&H, National Engineering College",
       bio: "",
-      expertise: "English Language Teaching",
+      expertise: ["English Language Teaching"],
       link: "https://nec.edu.in/wp-content/uploads/2025/02/Revathe-Resume.pdf"
     },
     video: ""
-  }
+  },
+  //AI&DS workshops
+  {
+    id: 116,
+    name: "AI Powered Edge Intelligence",
+    title: "AI Powered Edge Intelligence",
+    subtitle: "AI & Edge Computing Workshop",
+    description: "Explore the cutting edge of AI and edge computing at the Edge Intelligence Workshop. Discover how AI-powered edge devices enable real-time data processing and decision-making.",
+    image: "/events/aids/Edge Intelligence.jpg",
+    poster: "/events/aids/Edge Intelligence.jpg",
+    department: "AI&DS Association",
+    category: "workshops",
+    tags: ["AI", "EDGE COMPUTING", "TECH"],
+    date: "2025-03-14",
+    startingtime: "9:30 AM",
+    venue: "Deep Learning Lab",
+    registrationLink: "",
+    organizer: "AI&DS Association",
+    facultyCoordinator: "Ms. P. Rampriya, AP/AI&DS",
+    studentCoordinators: [{ name: "Malaiarasu G", contact: "8270484867" }],
+    resourcePerson: {
+      name: "",
+      image: "",
+      designation: "",
+      organization: "",
+      bio: "",
+      expertise: ["", ""],
+      link: "",
+    },
+    video: "",
+  },
+  {
+    id: 117,
+    name: "Agentic AI",
+    title: "Agentic AI",
+    subtitle: "Agentic AI Workshop",
+    description: "Explore the future of intelligent systems at the Agentic AI Workshop, where you'll learn how autonomous AI agents perceive, decide, and act with minimal human intervention, covering cutting-edge techniques and real-world applications.",
+    image: "/events/aids/Agentic AI.jpg",
+    poster: "/events/aids/Agentic AI.jpg",
+    department: "AI&DS Association",
+    category: "workshops",
+    tags: ["AI", "Autonomous Systems", "Reinforcement Learning", "Multi-Agent Systems"],
+    date: "2025-03-14",
+    startingtime: "9:30 AM",
+    venue: "AI Lab",
+    registrationLink: "",
+    organizer: "NEC",
+    facultyCoordinator: "Ms.K.Poorani, AP/AI&DS",
+    studentCoordinators: [{ name: "E.Vignesh", contact: "8286354549" }],
+    resourcePerson: {
+      name: "",
+      image: "",
+      designation: "",
+      organization: "",
+      bio: "",
+      expertise: ["", ""],
+      link: "",
+    },
+    video: "",
+  },
+  {
+    id: 118,
+    name: "GenAI for web development",
+    title: "GenAI for web development",
+    subtitle: "GenAI for Web Development Workshop",
+    description: "Explore the power of Generative AI in web development at this hands-on workshop. Learn how AI-driven tools can accelerate coding, automate design, and enhance user experiences. Discover the latest advancements in AI-powered website generation, UI/UX optimization, and intelligent code assistants to streamline development workflows.",
+    image: "/events/aids/GenAI_for_web_development.jpg",
+    poster: "/events/aids/GenAI_for_web_development.jpg",
+    department: "AI&DS Association",
+    category: "workshops",
+    tags: ["AI", "Generative AI", "Web Development", "Code Generation", "UI/UX Design", "Tech"],
+    date: "2025-03-15",
+    startingtime: "9:30 AM",
+    venue: "AI Lab",
+    registrationLink: "",
+    organizer: " AI Club",
+    facultyCoordinator: "Ms.K.Poorani, AP/AI&DS",
+    studentCoordinators: [{ name: "E.Vignesh", contact: "8286354549" }],
+    resourcePerson: {
+      name: "",
+      image: "",
+      designation: "",
+      organization: "",
+      bio: "",
+      expertise: ["", ""],
+      link: "",
+    },
+    video: "",
+  },
+  //cse events
+  {
+    id: 119,
+    name: "Entrepreneurial Conclave",
+    subtitle: "From Idea to Impact: Build and Scale your Startup!",
+    description: "To scale your startup, the Entrepreneurial Conclave offers expert insights on innovation, funding, product development, and growth. Learn from industry leaders, tackle challenges, and network to turn ideas into successful ventures!",
+    image: "/events/cse/Entrepreneurial Conclave.jpg",
+    poster: "/events/cse/Entrepreneurial Conclave.jpg",
+    department: "CSE Association",
+    category: "Technical",
+    tags: ["Product development", "Startups", "Conference"],
+    date: "15/03/2025",
+    startingTime: "9:30 AM",
+    venue: "Seminar Hall (CSE)",
+    registrationLink: "",
+    organizer: "IT Club",
+    facultyCoordinator: "Dr. R. Rajakumari, AP(SG) / CSE, Ms. S. Santhi (AP / IT)",
+    studentCoordinators: [
+      {
+        "name": "Srinidhi S",
+        "contact": "7339120840"
+      },
+      {
+        "name": "Madhumitha A",
+        "contact": "8610621394"
+      }
+    ],
+    rules: [
+      "Individual Participation"
+    ]
+  },
+  {
+    id: 120,
+    name: "Capture the Flag",
+    subtitle: "CTF Cybersecurity Event",
+    description: "An online treasure hunt with cryptic clues, hidden messages, and real-world cyber challenges. Test your skills in encryption, digital forensics, and ethical hacking with mind-bending puzzles.",
+    image: "/events/cse/CaptureTheFlag.jpg",
+    poster: "/events/cse/CaptureTheFlag.jpg",
+    department: "CSE Association",
+    category: "Technical",
+    tags: ["CTF", "CYBERSECURITY", "TECHNICAL"],
+    date: "2024-03-15",
+    startingTime: "9:30 A.M",
+    venue: "Activity Hall",
+    registrationLink: "",
+    organizer: "IEEE CS",
+    facultyCoordinator: "S. KALAISELVI, Associate Professor, Department of Computer Science and Engineering, National Engineering College",
+    studentCoordinators: [
+      {
+        name: "Arul N V",
+        contact: "+91 8148831608"
+      }
+    ],
+    rules: [
+      "Team Size: Maximum of 2 members",
+      "Duration: 3 hours",
+      "Format: Jeopardy-style challenges",
+      "Flag Submission Format: CTF{flag}",
+      "Ranking based on points, earlier completion will break ties",
+      "External tools and resources like ChatGPT, DeepSeek etc are allowed",
+      "Host system attacks will result in disqualification",
+      "Single-round event"
+    ]
+  },
 
 
 ];

@@ -10,6 +10,8 @@ export const TimelineCard = ({ title, description, icon }) => {
         return "/events/workshops";
       case "Technical Events":
         return "/associations/department/cse-association";
+      case "Leisure Activities":
+        return "/events/non-tech";
       default:
         return null;
     }

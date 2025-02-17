@@ -3223,6 +3223,7 @@ export const events = [
   //s&h workshops
   {
     id: 111,
+    name:"ELEVATE YOUR MIND: THE PATH TO APTITUDE SUCCESS",
     title: "ELEVATE YOUR MIND: THE PATH TO APTITUDE SUCCESS",
     startingTime: "9.30 to 11:00 am",
     date: "14-3-2025",
@@ -3246,6 +3247,7 @@ export const events = [
   },
   {
     id: 112,
+    name:"Workshop on Ecoche Insights-Instrumental Techniques for Environmental",
     title: "Workshop on Ecoche Insights-Instrumental Techniques for Environmental",
     startingTime: "9:30 to 11:30",
     date: "2025-03-15",
@@ -3269,6 +3271,7 @@ export const events = [
   },
   {
     id: 113,
+    name:"Workshop on Circuit Symphony: Crafting Electronics with Tinker",
     title: "Workshop on Circuit Symphony: Crafting Electronics with Tinker",
     startingTime: "11:00 to 12:30 am",
     date: "14.03.2025",
@@ -3292,6 +3295,7 @@ export const events = [
   },
   {
     id: 114,
+    name:"The Essential Mathematics behind Engineering Breakthrough",
     title: "The Essential Mathematics behind Engineering Breakthrough",
     startingTime: "11:00 to 12:30 am",
     date: "15-3-2025",
@@ -3316,6 +3320,7 @@ export const events = [
   {
     id: 115,
     title: "Master Your Mic",
+    name:"Master Your Mic",
     startingTime: "1.45 pm to 3.00 pm",
     date: "2025-03-14",
     image: "/events/sh/Master Your Mic.png",

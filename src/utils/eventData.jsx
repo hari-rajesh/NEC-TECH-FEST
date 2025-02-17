@@ -487,7 +487,7 @@ export const events = [
     ],
   },
   {
-    id:16,
+    id: 16,
     name: "AR VR Workshop",
     title: "AR VR Workshop",
     subtitle: "Innovate, Ideate, Create – Unleash Your Ideas!",
@@ -1919,7 +1919,7 @@ export const events = [
       "Judges' decisions will be final.",
     ],
     image: "/events/eee/CUP_BRIDGE_EEE.jpg",
-    poster: "/eventseee//CUP_BRIDGE_EEE.jpg",
+    poster: "/events/eee/CUP_BRIDGE_EEE.jpg",
   },
   {
     id: 68,
@@ -2892,11 +2892,6 @@ export const events = [
     date: "14-03-2025",
     organizer: "Mechanical Association",
     category: "workshops",
-    subtitle: " ",
-    time: "9.30 am.",
-    date: "14-03-2025",
-    organizer: "Mechanical Association",
-    category: "Workshops",
     facultyCoordinator: "Mr. C. Veera Ajay AP/Mech ",
     studentCoordinator: [{ name: "Mahesh Kumar M", contact: 7358897167 }],
     description: "This workshop covers the basics of Geometric Dimensioning and Tolerancing (GD&T), a key system used in engineering and manufacturing for precise part design and quality control. Participants will learn essential GD&T symbols, datums and tolerances, helping them understand how to improve accuracy and efficiency in industrial applications.",
@@ -2913,30 +2908,6 @@ export const events = [
     video: "",
   },
   //s&h events
-  {
-    id: 99,
-    name: "Elevate Your Mind",
-    subtitle: "The Path to Aptitude Success",
-    description:
-      "This Aptitude Training Workshop is designed to enhance participants' problem-solving abilities and numerical proficiency through structured learning and practical exercises. The workshop will cover key aptitude areas such as quantitative aptitude, logical reasoning, and data interpretation, with expert guidance.",
-    image: "/events/sh/Elevate Your Mind.jpg",
-    poster: "/events/sh/Elevate Your Mind.jpg",
-    department: "S&H",
-    category: "workshops",
-    tags: [],
-    date: "2025-03-14",
-    startingTime: "9:30 am",
-    venue: "First Smart Classroom (S&H)",
-    registrationLink: "",
-    organizer: "Science & Humanities",
-    facultyCoordinator: "Dr. S. S. Basitha Parveen",
-    studentCoordinators: [
-      {
-        name: "S. Gomathisankar",
-        contact: "6374367922",
-      },
-    ],
-  },
   {
     id: 100,
     name: "CEREBRAL EVENT",
@@ -3283,7 +3254,124 @@ export const events = [
     venue: "Smart Classroom/IT",
     registrationLink: "[will be filled up by dev]",
     rules: ["", "", ""]
+  },
+  //s&h workshops
+  {
+    id: 111,
+    title: "ELEVATE YOUR MIND: THE PATH TO APTITUDE SUCCESS",
+    startingTime: "9.30 to 11:00 am",
+    date: "14-3-2025",
+    image: "/events/sh/Elevate Your Mind.jpg",
+    poster: "/events/sh/Elevate Your Mind.jpg",
+    organizer: "S&H Association",
+    category: "workshops",
+    facultyCoordinator: "Dr.S.S.Basitha Parveen",
+    studentCoordinators: [{ name: "S.Gomathisankar", contact: "6374367922" }],
+    description: "This Aptitude Training Workshop is designed to enhance participants' problem-solving abilities and numerical proficiency through structured learning and practical exercises. The workshop will cover key aptitude areas such as quantitative aptitude, logical reasoning and data interpretation, with expert guidance.",
+    resourcePerson: {
+      name: "Murali Dharan R",
+      image: "",
+      designation: "Adjunct Faculty",
+      organization: "Dept of S&H, National Engineering College",
+      bio: "",
+      expertise: "Career Coach & Corporate Trainer",
+      link: "https://in.linkedin.com/in/connectmurali"
+    },
+    video: ""
+  },
+  {
+    id: 112,
+    title: "Workshop on Ecoche Insights-Instrumental Techniques for Environmental",
+    startingTime: "9:30 to 11:30",
+    date: "2025-03-15",
+    image: "/events/sh/Workshop on Ecoche Insights.png",
+    poster: "/events/sh/Workshop on Ecoche Insights.png",
+    organizer: "S&H Association",
+    category: "workshops",
+    facultyCoordinator: "Dr.S.Chithrai Kumar",
+    studentCoordinators: [{ name: "Mr. Balamurugan", contact: "9362885141" }],
+    description: "This workshop aims to impart analytical skills in the use of various instruments (UV-Vis, FT-IR, Fluorescence Spectrophotometer, and Electrochemical Analyzer) that are essential for students interested in identifying and quantifying pollutants in water.",
+    resourcePerson: {
+      name: "Dr.S.Thalamuthu",
+      image: "",
+      designation: "Associate Professor",
+      organization: "Dept of S&H, National Engineering College",
+      bio: "",
+      expertise: "Bio inorganic chemistry",
+      link: "https://vidwan.inflibnet.ac.in/profile/286364"
+    },
+    video: ""
+  },
+  {
+    id: 113,
+    title: "Workshop on Circuit Symphony: Crafting Electronics with Tinker",
+    startingTime: "11:00 to 12:30 am",
+    date: "14.03.2025",
+    image: "/events/sh/Workshop on Circuit Symphony.png",
+    poster: "/events/sh/Workshop on Circuit Symphony.png",
+    organizer: "S&H Association",
+    category: "workshops",
+    facultyCoordinator: "Dr.T.Srisuvetha",
+    studentCoordinators: [{ name: "Sujith Kumar", contact: "8248166737" }],
+    description: "In the modern era of electronics and rapid prototyping, simulation tools play a crucial role in designing, testing, and refining circuits before actual implementation. 'Circuit Symphony: Crafting Electronics with Tinkercad' is a hands-on workshop designed to introduce participants to the fundamentals of electronic circuit design using Tinkercad, a beginner-friendly yet powerful online simulation tool.",
+    resourcePerson: {
+      name: "Dr.A.Nichelson",
+      image: "",
+      designation: "Assistant Professor(SG)",
+      organization: "Dept of S&H, National Engineering College",
+      bio: "",
+      expertise: "Nano materials & Batteries",
+      link: "https://nec.edu.in/wp-content/uploads/2021/07/Dr.A.Nichelson.pdf"
+    },
+    video: ""
+  },
+  {
+    id: 114,
+    title: "The Essential Mathematics behind Engineering Breakthrough",
+    startingTime: "11:00 to 12:30 am",
+    date: "15-3-2025",
+    image: "/events/sh/The Essential Mathematics behind Engineering Breakthrough.png",
+    poster: "/events/sh/The Essential Mathematics behind Engineering Breakthrough.png",
+    organizer: "S&H Association",
+    category: "workshops",
+    facultyCoordinator: "Dr.M.Dhivya",
+    studentCoordinators: [{ name: "Mr.P.Abraham", contact: "9487880943" }],
+    description: "This workshop explores bridge theoretical knowledge with practical applications. Engineering breakthroughs are built on a strong foundation of mathematical principles. This event explores the mathematical principles behind QR code generation, cryptographic password creation, and their connections to number theory and computational tools like GeoGebra. After the completion of the workshop, participants will explore modular arithmetic, prime number theory, and cryptographic principles that ensure data security.",
+    resourcePerson: {
+      name: "Dr.S.Geetha",
+      image: "",
+      designation: "Associate Professor",
+      organization: "Dept of S&H, National Engineering College",
+      bio: "",
+      expertise: "Graph Theory",
+      link: "https://vidwan.inflibnet.ac.in/profile/249904"
+    },
+    video: ""
+  },
+  {
+    id: 115,
+    title: "Master Your Mic",
+    startingTime: "1.45 pm to 3.00 pm",
+    date: "2025-03-14",
+    image: "/events/sh/Master Your Mic.png",
+    poster: "/events/sh/Master Your Mic.png",
+    organizer: "S&H Association",
+    category: "workshops",
+    facultyCoordinator: "Ms.S.Jeba",
+    studentCoordinators: [{ name: "Keerthana", contact: "9361411047" }],
+    description: "The 'Master Your Mic' workshop enhances public speaking by improving speaking style for professional success.",
+    resourcePerson: {
+      name: "Ms.B.Revathe, AP/S&H",
+      image: "",
+      designation: "Assistant Professor",
+      organization: "Dept of S&H, National Engineering College",
+      bio: "",
+      expertise: "English Language Teaching",
+      link: "https://nec.edu.in/wp-content/uploads/2025/02/Revathe-Resume.pdf"
+    },
+    video: ""
   }
+
 
 ];
 

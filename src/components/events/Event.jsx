@@ -14,7 +14,11 @@ const Event = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
   const { events, tags, departments } = useEvents();
-// 
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when navigating to this page
+  }, []);
+
   // Convert URL department name to proper format
   const getDepartmentName = () => {
     if (!department) return null;
@@ -48,8 +52,7 @@ const Event = () => {
 
   const getRelevantTags = () => {
     const deptName = getDepartmentName();
-      return tags[deptName || eventType ];
-
+    return tags[deptName || eventType];
   };
 
   const filteredEvents = filterEvents();

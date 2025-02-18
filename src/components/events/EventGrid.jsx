@@ -1,11 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import EventCard from "./EventCard";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const EventGrid = ({ filteredEvents }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const eventsPerPage = 9;
+
+  // Reset to page 1 when filteredEvents changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filteredEvents]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

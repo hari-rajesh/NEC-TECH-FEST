@@ -6,8 +6,12 @@ import Particle from "../components/Particle";
 import ParticleBackground from "../components/Accommodations/ParticleBackground";
 import { Navbar } from "../components/Navbar/Navbar";
 import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Accommodation = () => {
+
+  const navigate = useNavigate();
+
   const handleBack = () => {
     window.location.href = '/'; // For direct navigation
     // OR

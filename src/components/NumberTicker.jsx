@@ -11,7 +11,7 @@ const NumberCounter = () => {
             <div className="flex items-baseline font-orbitron">
               <NumberTicker
                 className="text-lg md:text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-400 text-transparent bg-clip-text"
-                value={50}
+                value={110}
                 duration={2000}
               />
               <span className="text-lg md:text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-400 text-transparent bg-clip-text">+</span>

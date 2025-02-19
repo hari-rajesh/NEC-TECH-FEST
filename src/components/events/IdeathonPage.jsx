@@ -69,6 +69,7 @@ export default function IdeathonPage() {
     const styleSheet = document.createElement("style");
     styleSheet.innerText = styles.keyframes;
     document.head.appendChild(styleSheet);
+    window.scrollTo(0, 0); // Scroll to top when event is loaded
     return () => document.head.removeChild(styleSheet);
   }, []);
 
@@ -170,7 +171,7 @@ export default function IdeathonPage() {
               className="rounded-lg overflow-hidden border border-purple-600/30 aspect-square relative cursor-pointer"
             >
               <img
-                src="/public/images/uiux.jpg"
+                src="/public/images/Ideathon.jpg"
                 alt="Ideathon 2025 Poster"
                 className="absolute inset-0 w-full h-full object-fill"
                 onError={(e) => {

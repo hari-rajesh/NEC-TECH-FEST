@@ -12,8 +12,22 @@ const Event = () => {
   const {  eventType } = useParams();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
+
   const [selectedTag, setSelectedTag] = useState(null);
   const { events, tags } = useEvents();
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when navigating to this page
+  }, []);
+
+  // Convert URL department name to proper format
+  const getDepartmentName = () => {
+    if (!department) return null;
+    // Find the matching department from our departments list
+    const dept = departments.find(d => d.id === department);
+    return dept ? dept.name : department;
+  };
 
  
   const filterEvents = () => {
@@ -35,7 +49,10 @@ const Event = () => {
   };
 
   const getRelevantTags = () => {
+
     return tags[eventType];
+
+
   };
 
   const filteredEvents = filterEvents();

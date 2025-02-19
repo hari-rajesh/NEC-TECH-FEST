@@ -13,6 +13,13 @@ function About() {
           icon: <FaUniversity size={30} color="white" />
         },
         {
+          id: 5,
+          title: "Ideathon",
+          description: "Join our Ideathon to brainstorm and develop innovative solutions. Collaborate with peers, get expert mentorship, and compete for exciting prizes!",
+       
+          icon: <FaRegLightbulb size={30} color="white" />
+        },
+        {
           id: 2,
           title: "Workshops & Sessions",
           description: "20+ expert-led workshops covering the latest trends and hands-on skills, designed to boost your knowledge and spark innovation.",
@@ -22,7 +29,7 @@ function About() {
         {
           id: 3,
           title: "Technical Events",
-          description: "Explore 50+ technical events featuring expert talks, hackathons, coding challenges, and panel discussions",
+          description: "Explore 110+ technical events featuring expert talks, hackathons, coding challenges, and panel discussions",
           
           icon: <FaUsers size={30} color="white" />
         },
@@ -33,13 +40,7 @@ function About() {
        
           icon: <FaHandsHelping size={30} color="white" />
         },
-        {
-          id: 5,
-          title: "Valedictory Function",
-          description: "Celebrate the achievements, recognize outstanding contributions, and reflect on the enriching experiences shared throughout the event!",
-       
-          icon: <FaRegLightbulb size={30} color="white" />
-        }
+   
       ];
   
     return (

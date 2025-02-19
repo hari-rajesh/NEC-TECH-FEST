@@ -28,30 +28,32 @@ const EventCard = ({ event }) => {
   };
 
   const handleViewDetails = () => {
-    if(event.category==="workshops"){
+    if(event.category === "workshops") {
       navigate(`/workshop/${event.title}`);
-
-    }
-    else{
+    } else {
       navigate(`/associations/event/${event.id}`);
     }
-    
   };
-
 
   return (
     <motion.div {...floatingAnimation} className="relative group">
-      <div className="relative aspect-square">
+      <div 
+        className="relative aspect-[4/5] sm:aspect-[3/4] cursor-pointer" 
+        onClick={handleViewDetails}
+      >
         {/* Wave effect container */}
-        <div className="absolute inset-0 rounded-full">
-          <div className="absolute inset-[-4px] rounded-full bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-100 animate-wave-spin1" />
-          <div className="absolute inset-[-4px] rounded-full bg-gradient-to-r from-[#00ffff] to-[#ff00ff] opacity-0 group-hover:opacity-75 animate-wave-spin2" />
-          <div className="absolute inset-[-4px] rounded-full bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 animate-wave-spin3" />
+        <div className="absolute inset-0 rounded-2xl sm:rounded-[2rem]">
+          <div className="absolute inset-[-4px] rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-100 animate-wave-spin1" />
+          <div className="absolute inset-[-4px] rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-[#00ffff] to-[#ff00ff] opacity-0 group-hover:opacity-75 animate-wave-spin2" />
+          <div className="absolute inset-[-4px] rounded-2xl sm:rounded-[2rem] bg-gradient-to-r from-[#ff00ff] to-[#00ffff] opacity-0 group-hover:opacity-50 animate-wave-spin3" />
         </div>
 
-        {/* Main circle container */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#ff00ff] to-[#00ffff] p-[2px]">
-          <div className="w-full h-full rounded-full overflow-hidden relative bg-black">
+        {/* Main container with dynamic shape */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff] to-[#00ffff] p-[2px] rounded-2xl sm:rounded-[2rem] overflow-hidden">
+          <div className="w-full h-full relative bg-black rounded-2xl sm:rounded-[2rem] overflow-hidden">
+            {/* Curved shape overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+            
             <img
               src={event.image}
               alt={event.name}
@@ -65,8 +67,11 @@ const EventCard = ({ event }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                 <button
-                  onClick={handleViewDetails}
-                  className="px-4 py-2 bg-gradient-to-r from-[#613aeb] to-[#9e00b7] text-white rounded-full text-sm hover:opacity-90 transition-opacity"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent double navigation
+                    handleViewDetails();
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-[#613aeb] to-[#9e00b7] text-white rounded-xl text-sm hover:opacity-90 transition-opacity shadow-lg"
                 >
                   View Details
                 </button>

@@ -27,7 +27,7 @@ function App() {
       <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/associations/department/:department" element={<Event />} />
+          {/* <Route path="/associations/department/:department" element={<Event />} /> */}
           <Route path="/events/:eventType" element={<Event />} />
           <Route path="/:id" element={<EventPage />} />
           <Route path="/workshop/:title" element={<WorkshopPage />} />

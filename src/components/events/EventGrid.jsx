@@ -65,36 +65,50 @@ const EventGrid = ({ filteredEvents }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Generate page numbers array
+  // Generate page numbers array - responsive for mobile
   const getPageNumbers = () => {
     const pageNumbers = [];
-    const maxVisiblePages = 5;
+    // Show fewer pages on small screens
+    const isMobile = window.innerWidth < 640;
+    const maxVisiblePages = isMobile ? 3 : 5;
     
     if (totalPages <= maxVisiblePages) {
       for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);
       }
     } else {
-      if (currentPage <= 3) {
-        for (let i = 1; i <= 4; i++) {
-          pageNumbers.push(i);
-        }
-        pageNumbers.push('...');
-        pageNumbers.push(totalPages);
-      } else if (currentPage >= totalPages - 2) {
-        pageNumbers.push(1);
-        pageNumbers.push('...');
-        for (let i = totalPages - 3; i <= totalPages; i++) {
-          pageNumbers.push(i);
+      if (isMobile) {
+        // Simplified mobile view - current, prev, next
+        if (currentPage === 1) {
+          pageNumbers.push(1, 2, '...', totalPages);
+        } else if (currentPage === totalPages) {
+          pageNumbers.push(1, '...', totalPages - 1, totalPages);
+        } else {
+          pageNumbers.push(currentPage - 1, currentPage, currentPage + 1);
         }
       } else {
-        pageNumbers.push(1);
-        pageNumbers.push('...');
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-          pageNumbers.push(i);
+        // Desktop view
+        if (currentPage <= 3) {
+          for (let i = 1; i <= 4; i++) {
+            pageNumbers.push(i);
+          }
+          pageNumbers.push('...');
+          pageNumbers.push(totalPages);
+        } else if (currentPage >= totalPages - 2) {
+          pageNumbers.push(1);
+          pageNumbers.push('...');
+          for (let i = totalPages - 3; i <= totalPages; i++) {
+            pageNumbers.push(i);
+          }
+        } else {
+          pageNumbers.push(1);
+          pageNumbers.push('...');
+          for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+            pageNumbers.push(i);
+          }
+          pageNumbers.push('...');
+          pageNumbers.push(totalPages);
         }
-        pageNumbers.push('...');
-        pageNumbers.push(totalPages);
       }
     }
     return pageNumbers;
@@ -134,20 +148,21 @@ const EventGrid = ({ filteredEvents }) => {
           <div className="text-gray-600 mt-2">Try adjusting your filters</div>
         </motion.div>
       ) : (
-        <div className="flex justify-center items-center gap-2 mt-8">
+        <div className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 mt-8 px-2">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="p-2 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700"
+            className="p-1 sm:p-2 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700"
+            aria-label="Previous page"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
           
           {getPageNumbers().map((pageNum, index) => (
             <button
               key={index}
               onClick={() => typeof pageNum === 'number' && handlePageChange(pageNum)}
-              className={`px-4 py-2 rounded-lg border ${
+              className={`px-2 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-lg border ${
                 currentPage === pageNum
                   ? 'bg-blue-500 text-white border-blue-500'
                   : pageNum === '...'
@@ -163,10 +178,16 @@ const EventGrid = ({ filteredEvents }) => {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="p-2 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700"
+            className="p-1 sm:p-2 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700"
+            aria-label="Next page"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
+
+          {/* Page info for mobile */}
+          <div className="w-full text-center text-sm text-gray-500 mt-2 sm:hidden">
+            Page {currentPage} of {totalPages}
+          </div>
         </div>
       )}
     </motion.div>

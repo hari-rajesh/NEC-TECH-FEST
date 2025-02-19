@@ -280,20 +280,6 @@ const EventPage = () => {
                   </div>
                 ))}
 
-              {/* Register Button */}
-              <div>
-                <button
-                  onClick={handleRegister}
-                  /*   className="w-full bg-[#8000ff] text-white py-3 px-6 text-base font-semibold rounded-lg 
-                          cursor-pointer shadow-[0_0_15px_rgba(128,0,255,0.5)] 
-                          hover:bg-[#6600cc] hover:shadow-[0_0_25px_rgba(128,0,255,0.7)]
-                          transition-all duration-300"*/
-                  className="w-fit mt-4 rounded-lg 
-                          cursor-pointer group-hover:opacity-100  transition-all duration-300 ease-in-out px-6 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-space-grotesk text-sm transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:shadow-purple-500/50 w-fit"
-                >
-                  Register Now
-                </button>
-              </div>
             </div>
           </div>
         </div>

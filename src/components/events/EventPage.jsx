@@ -45,7 +45,9 @@ const EventPage = () => {
     document.head.appendChild(styleSheet);
     return () => document.head.removeChild(styleSheet);
   }, []);
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when navigating to this page
+  }, []);
   useEffect(() => {
     let isMounted = true;
 
@@ -73,7 +75,6 @@ const EventPage = () => {
         console.error("Error fetching event:", error);
       } finally {
         setLoading(false);
-          window.scrollTo(0, 0); // Scroll to top when event is loaded
       }
     }
 

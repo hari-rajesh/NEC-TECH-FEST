@@ -39,14 +39,9 @@ export function Navbar() {
       icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
-      name: `Associations`,
-      link: "#",
-      icon: <IconBuilding className="h-4 w-4 text-white" />,
-      hasDropdown: true,
-      dropdownItems: departments,
-      onMouseEnter: () => setShowDepartments(true),
-      onMouseLeave: () => setShowDepartments(false),
-      ref: associationsRef,
+      name: "Technical",
+      link: "/events/technical",
+      icon: <IconDeviceGamepad2 className="h-4 w-4 text-white" />,
     },
     {
       name: "Non-Tech",

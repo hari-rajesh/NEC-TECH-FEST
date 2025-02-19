@@ -2,15 +2,22 @@ import { Search } from "lucide-react";
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
-    <div className="relative">
+    <div className="relative border-2 border-violet-500 rounded-full p-0.5 subtle-glow">
       <input
         type="text"
-        placeholder="Search events, categories, or tags..."
-        className="w-full p-3 pl-10 rounded-lg bg-[#0d0c0c] text-white border border-[#17141d] focus:outline-none focus:border-[#613aeb]"
+        placeholder="Search...."
+        className="w-full p-3 pr-14 rounded-full bg-gray-950 text-white border border-gray-800 hover:border-violet-400 focus:outline-none focus:border-violet-600 transition-colors duration-200"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <Search className="absolute left-3 top-3 text-gray-400" size={20} />
+      <div className="absolute right-0 top-0 h-full w-14 bg-gradient-to-r from-pink-600 to-violet-600 rounded-r-full flex items-center justify-center">
+        <Search className="text-white" size={20} />
+      </div>
+      <style jsx>{`
+        .subtle-glow {
+          box-shadow: 0 0 5px 1px rgba(139, 92, 246, 0.5);
+        }
+      `}</style>
     </div>
   );
 };

@@ -233,15 +233,7 @@ export default function IdeathonPage() {
                 </div>
               </div>
 
-              {/* Register Button */}
-              <div>
-                <button
-                  className="w-fit mt-4 rounded-lg 
-                          cursor-pointer group-hover:opacity-100 transition-all duration-300 ease-in-out px-6 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-space-grotesk text-sm transform translate-y-2 group-hover:translate-y-0 shadow-lg hover:shadow-purple-500/50 w-fit"
-                >
-                  Register Now
-                </button>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -432,9 +424,6 @@ export default function IdeathonPage() {
 
       {/* Call to Action */}
       <div className="text-center mt-12 mb-8">
-        <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold hover:from-purple-500 hover:to-pink-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
-          Register Now
-        </button>
         <p className="mt-4 text-purple-300 [text-shadow:_0_0_2px_rgba(128,0,255,0.5)] tracking-widest">
           Join us in creating sustainable solutions for a better tomorrow
         </p>

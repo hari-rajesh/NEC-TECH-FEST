@@ -9,27 +9,15 @@ import { Navbar } from "../Navbar/Navbar";
 import { ArrowLeft } from "lucide-react";
 
 const Event = () => {
-  const { department, eventType } = useParams();
+  const {  eventType } = useParams();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTags, setSelectedTags] = useState([]);
-  const { events, tags, departments } = useEvents();
-// 
-  // Convert URL department name to proper format
-  const getDepartmentName = () => {
-    if (!department) return null;
-    // Find the matching department from our departments list
-    const dept = departments.find(d => d.id === department);
-    return dept ? dept.name : department;
-  };
+  const [selectedTag, setSelectedTag] = useState(null);
+  const { events, tags } = useEvents();
 
+ 
   const filterEvents = () => {
     return events.filter((event) => {
-      const deptName = getDepartmentName();
-
-      // Handle department-specific events
-      const matchesDept = department ? event.department === deptName : true;
-
       // Handle category-specific events (non-tech, etc.)
       const matchesCategory = eventType ? event.category.toLowerCase() === eventType.toLowerCase() : true;
 
@@ -37,49 +25,31 @@ const Event = () => {
         event.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         event?.description?.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const matchesTags =
-        selectedTags.length === 0 ||
-        selectedTags.every((tag) => event.tags?.includes(tag)) ||
-        selectedTags.every((tag) => event.organizer === tag);
+      const matchesTag = 
+        !selectedTag || 
+        event.tags?.includes(selectedTag) || 
+        event.organizer === selectedTag;
 
-      return matchesDept && matchesCategory && matchesSearch && matchesTags;
+      return matchesCategory && matchesSearch && matchesTag;
     });
   };
 
   const getRelevantTags = () => {
-    const deptName = getDepartmentName();
-      return tags[deptName || eventType ];
-
+    return tags[eventType];
   };
 
   const filteredEvents = filterEvents();
 
-  const handleTagClick = (tag) => {
-    setSelectedTags((prevTags) =>
-      prevTags.includes(tag)
-        ? prevTags.filter((t) => t !== tag)
-        : [...prevTags, tag]
-    );
-  };
-
   const clearFilters = () => {
     setSearchQuery("");
-    setSelectedTags([]);
+    setSelectedTag(null);
   };
 
   const getHeroHeading = () => {
-    if (department) {
-      const deptName = getDepartmentName();
-      return `${deptName} Events`;
-    }
     if (eventType) {
       return `${eventType.charAt(0).toUpperCase() + eventType.slice(1)} Events`;
     }
     return "Events";
-  };
-
-  const handleBack = () => {
-    navigate(-1);
   };
 
   return (
@@ -105,7 +75,7 @@ const Event = () => {
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
               />
-              {(searchQuery || selectedTags.length > 0) && (
+              {(searchQuery || selectedTag) && (
                 <button
                   onClick={clearFilters}
                   className="w-full p-2 rounded bg-[#613aeb] text-white hover:bg-[#4f2ec7] transition-colors"
@@ -115,8 +85,8 @@ const Event = () => {
               )}
               <TagFilter
                 tags={getRelevantTags()}
-                selectedTags={selectedTags}
-                handleTagClick={handleTagClick}
+                selectedTag={selectedTag}
+                onChange={setSelectedTag}
               />
             </div>
           </div>

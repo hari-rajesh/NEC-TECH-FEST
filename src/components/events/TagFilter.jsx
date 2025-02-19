@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Check } from "lucide-react";
 
-const TagFilter = ({ tags, selectedTags, handleTagClick }) => {
+const TagFilter = ({ tags, selectedTag, onChange }) => {
   const [hoveredTag, setHoveredTag] = useState(null);
   let hoverTimer = null;
 
@@ -17,12 +17,22 @@ const TagFilter = ({ tags, selectedTags, handleTagClick }) => {
     }, 500);
   };
 
+  const handleTagClick = (tag) => {
+    // If the clicked tag is already selected, deselect it
+    if (selectedTag === tag) {
+      onChange(null);
+    } else {
+      // Otherwise, select the new tag
+      onChange(tag);
+    }
+  };
+
   return (
     <div className="p-4 rounded-lg bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-800">
       <h2 className="text-xl font-bold text-white mb-4">Tags</h2>
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => {
-          const isSelected = selectedTags.includes(tag);
+          const isSelected = selectedTag === tag;
           const isHovered = hoveredTag === tag;
 
           return (

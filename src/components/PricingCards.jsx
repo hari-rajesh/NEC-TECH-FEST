@@ -7,7 +7,7 @@ export default function PricingCards() {
   const navigate = useNavigate();
 
   const handleTechClick = () => {
-    navigate("/associations/department/it-association");
+    navigate("/events/technical");
   };
 
   const handleNonTechClick = () => {
@@ -59,7 +59,6 @@ export default function PricingCards() {
           </CardContent>
         </Card>
         
-        {/* Pro Plan - Enhanced */}
         {/* Pro Plan - Enhanced */}
 <div className="relative w-full max-w-sm min-h-[450px] group">
   {/* Background elements that need to be blurred */}

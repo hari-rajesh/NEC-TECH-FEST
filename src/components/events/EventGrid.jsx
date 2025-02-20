@@ -3,14 +3,25 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import EventCard from "./EventCard";
 import { useState, useMemo, useEffect } from "react";
 
-const EventGrid = ({ filteredEvents }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const EventGrid = ({ filteredEvents, initialPage = 1, onPageChange }) => {
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const eventsPerPage = 9;
 
-  // Reset to page 1 when filteredEvents changes
+  // Reset to page 1 when filteredEvents changes, but NOT on initial render
   useEffect(() => {
-    setCurrentPage(1);
+    const shouldResetPage = sessionStorage.getItem('eventListSearchFiltersChanged') === 'true';
+    if (shouldResetPage) {
+      setCurrentPage(1);
+      sessionStorage.setItem('eventListSearchFiltersChanged', 'false');
+    }
   }, [filteredEvents]);
+  
+  // Call parent's onPageChange whenever currentPage changes
+  useEffect(() => {
+    if (onPageChange) {
+      onPageChange(currentPage);
+    }
+  }, [currentPage, onPageChange]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -63,6 +74,7 @@ const EventGrid = ({ filteredEvents }) => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    sessionStorage.setItem('eventListCurrentPage', pageNumber.toString());
   };
 
   // Generate page numbers array - responsive for mobile
@@ -114,6 +126,13 @@ const EventGrid = ({ filteredEvents }) => {
     return pageNumbers;
   };
 
+  // Ensure current page is valid
+  useEffect(() => {
+    if (totalPages > 0 && currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [totalPages, currentPage]);
+
   return (
     <motion.div 
       className="relative overflow-hidden py-8"
@@ -130,6 +149,10 @@ const EventGrid = ({ filteredEvents }) => {
               variants={itemVariants}
               style={{
                 perspective: 1000
+              }}
+              onClick={() => {
+                // Store the current page before navigating to event details
+                sessionStorage.setItem('eventListCurrentPage', currentPage.toString());
               }}
             >
               <EventCard event={event} index={index} />

@@ -45,9 +45,14 @@ const EventPage = () => {
     document.head.appendChild(styleSheet);
     return () => document.head.removeChild(styleSheet);
   }, []);
+  
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when navigating to this page
+    // Always scroll to top when this page is initially navigated to
+    if (performance.navigation.type !== 2) { // Not back/forward navigation
+      window.scrollTo(0, 0);
+    }
   }, []);
+  
   useEffect(() => {
     let isMounted = true;
 
@@ -85,7 +90,10 @@ const EventPage = () => {
 
   const handleBack = () => {
     setNavigating(true);
-    window.history.back();
+    // Use history.back() to properly maintain browser history
+    setTimeout(() => {
+      window.history.back();
+    }, 300); // Short delay for animation
   };
 
   const handleRegister = () => {
@@ -99,7 +107,7 @@ const EventPage = () => {
           className="text-white text-xl"
           style={navigating ? styles.fadeOut : {}}
         >
-          {/* {navigating ? "Returning to events..." : "Loading..."} */}
+          {/* Loading spinner or text could go here */}
         </div>
       </div>
     );
@@ -142,10 +150,10 @@ const EventPage = () => {
         className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors duration-300 mb-4"
       >
         <ArrowLeft className="w-5 h-5" />
-        {/* <span>Back to Events</span> */}
-        <span>Back to Home</span>
+        <span>Back to Events</span>
       </button>
 
+      {/* Rest of the component remains unchanged */}
       {/* Header */}
       <header className="text-center py-5 mb-10">
         <h1
@@ -280,7 +288,6 @@ const EventPage = () => {
                     </div>
                   </div>
                 ))}
-
             </div>
           </div>
         </div>

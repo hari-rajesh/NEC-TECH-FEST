@@ -26,7 +26,7 @@ const Contact = () => {
       image2: Call,
       Name: "Dr.S.Rajagopal",
       Sub: "Assistant Professor(SG)",
-      Department: "Information and Communication Engineering",
+      Department: "Information Technology",
       Email: "rajatarget@nec.edu.in",
       Phone: "9629668167",
     },

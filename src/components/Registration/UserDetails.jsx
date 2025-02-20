@@ -12,57 +12,57 @@ const UserDetails = () => {
     email: location.state?.email || "",
     college: location.state?.college || "",
     phone: location.state?.phone || "",
-    department: location.state?.department || "",
+    department: "",
     city: "",
     year: "",
   });
+
+  const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setUserData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" })); 
   };
 
-  const isPhoneValid = userData.phone.length === 10 && /^\d+$/.test(userData.phone);
-  const isFormValid =
-    userData.name &&
-    userData.email &&
-    userData.college &&
-    isPhoneValid &&
-    userData.department &&
-    userData.city &&
-    userData.year;
+  const validateForm = () => {
+    let newErrors = {};
+    if (!userData.name) newErrors.name = "Name is required.";
+    if (!userData.email) newErrors.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/.test(userData.email)) newErrors.email = "Invalid email format.";
+    if (!userData.college) newErrors.college = "College name is required.";
+    if (!userData.phone) newErrors.phone = "Phone number is required.";
+    else if (userData.phone.length !== 10 || !/^\d+$/.test(userData.phone)) newErrors.phone = "Phone must be 10 digits.";
+    if (!userData.city) newErrors.city = "City is required.";
+    if (!userData.department) newErrors.department = "Department is required.";
+    if (!userData.year) newErrors.year = "Year is required.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleNext = async (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      setModalMessage("Please fill all required fields correctly.");
+      setShowModal(true);
+      return;
+    }
+
     try {
-      if (isFormValid) {
-        const response = await axios.get("http://localhost:5200/api/user/validateuser", { params: userData });
-        if (response.data.message === "User Created Successfully") {
-          navigate("/registration/eventselection", { state: userData });
-        } else {
-          setModalMessage("An error occurred. Please try again.");
-          setShowModal(true);
-        }
+      const response = await axios.get("http://localhost:5200/api/user/validateuser", { params: userData });
+      if (response.data.message === "User Created Successfully") {
+        window.scrollTo(0, 0);
+        navigate("/registration/eventselection", { state: userData });
+      } else {
+        setModalMessage("An error occurred. Please try again.");
+        setShowModal(true);
       }
     } catch (err) {
-      if (err.message === "Network Error") {
-        setModalMessage("Network Error. Please try again.");
-        setShowModal(true);
-      }
-      else if (err.response.data === "Too many requests from the same IP, please try again after 5 minute.") {
-        setModalMessage(err.response.data || "An error occurred. Please try again.");
-        setShowModal(true);
-      }
-      else if (err.response) {
-        setModalMessage(err?.response?.data?.message || "An error occurred. Please try again.");
-        setShowModal(true);
-      }
-      console.log(err);
+      setModalMessage(err.response?.data?.message || "An error occurred. Please try again.");
+      setShowModal(true);
     }
   };
 
@@ -74,6 +74,7 @@ const UserDetails = () => {
             Registration Form
           </h1>
         </motion.div>
+
         <motion.div className="bg-[#2A1B3D] rounded-xl p-6 sm:p-8 shadow-2xl border border-purple-700/30">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-purple-100 mb-8 text-center">
             User Details
@@ -89,10 +90,11 @@ const UserDetails = () => {
                   name={field}
                   value={userData[field]}
                   onChange={handleChange}
+                  placeholder={`Enter your ${field}`}
                   maxLength={field === "phone" ? "10" : undefined}
                   className="w-full bg-[#3B2A4F] border rounded-lg px-4 py-3 text-purple-200 focus:ring-2 focus:ring-purple-500"
-                  required
                 />
+                {errors[field] && <p className="text-red-500 text-sm mt-1">{errors[field]}</p>}
               </div>
             ))}
 
@@ -109,6 +111,7 @@ const UserDetails = () => {
                   <option key={dept} value={dept}>{dept}</option>
                 ))}
               </select>
+              {errors.department && <p className="text-red-500 text-sm mt-1">{errors.department}</p>}
             </div>
 
             <div>
@@ -124,28 +127,26 @@ const UserDetails = () => {
                   <option key={yr} value={yr}>{yr}</option>
                 ))}
               </select>
+              {errors.year && <p className="text-red-500 text-sm mt-1">{errors.year}</p>}
             </div>
 
             <button
               onClick={handleNext}
-              disabled={!isFormValid}
-              className="w-full py-4 px-6 rounded-xl text-xl font-bold bg-purple-700 text-white hover:bg-purple-800 disabled:bg-gray-600">
+              className="w-full py-4 px-6 rounded-xl text-xl font-bold bg-purple-700 text-white hover:bg-purple-800 disabled:bg-gray-600"
+            >
               Proceed to Events
             </button>
           </form>
         </motion.div>
       </div>
 
-      {/* Modal for Errors */}
+      {/* Modal for General Errors */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
             <h3 className="text-xl font-bold text-red-600">Error</h3>
             <p className="text-gray-700 mt-2">{modalMessage}</p>
-            <button
-              onClick={() => setShowModal(false)}
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg"
-            >
+            <button onClick={() => setShowModal(false)} className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg">
               Close
             </button>
           </div>

@@ -48,7 +48,7 @@ const Food = () => {
         </div>
 
         <div className="fade-in-animation bg-white p-5 rounded-[10px] h-[350px] w-[280px] m-[25px] mt-[5px] sm:mt-[25px] shadow-[15px_15px_2px_rgb(0,0,0)] mb-[80px] z-10 text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] shadow-[0_4px_20px_rgba(139,92,246,0.3)]">
-          <p className="text-[25px] font-medium">Veg Food</p>
+          <p className="text-[25px] font-medium">Non-Veg Food</p>
           <ul className="text-[20px] list-disc list-inside marker:text-white marker:text-lg ml-4 mt-4">
             <li>Egg Fried Rice</li>
             <li>Chicken Fried Rice</li>
@@ -60,7 +60,7 @@ const Food = () => {
         </div>
 
         <div className="fade-in-animation bg-white p-5 rounded-[10px] h-[350px] w-[280px] m-[25px] mt-[5px] sm:mt-[25px] shadow-[15px_15px_2px_rgb(0,0,0)] mb-[80px] z-10 text-white bg-gradient-to-br from-[#a7465b] to-[#6f39cd] shadow-[0_4px_20px_rgba(139,92,246,0.3)]">
-          <p className="text-[25px] font-medium">Veg Food</p>
+          <p className="text-[25px] font-medium">Snacks</p>
           <ul className="text-[20px] list-disc list-inside marker:text-white marker:text-lg ml-4 mt-4">
             <li>Puffs</li>
             <li>Vadai</li>

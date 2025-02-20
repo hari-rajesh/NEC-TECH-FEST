@@ -414,7 +414,7 @@ const WorkshopPage = () => {
 
               {/* Register Button */}
               <div>
-                <button
+                {/* <button
                   onClick={handleRegister}
                   className="w-full bg-[#8000ff] text-white py-2.5 px-5 text-base font-semibold rounded-lg 
                           cursor-pointer shadow-[0_0_15px_rgba(128,0,255,0.5)] 
@@ -422,7 +422,7 @@ const WorkshopPage = () => {
                           transition-all duration-300"
                 >
                   Register Now
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

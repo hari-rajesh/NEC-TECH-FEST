@@ -14,16 +14,16 @@ const EventSelection = () => {
 
   const eventSchedule = {
     "Day 1": {
-      "9:30 AM - 11:00 AM": [{ id: 9 }, { id: 17 }, { id: 34 }, { id: 36 }, { id: 39 }, { id: 40 }, { id: 42 }, { id: 81 }, { id: 98 }, { id: 99 }, { id: 104 }, { id: 106 }, { id: 108 }, { id: 109 }, { id: 110 }, { id: 111 }, { id: 116 }, { id: 117 }],
-      "11:30 AM - 1:30 PM": [{ id: 1 }, { id: 2 }, { id: 48 }, { id: 52 }, { id: 58 }, { id: 84 }, { id: 85 }, { id: 94 }, { id: 95 }, { id: 107 }, { id: 113 }],
-      "2:00 PM - 3:30 PM": [{ id: 10 }, { id: 11 }, { id: 18 }, { id: 19 }, { id: 20 }, { id: 51 }, { id: 57 }, { id: 61 }, { id: 62 }, { id: 68 }, { id: 86 }, { id: 87 }, { id: 88 }, { id: 97 }, { id: 72 }, { id: 73 }, { id: 76 }, { id: 77 }, { id: 80 }, { id: 115 }],
-      "3:30 PM - 5:00 PM": [{ id: 3 }, { id: 48 }, { id: 49 }, { id: 50 }, { id: 66 }, { id: 67 }, { id: 74 }, { id: 102 }, { id: 101 }],
+      "9:30 AM - 10:45 AM": [{ id: 9 }, { id: 10 }, { id: 11 }, { id: 14 }, { id: 30 }, { id: 31 }, { id: 33 }, { id: 43 }, { id: 58 }, { id: 61 }, { id: 75 }, { id: 77 }, { id: 89 }, { id: 101 }, { id: 102 }, { id: 112 },{id:117}],
+      "11:00 AM - 12:30 PM": [{ id: 12 }, { id: 34 }, { id: 48 }, { id: 62 }, { id: 105 }, { id: 113 }, { id: 104 }],
+      "1:15 PM - 3:00 PM": [{ id: 1 }, { id: 2 }, { id: 13 }, { id: 15 }, { id: 16 }, { id: 35 }, { id: 40 }, { id: 45 }, { id: 46 }, { id: 47 }, { id: 63 }, { id: 64 }, { id: 65 }, { id: 81 }, { id: 82 }, { id: 92 }, { id: 93 }, { id: 106 }, { id: 114 }],
+      "3:15 PM - 5:00 PM": [{ id: 7 }, { id: 17 }, { id: 24 }, { id: 25 }, { id: 26 }, { id: 27 }, { id: 36 }, { id: 39 }, { id: 44 }, { id: 54 }, { id: 55 }, { id: 69 }, { id: 70 }, { id: 71 }, { id: 80 }, { id: 85 }, { id: 86 }, { id: 94 }, { id: 97 }, { id: 98 }, { id: 108 }, { id: 109 }],
     },
     "Day 2": {
-      "9:30 AM - 11:00 AM": [{ id: 4 }, { id: 5 }, { id: 12 }, { id: 35 }, { id: 37 }, { id: 38 }, { id: 41 }, { id: 43 }, { id: 44 }, { id: 93 }, { id: 82 }, { id: 83 }, { id: 103 }, { id: 112 }, { id: 118 }, { id: 119 }, { id: 120 }],
-      "11:30 AM - 1:30 PM": [{ id: 6 }, { id: 7 }, { id: 13 }, { id: 21 }, { id: 45 }, { id: 46 }, { id: 55 }, { id: 63 }, { id: 64 }, { id: 65 }, { id: 69 }, { id: 70 }, { id: 71 }, { id: 89 }, { id: 90 }, { id: 96 }, { id: 100 }, { id: 114 }],
-      "2:00 PM - 3:30 PM": [{ id: 8 }, { id: 14 }, { id: 22 }, { id: 47 }, { id: 53 }, { id: 75 }, { id: 78 }, { id: 79 }, { id: 105 }],
-      "3:30 PM - 5:00 PM": [{ id: 56 }, { id: 91 }, { id: 92 }],
+      "9:30 AM - 10:45 AM": [{ id: 3 }, { id: 4 }, { id: 18 }, { id: 22 }, { id: 23 }, { id: 32 }, { id: 59 }, { id: 60 }, { id: 76 }, { id: 78 }, { id: 79 }, { id: 90 }, { id: 91 }, { id: 103 },{id:117}],
+      "11:00 AM - 12:30 PM": [{ id: 19 }, { id: 111 },{ id: 115 }],
+      "1:15 PM - 3:00 PM": [{ id: 5 }, { id: 6 }, { id: 20 }, { id: 21 }, { id: 28 }, { id: 38 }, { id: 42 }, { id: 49 }, { id: 50 }, { id: 51 }, { id: 52 }, { id: 53 }, { id: 66 }, { id: 67 }, { id: 68 }, { id: 83 }, { id: 84 }, { id: 88 }, { id: 95 }, { id: 96 }, { id: 107 },{ id: 116 }],
+      "3:15 PM - 5:00 PM": [{ id: 8 }, { id: 29 }, { id: 37 }, { id: 41 }, { id: 56 }, { id: 57 }, { id: 72 }, { id: 73 }, { id: 74 },{ id: 87 }, { id: 99 }, { id: 100 },{ id: 110 }],
     },
   };
 
@@ -52,6 +52,7 @@ const EventSelection = () => {
 
   const handleNext = () => {
     userData.selectedOption = selectedOption;
+    window.scrollTo(0, 0);
     navigate("/registration/payment", {
       state: { userData, selectedEvents },
     });
@@ -107,7 +108,6 @@ const EventSelection = () => {
           </table>
         </div>
 
-        {/* Events Based on Payment Selection */}
         {selectedOption && (
           <div className="space-y-6">
             {Object.entries(eventSchedule)
@@ -125,7 +125,7 @@ const EventSelection = () => {
                   {Object.entries(sessions).map(([timeSlot, sessionEvents]) => (
                     <div key={timeSlot} className="mb-4">
                       <h3 className="text-xl font-semibold mb-2 text-purple-200">{timeSlot}</h3>
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {sessionEvents.map(({ id }) => {
                           const eventDetails = events.find((e) => e.id === id);
                           if (!eventDetails) return null;
@@ -140,15 +140,15 @@ const EventSelection = () => {
                             >
                               {/* Event Selection Radio Button */}
                               <input
-                                type="checkbox"
+                                type="radio"
+                                name={timeSlot} 
                                 checked={isSelected}
                                 onChange={() => handleEventSelection(eventDetails)}
                                 className="w-5 h-5 accent-purple-500"
                               />
 
-                              {/* Event Name Redirects to Details Page */}
                               <span
-                                className="text-xs text-purple-100 w-full truncate cursor-pointer  ml-2"
+                                className="text-xs text-purple-100 w-full cursor-pointer ml-2 whitespace-normal break-words"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   handleViewEvent(eventDetails.id);
@@ -166,6 +166,7 @@ const EventSelection = () => {
               ))}
           </div>
         )}
+
 
         {/* Confirm Selection Button */}
         <div className="mt-8 flex justify-center">

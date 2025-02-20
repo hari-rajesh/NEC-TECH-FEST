@@ -15,20 +15,19 @@ const Payment = () => {
     const [modalMessage, setModalMessage] = useState("");
 
     const upiId = import.meta.env.VITE_UPIID;
-    const upiLink = Data?.userData?.selectedOption === "Both" 
-        ? `upi://pay?pa=${upiId}&pn=YourName&mc=&tid=&tr=&tn=Payment&am=300&cu=INR` 
+    const upiLink = Data?.userData?.selectedOption === "Both"
+        ? `upi://pay?pa=${upiId}&pn=YourName&mc=&tid=&tr=&tn=Payment&am=300&cu=INR`
         : `upi://pay?pa=${upiId}&pn=YourName&mc=&tid=&tr=&tn=Payment&am=200&cu=INR`;
 
     const handleDBStore = async (Data) => {
-        console.log(Data);
         try {
             await axios.post("http://localhost:5200/api/registration/register", Data);
-            setModalMessage( "Payment has been successfully made , For furthur details check your mail");
+            setModalMessage("Payment has been successfully made , For furthur details check your mail");
             setShowModal(true);
             setPaymentSuccess(true);
         } catch (err) {
-            if(err.response.data==="Too many requests from the same IP, please try again after 3 minutes."){
-                setModalMessage(err.response.data || "An error occurred. Please try again.");
+            if (err.response?.data === "Too many requests from the same IP, please try again after 3 minutes.") {
+                setModalMessage(err.response.data);
                 setShowModal(true);
             }
             else if (err.response) {
@@ -45,6 +44,7 @@ const Payment = () => {
             Data.transactionId = transactionId;
             Data.image = image;
             Data.paymentStatus = true;
+            Data.amount = Data?.userData?.selectedOption === "Both" ? 300 : 200;
             await handleDBStore(Data);
             setIsProcessing(false);
         }
@@ -82,45 +82,53 @@ const Payment = () => {
                 </div>
 
                 <div className="mb-4">
+                    {/* <label className="block text-lg font-semibold mb-2 text-purple-300">
+                        Transaction ID
+                    </label> */}
                     <input
                         type="text"
-                        placeholder="Enter Transaction ID"
+                        placeholder="Enter your transaction ID"
                         value={transactionId}
                         onChange={(e) => setTransactionId(e.target.value)}
-                        className="w-full p-3 bg-[#3B2A4F] text-purple-200 border border-purple-700/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full p-3 bg-[#3B2A4F] text-purple-200 border border-purple-700/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-purple-400"
                     />
                 </div>
 
+                <p className="text-lg font-medium text-purple-300 mb-3">
+                    Upload your <strong>Payment Screenshot</strong> below:
+                </p>
+
                 <div className="mb-4">
+                    <label className="block mb-2 text-purple-300 text-sm">
+                        Accepted formats: JPG, PNG, JPEG
+                    </label>
                     <input
                         type="file"
                         accept="image/*"
                         onChange={handleImageUpload}
-                        className="w-full p-3 bg-[#3B2A4F] text-purple-200 border border-purple-700/30 rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:bg-purple-700 file:text-white"
+                        className="w-full p-3 bg-[#3B2A4F] text-purple-200 border border-purple-700/30 rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:bg-purple-700 file:text-white hover:file:bg-purple-600"
                     />
                 </div>
 
                 {image && (
                     <div className="mb-4">
+                        <p className="text-sm text-purple-400 mb-2">Preview:</p>
                         <img
                             src={image}
-                            alt="Uploaded"
-                            className="max-w-full h-auto border border-purple-700/30 rounded-lg"
+                            alt="Uploaded Screenshot"
+                            className="max-w-full h-auto border border-purple-700/30 rounded-lg shadow-md"
                         />
                     </div>
                 )}
 
-                <button
-                    onClick={handleTransactionSubmit}
-                    className={`w-full py-3 rounded-xl font-bold bg-gradient-to-r from-purple-700 to-purple-900 text-white transition-all duration-300 border border-purple-600/30 shadow-lg shadow-purple-900/50 hover:shadow-xl hover:shadow-purple-900/70 ${!(transactionId && image) ? "opacity-50 cursor-not-allowed" : "hover:from-purple-800 hover:to-purple-950"}`}
-                    disabled={!(transactionId && image) || isProcessing}
-                >
-                    {isProcessing ? "Processing..." : "Confirm Payment"}
+                <button onClick={handleTransactionSubmit} className="w-full bg-purple-700 hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition">
+                    {isProcessing ? "Processing..." : "Submit"}
                 </button>
+
 
                 {paymentSuccess && (
                     <p className="mt-4 text-green-400 font-semibold text-center drop-shadow-[0_0_3px_rgba(34,197,94,0.5)]">
-                        Payment Successful
+                        Registration Successful
                     </p>
                 )}
             </div>

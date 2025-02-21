@@ -1,7 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 
-const TagFilter = ({ tags, selectedTag, onChange }) => {
+const TagFilter = ({ tags = [], selectedTag, onChange }) => {
+  useEffect(()=>{
+    const searchTag=sessionStorage.getItem('eventListSelectedTag');
+    if(searchTag){
+      onChange(searchTag);
+    }
+  },[]);
+  // Return null if no tags are provided
+  if (!tags || tags.length === 0) return null;
+  
   const [hoveredTag, setHoveredTag] = useState(null);
   const scrollContainerRef = useRef(null);
   let hoverTimer = null;

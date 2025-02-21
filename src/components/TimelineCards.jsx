@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const TimelineCard = ({ title, description, icon }) => {
   const navigate = useNavigate();
+  const [showDetails, setShowDetails] = useState(false);
 
   const getNavigationLink = () => {
     switch (title) {
@@ -12,8 +13,6 @@ export const TimelineCard = ({ title, description, icon }) => {
         return "/events/technical";
       case "Leisure Activities":
         return "/events/non-tech";
-      case "Ideathon":
-        return "/ideathon";
       default:
         return null;
     }
@@ -27,6 +26,14 @@ export const TimelineCard = ({ title, description, icon }) => {
   };
 
   const link = getNavigationLink();
+
+  const inceptionDetails = `
+   • Nectechfest 2k24 witnessed an impressive total event participation of 3,997, with 1,522 individual participants. 
+   • The event featured various competitions and activities, culminating in a total prize amount of ₹1,37,250 awarded to the winners. 
+   • We take pride in organizing events that are knowledgeable, fun, and exciting, ensuring a memorable and enriching experience for all participants.
+   • Looking ahead, NEC Techfest 2K25 is set to be even bigger and better! We anticipate 3,000 participants, with a lineup of exciting tech and non-tech events, hands-on workshops, and an innovative Ideathon.
+     Additionally, nearly ₹1,00,000 in cash prizes will be up for grabs, providing an incredible opportunity for participants to learn, innovate, and enjoy all at once!
+  `;
 
   return (
     <div className="group relative p-4 md:p-6 bg-black/40 rounded-xl transition-all duration-500 
@@ -70,7 +77,49 @@ export const TimelineCard = ({ title, description, icon }) => {
             {description}
           </p>
 
-          {link && (
+          {title === "Inception of Sympo" ? (
+            <div className="w-full mt-4 space-y-4 flex flex-col items-center">
+              <button 
+                onClick={() => setShowDetails(!showDetails)}
+                className="transition-all duration-300 ease-in-out
+                           px-6 py-2 rounded-lg
+                           bg-gradient-to-r from-purple-600 to-pink-600
+                           hover:from-purple-500 hover:to-pink-500
+                           text-white font-space-grotesk text-sm
+                           transform translate-y-2 group-hover:translate-y-0
+                           shadow-lg hover:shadow-purple-500/50
+                           flex items-center gap-2
+                           mx-auto"
+              >
+                {showDetails ? 'Show less..' : 'Show more..'}
+                <svg
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    showDetails ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div className={`w-full overflow-hidden transition-all duration-500 ease-in-out
+                             ${showDetails ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="bg-purple-900/30 rounded-lg p-6 border border-purple-500/20">
+                  <p className="text-purple-200/90 font-space-grotesk text-sm md:text-base 
+                               leading-relaxed whitespace-pre-line">
+                    {inceptionDetails}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ) : link && (
             <button 
               onClick={handleClick}
               className="mt-4 

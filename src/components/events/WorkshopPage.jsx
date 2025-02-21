@@ -52,6 +52,7 @@ const WorkshopPage = () => {
   const [videoProgress, setVideoProgress] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const styleSheet = document.createElement("style");
     styleSheet.innerText = styles.keyframes;
     document.head.appendChild(styleSheet);
@@ -73,7 +74,7 @@ const WorkshopPage = () => {
           setWorkshop({
             ...fetchedWorkshop,
             image: fetchedWorkshop.image || "/api/placeholder/800/800",
-            subtitle: fetchedWorkshop.subtitle || fetchedWorkshop.description,
+            subtitle: fetchedWorkshop.subtitle || "Workshop",
             time: fetchedWorkshop.time || "10:00 AM - 5:00 PM",
             organizer: fetchedWorkshop.organizer || "TBD",
             facultyCoordinator: fetchedWorkshop.facultyCoordinator || "TBD",
@@ -82,7 +83,7 @@ const WorkshopPage = () => {
               name: fetchedWorkshop.resourcePerson?.name || "TBD",
               image:
                 fetchedWorkshop.resourcePerson?.image ||
-                "/api/placeholder/400/400",
+                "public\images\person1.jpg",
               designation:
                 fetchedWorkshop.resourcePerson?.designation || "Expert",
               organization:

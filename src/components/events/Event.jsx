@@ -66,8 +66,10 @@ const Event = () => {
     window.addEventListener('pageshow', handleNavigation);
     
     return () => {
+      window.scrollTo(0, 0);
       window.removeEventListener('pageshow', handleNavigation);
     };
+    
   }, []);
 
   const filterEvents = () => {

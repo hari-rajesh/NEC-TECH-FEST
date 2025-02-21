@@ -376,7 +376,7 @@ export const events = [
     description: "Join our hands-on workshop to explore the power of Oracle APEX in building scalable, low-code cloud solutions seamlessly integrated with AI-driven technologies. Learn how to harness Oracle APEX for rapid application development, automate workflows, and implement intelligent features like predictive analytics and natural language processing to create next-generation enterprise applications. Whether you're a developer, IT professional, or innovator, this workshop will equip you with the tools and techniques to transform ideas into intelligent, cloud-powered solutions.",
     resourcePerson: {
       name: "Ms. Sujitha Jayaraman",
-      image: "/images/person2.jpg",
+      image: "/images/person1.jpg",
       designation: "Associate Vice President",
       organization: "Vibathi Labs",
       bio: "Ms. Sujitha Jayaraman is an accomplished technology leader with expertise in Oracle APEX, cloud solutions, and AI-driven innovations. As the Associate Vice President at Vibathi Labs, she has spearheaded numerous transformative projects that integrate cutting-edge technologies to solve real-world business challenges. Her work focuses on enabling organizations to adopt scalable, intelligent solutions for enhanced operational efficiency and innovation.",
@@ -392,8 +392,8 @@ export const events = [
   },
   {
     id: 10,
-    name: "MASTERING ADVANCED PL/SQL FOR DATABASE EXCELLENCE",
-    title: "MASTERING ADVANCED PL/SQL FOR DATABASE EXCELLENCE",
+    name: "MASTERING ADVANCED PL-SQL FOR DATABASE EXCELLENCE",
+    title: "MASTERING ADVANCED PL-SQL FOR DATABASE EXCELLENCE",
     subtitle: "Workshop",
     image: "/events/it/Mastering Advanced PLSQL.png",
     poster: "/events/it/Mastering Advanced PLSQL.png",
@@ -1334,7 +1334,7 @@ export const events = [
     registrationLink: "will be filled up by dev",
     organizer: "Mechanical Engineering Association",
     facultyCoordinator: "Mrs. M. Rajeshwari AP/Mech",
-    studentCoordinators: { name: "Seeninvasan S", contact: "7904224539" },
+    studentCoordinators:[ { name: "Seeninvasan S", contact: "7904224539" }],
     rules: [
       " No external materials are allowed apart from those provided.",
       "Teams must work within the given time frame.",

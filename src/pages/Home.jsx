@@ -19,7 +19,12 @@ import VisitorCounter from "../components/VisitorCount/index.jsx";
 
 function Home() {
   useEffect(() => {
+    sessionStorage.removeItem('eventListScrollPosition');
+            sessionStorage.removeItem('eventListSearchQuery');
+            sessionStorage.removeItem('eventListSelectedTag');
+            sessionStorage.removeItem('eventListCurrentPage');
     window.scrollTo(0, 0);
+
   }, []);
   const developers = [
     {
@@ -163,7 +168,7 @@ function Home() {
 
               className="text-[18px] sm:text-[18px] md:text-[22px] lg:text-[25px] font-['Orbitron'] tracking-[1px] sm:tracking-[1.5px] md:tracking-[2px] bg-gradient-to-b from-[#edeffd] to-[#524d57]  bg-clip-text text-transparent [text-shadow:2px_2px_4px_rgba(192,192,192,0.3)] transform-none opacity-100 font-bold "
             >
-              14th & 15th March 2k&apos;25
+              14<sup className="text-[18px] sm:text-[10px] md:text-[15px] lg:text-[20px] font-['Orbitron'] tracking-[1px] sm:tracking-[1.5px] md:tracking-[2px] bg-gradient-to-b from-[#edeffd] to-[#524d57]  bg-clip-text text-transparent [text-shadow:2px_2px_4px_rgba(192,192,192,0.3)] transform-none opacity-100 font-bold ">th</sup> & 15<sup className="text-[18px] sm:text-[10px] md:text-[15px] lg:text-[20px] font-['Orbitron'] tracking-[1px] sm:tracking-[1.5px] md:tracking-[2px] bg-gradient-to-b from-[#edeffd] to-[#524d57]  bg-clip-text text-transparent [text-shadow:2px_2px_4px_rgba(192,192,192,0.3)] transform-none opacity-100 font-bold ">th</sup> March 2k&apos;25
             </motion.p>
           </div>
 

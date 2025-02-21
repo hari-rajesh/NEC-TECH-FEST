@@ -203,7 +203,7 @@ export default function IdeathonPage() {
                 <Calendar className="w-6 h-6 text-purple-300" />
                 <div>
                   <p className="font-medium [text-shadow:_0_0_5px_rgba(128,0,255,0.5)]">
-                    July 23-24, 2025
+                     March 14<sup>th</sup> & 15<sup>th</sup>, 2025
                   </p>
                   <p className="text-sm text-purple-300 mt-1">2 Days - 9:00 AM to 5:00 PM</p>
                 </div>

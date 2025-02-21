@@ -1,10 +1,15 @@
 import { Search } from "lucide-react";
+import { useEffect } from "react";
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  useEffect(()=>{
+    const searchString=sessionStorage.getItem('eventListSearchQuery');
+    if(searchString){
+      setSearchQuery(searchString);
+    }
+  },[])
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
-    // Flag that filters changed (for pagination reset)
-    sessionStorage.setItem('eventListSearchFiltersChanged', 'true');
   };
   return (
     <div className="relative border-2 border-violet-500 rounded-full p-0.5 subtle-glow">

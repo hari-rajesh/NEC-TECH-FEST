@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
-import { CheckCircleIcon, XCircleIcon, EyeIcon } from "lucide-react";
+import { CheckCircleIcon, XCircleIcon, EyeIcon, X } from "lucide-react";
+import { CalendarDays, Clock, MapPin, School } from "lucide-react"; // Added missing imports
 import { events } from "../../utils/eventData";
 
 const EventSelection = () => {
@@ -11,6 +12,13 @@ const EventSelection = () => {
 
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedEventsByTimeSlot, setSelectedEventsByTimeSlot] = useState({});
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedEventDetails, setSelectedEventDetails] = useState(null);
+  const [needsAccommodation, setNeedsAccommodation] = useState(null);
+
+  const handleAccommodationSelection = (event) => {
+    setNeedsAccommodation(event.target.value);
+  };
 
   const eventSchedule = {
     "Day 1": {
@@ -58,24 +66,103 @@ const EventSelection = () => {
     });
   };
 
-  const handleViewEvent = (e, eventId, eventName) => {
-    // Prevent the parent div's click handler from being triggered
-    e.stopPropagation();
-    e.preventDefault();
+  const handleViewEvent = (e, eventId) => {
+    e.stopPropagation(); // Prevent event selection when clicking the eye icon
     
-    // Find the event details to check its category
     const eventDetails = events.find(event => event.id === eventId);
-    
-    if (eventDetails.category === "workshops") {
-      // Open workshop page in new tab
-      window.open(`/workshop/${encodeURIComponent(eventName)}`, '_blank');
-    } else {
-      // Default redirection for other event categories in new tab
-      window.open(`/associations/event/${eventId}`, '_blank');
+    if (eventDetails) {
+      setSelectedEventDetails(eventDetails);
+      setModalOpen(true);
     }
   };
+
+  // Modal component definition
+  const Modal = ({ isOpen, onClose, eventDetails }) => {
+    if (!isOpen || !eventDetails) return null;
   
+    return (
+      <div 
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        onClick={onClose}
+      >
+        <div
+          className="bg-[#1E0F2D] rounded-xl overflow-hidden w-full max-w-2xl shadow-2xl"
+          onClick={e => e.stopPropagation()}
+        >
+          {/* Header */}
+          <div className="border-b border-purple-800">
+            <div className="p-6">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h2 className="text-2xl font-bold text-purple-100 mb-2">
+                    {eventDetails.name}
+                  </h2>
+                  <p className="text-purple-300 text-sm">{eventDetails.subtitle}</p>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 hover:bg-purple-800/30 rounded-lg transition-colors"
+                >
+                  <X className="text-purple-200" size={20} />
+                </button>
+              </div>
+            </div>
+          </div>
   
+          {/* Content */}
+          <div className="p-6 space-y-6">
+            {/* Description */}
+            <div>
+              <p className="text-purple-200 leading-relaxed">
+                {eventDetails.description}
+              </p>
+            </div>
+  
+            {/* Event Details */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+              <div className="flex items-center gap-2 text-purple-300">
+                <CalendarDays size={18} />
+                <span>{new Date(eventDetails.date).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-300">
+                <Clock size={18} />
+                <span>{eventDetails.startingtime}</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-300">
+                <MapPin size={18} />
+                <span>{eventDetails.venue}</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-300">
+                <School size={18} />
+                <span>{eventDetails.organizer}</span>
+              </div>
+            </div>
+  
+            {/* Coordinators */}
+            <div className="border-t border-purple-800/30 pt-4">
+              <h3 className="text-lg font-semibold text-purple-100 mb-3">Contact</h3>
+              <div className="grid gap-4">
+                <div className="text-purple-200">
+                  <p className="font-medium">Faculty Coordinator</p>
+                  <p className="text-purple-300">{eventDetails.facultyCoordinator}</p>
+                </div>
+                <div className="text-purple-200">
+                  <p className="font-medium">Student Coordinators</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-1">
+                    {eventDetails.studentCoordinators.map((coordinator, index) => (
+                      <p key={index} className="text-purple-300">
+                        {coordinator.name} - {coordinator.contact}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const handleNext = () => {
     const selectedEvents = Object.values(selectedEventsByTimeSlot);
@@ -94,7 +181,7 @@ const EventSelection = () => {
   // Get total number of selected events
   const totalSelectedEvents = Object.keys(selectedEventsByTimeSlot).length;
 
-  // Custom checkbox component
+  // Fixed Custom checkbox component
   const Checkbox = ({ checked, onChange }) => {
     return (
       <div 
@@ -102,7 +189,10 @@ const EventSelection = () => {
           ${checked 
             ? "bg-purple-600 border-purple-400" 
             : "bg-purple-900/30 border-purple-700"}`}
-        onClick={onChange}
+        onClick={(e) => {
+          e.stopPropagation(); // Stop event from bubbling up
+          onChange(e);
+        }}
       >
         {checked && (
           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,6 +252,41 @@ const EventSelection = () => {
             </tbody>
           </table>
         </div>
+        {selectedOption === "Both" && (
+          <motion.div
+            className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 p-6 rounded-xl shadow-lg border border-purple-800/30 mt-6 mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <h2 className="text-xl font-semibold text-purple-100 mb-4">Do you need accommodation?</h2>
+            <div className="flex space-x-6">
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="accommodation"
+                  value="Yes"
+                  checked={needsAccommodation === "Yes"}
+                  onChange={handleAccommodationSelection}
+                  className="w-5 h-5 accent-purple-500"
+                />
+                <span className="text-purple-100">Yes</span>
+              </label>
+              <label className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="accommodation"
+                  value="No"
+                  checked={needsAccommodation === "No"}
+                  onChange={handleAccommodationSelection}
+                  className="w-5 h-5 accent-purple-500"
+                />
+                <span className="text-purple-100">No</span>
+              </label>
+            </div>
+          </motion.div>
+        )}
+
 
         {/* Events Based on Payment Selection */}
         {selectedOption && (
@@ -210,11 +335,13 @@ const EventSelection = () => {
                                   whileTap={{ scale: 0.98 }}
                                   onClick={() => handleEventSelection(eventDetails, day, timeSlot)}
                                 >
-                                  {/* Custom Checkbox (visual only) */}
+                                  {/* Custom Checkbox (with fixed event handling) */}
                                   <div className="flex-shrink-0 mr-3 mt-1">
                                     <Checkbox 
                                       checked={isSelected}
-                                      onChange={() => handleEventSelection(eventDetails, day, timeSlot)}
+                                      onChange={(e) => {
+                                        handleEventSelection(eventDetails, day, timeSlot);
+                                      }}
                                     />
                                   </div>
                                   
@@ -226,13 +353,12 @@ const EventSelection = () => {
                                   </div>
                                 </motion.div>
 
-                                {/* IMPORTANT: Eye button is now absolutely positioned and isolated from parent */}
+                                {/* Eye button to view event details */}
                                 <div 
-                                  className="absolute top-0 right-0 p-2" 
-                                  onClick={(e) => e.stopPropagation()}
+                                  className="absolute top-0 right-0 p-2"
                                 >
                                   <button
-                                    onClick={(e) => handleViewEvent(e, eventDetails.id,eventDetails.name)}
+                                    onClick={(e) => handleViewEvent(e, eventDetails.id)}
                                     className="text-purple-300 hover:text-purple-100 transition-colors p-2"
                                     aria-label="View event details"
                                   >
@@ -267,6 +393,16 @@ const EventSelection = () => {
           </motion.button>
         </div>
       </div>
+      
+      {/* Modal - rendered just once at the root level */}
+      <Modal
+        isOpen={modalOpen}
+        onClose={() => {
+          setModalOpen(false);
+          setSelectedEventDetails(null);
+        }}
+        eventDetails={selectedEventDetails}
+      />
     </motion.div>
   );
 };

@@ -75,6 +75,23 @@ const Payment = () => {
                     Scan to Pay
                 </h2>
 
+                {/* Warning Message */}
+                <div className="mb-6 bg-red-900/30 border border-red-500/50 rounded-lg p-4 text-red-200">
+                    <h3 className="font-bold text-red-100 mb-1">⚠️ Important Warning</h3>
+                    <p className="text-sm">
+                        Uploading fake payment screenshots or paying less than the required amount will result in:
+                    </p>
+                    <ul className="list-disc ml-5 mt-2 text-sm">
+                        <li>No refund under any circumstances</li>
+                        <li>Immediate cancellation of registration</li>
+                        <li>Inability to attend the event</li>
+                        <li>Possible ban from future events</li>
+                    </ul>
+                    <p className="text-xs mt-2 font-semibold">
+                        All payments are verified manually before registration is confirmed.
+                    </p>
+                </div>
+
                 <div className="flex justify-center mb-6">
                     <div className="p-2 bg-white rounded-lg">
                         <QRCode value={upiLink} size={200} />
@@ -82,9 +99,6 @@ const Payment = () => {
                 </div>
 
                 <div className="mb-4">
-                    {/* <label className="block text-lg font-semibold mb-2 text-purple-300">
-                        Transaction ID
-                    </label> */}
                     <input
                         type="text"
                         placeholder="Enter your transaction ID"
@@ -121,10 +135,13 @@ const Payment = () => {
                     </div>
                 )}
 
-                <button onClick={handleTransactionSubmit} className="w-full bg-purple-700 hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition">
+                <button 
+                    onClick={handleTransactionSubmit} 
+                    className="w-full bg-purple-700 hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition"
+                    disabled={!transactionId || !image || isProcessing}
+                >
                     {isProcessing ? "Processing..." : "Submit"}
                 </button>
-
 
                 {paymentSuccess && (
                     <p className="mt-4 text-green-400 font-semibold text-center drop-shadow-[0_0_3px_rgba(34,197,94,0.5)]">
